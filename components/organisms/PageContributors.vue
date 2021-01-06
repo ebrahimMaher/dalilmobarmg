@@ -17,7 +17,7 @@
               @{{contributor.github}}
             </div>
           </div>
-          <img :alt="contributor.name" :src="contributor.github ? `https://github.com/${contributor.github}.png?size=64` : '/img/default-avatar.jpg'" class="border rounded-full h-12" />
+          <img :alt="contributor.name" :src="contributor.github ? `https://github.com/${contributor.github}.png?size=64` : '/img/default-avatar.jpg'" class="border rounded-full h-12 w-12" />
         </a>
       </div>
       <p v-if="docLink && $route.params.book" class="text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary pt-3 mb-8 transition-colors duration-300 ease-linear" >
