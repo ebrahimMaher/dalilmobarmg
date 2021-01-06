@@ -6,7 +6,7 @@ export default {
   head: {
     htmlAttrs: {
       lang: process.env.NUXT_LOCALE,
-      dir: ['fa', 'ar', 'he'].includes(process.env.NUXT_LOCALE) ? 'rtl' : 'ltr'
+      dir: 'rtl'
     },
     meta: [
       { charset: 'utf-8' },
