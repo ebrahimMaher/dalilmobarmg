@@ -1,0 +1,70 @@
+html{
+    scroll-behavior: smooth;
+    &, *{
+      -webkit-tap-highlight-color: transparent;
+      &:focus{
+        outline: none;
+      }
+    }
+}
+@media (min-width: 1280px){
+  .container {
+      max-width: 1330px;
+  }
+}
+
+
+// remove outline on click or focus
+a, button, .btn{
+    &:focus{
+        outline: none!important;
+    }
+    &.disabled, &[disabled]{
+      @apply text-gray-500 cursor-default;
+      &:hover{
+        @apply text-gray-500;
+      }
+    }
+    &.nuxt-link-active{
+      &.disabled, &[disabled]{
+        @apply text-gray-500 cursor-default;
+      }
+    }
+}
+.overflow-y-auto, .lg\:overflow-y-auto{
+    &::-webkit-scrollbar{
+        background: hsl(0, 0%, 100%);
+        height:11px;
+        width:6px;
+    }
+
+    &::-webkit-scrollbar-track{
+        // border-radius: 5px;
+    }
+    &::-webkit-scrollbar-thumb{
+        background: rgba(0,0,0, 0.15);
+        border-radius: 6px!important;
+    }
+    &::-webkit-scrollbar-thumb:hover{
+        background: rgba(0,0,0, .25);
+    }
+    /* &::-webkit-scrollbar-thumb:active{
+        background: rgba(0,0,0, .25);
+    } */
+    &.theme--dark{
+        &::-webkit-scrollbar{
+            background: rgba(#191a25, 0.9)!important;
+        }
+        &::-webkit-scrollbar-thumb{
+            background: rgba(255, 255, 255, 0.15)!important;
+        }
+        &::-webkit-scrollbar-thumb:hover{
+            background: rgba(255, 255, 255, .25)!important;
+        }
+        &::-webkit-scrollbar-thumb:active{
+            background: rgba(255, 255, 255, .3)!important;
+        }
+    }
+
+}
+

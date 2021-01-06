@@ -1,0 +1,106 @@
+{
+  "name": "dalilmobarmg.com",
+  "version": "0.0.1",
+  "description": "Arabic Programming Guide And Tutorials",
+  "main": "index.js",
+  "dependencies": {
+    "@nuxt/content": "^1.11.1",
+    "@nuxt/http": "^0.6.2",
+    "@nuxtjs/tailwindcss": "^3.4.2",
+    "@snackbar/core": "^1.7.0",
+    "chart.js": "^2.9.4",
+    "clipboard": "^2.0.6",
+    "intersection-observer": "^0.12.0",
+    "lodash.groupby": "^4.6.0",
+    "lodash.sortby": "^4.7.0",
+    "node-fetch": "^2.6.1",
+    "nuxt-edge": "^2.14.0-26597729.aebf0ffe",
+    "nuxt-i18n": "^6.16.0",
+    "prism-themes": "^1.5.0",
+    "reading-time": "^1.2.1",
+    "vue-chartjs": "^3.5.1",
+    "vue-if-bot": "^1.2.0",
+    "vue-observe-visibility": "^1.0.0",
+    "vue-scrollactive": "^0.9.3",
+    "vue-scrollto": "^2.20.0"
+  },
+  "devDependencies": {
+    "@actions/core": "^1.2.6",
+    "@nuxtjs/color-mode": "^2.0.2",
+    "@nuxtjs/eslint-config": "^5.0.0",
+    "@nuxtjs/eslint-module": "^3.0.2",
+    "@nuxtjs/netlify-files": "^1.2.0",
+    "@nuxtjs/proxy": "^2.1.0",
+    "@nuxtjs/pwa": "^3.3.3",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "@nuxtjs/svg": "^0.1.12",
+    "@types/crawler": "^1.2.0",
+    "@types/fs-extra": "^9.0.6",
+    "babel-eslint": "^10.1.0",
+    "crawler": "^1.3.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.16.0",
+    "eslint-config-prettier": "^7.1.0",
+    "fibers": "^5.0.0",
+    "globby": "^11.0.1",
+    "husky": "^4.3.6",
+    "hygen": "^6.0.4",
+    "lint-staged": ">=10.5.3",
+    "markdownlint-cli": "^0.26.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.2.1",
+    "sass": "^1.30.0",
+    "sass-loader": "^10.1.0",
+    "start-server-and-test": "^1.11.7",
+    "stylelint": "^13.8.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-scss": "^3.18.0"
+  },
+  "scripts": {
+    "dev": "nuxt",
+    "serve": "npm run dev",
+    "build": "nuxt build",
+    "build:check": "nuxt build --analyze",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint:eslint": "eslint --ignore-path .gitignore --ignore-pattern modules/ --ignore-pattern plugins/ga.js --ext .js,.vue .",
+    "lint:markdownlint": "markdownlint  \"*.md\"",
+    "lint:stylelint": "stylelint \"**/*.{vue,scss}\"",
+    "lint:prettier": "prettier  \"**/*.{js,json,css,scss,vue,html,md}\"",
+    "check:prettier": "yarn lint:prettier --list-different",
+    "format:prettier": "yarn lint:prettier --write --loglevel warn",
+    "lint:all:eslint": "yarn lint:eslint --fix",
+    "lint:all:markdownlint": "yarn lint:markdownlint",
+    "lint:all:stylelint": "yarn lint:stylelint --fix",
+    "lint": "run-p lint:all:*",
+    "new": "hygen new"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "cross-env PRE_COMMIT=true lint-staged"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ebrahimMaher/dalilmobarmg.git"
+  },
+  "keywords": [
+    "dalilmobarmg",
+    "nuxt.js",
+    "vuejs",
+    "nuxtjs",
+    "js"
+  ],
+  "author": "Ebrahim Maher",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ebrahimMaher/dalilmobarmg/issues"
+  },
+  "homepage": "https://dalilmobarmg.com",
+  "lint-staged": {
+    "*.{js,vue}": "eslint --fix",
+    "*.{md}": "markdownlint",
+    "*.{js,json,css,vue,md}": "prettier --write"
+  }
+}

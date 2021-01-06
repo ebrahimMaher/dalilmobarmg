@@ -1,0 +1,498 @@
+/* purgecss start ignore */
+.light-mode .nuxt-content {
+  h2:before, h3:before{
+    content: "";
+    display: block;
+    margin-top: -96px;
+    height: 96px;
+    visibility: hidden;
+  }
+  p {
+    color: theme('colors.light.onSurfacePrimary');
+  }
+  h2, h3{
+    @apply font-bold;
+  }
+
+  blockquote {
+    color: theme('colors.light.onSurfaceSecondary');
+  }
+
+  .nuxt-content-highlight{
+    @apply my-6;
+    & code {
+      @apply border-0;
+    }
+  }
+  .code-block.active .nuxt-content-highlight {
+    margin-top: 0;
+  }
+
+  & a {
+    @apply text-dalil-lightindigo;
+
+    &:hover {
+      @apply underline;
+    }
+
+    & code {
+      @apply text-dalil-lightindigo;
+
+      &:hover {
+        @apply text-dalil-indigo;
+      }
+    }
+  }
+  // inline code snippet
+  & code {
+    @apply bg-red-100 text-red-700 mx-1;
+  }
+
+  & pre {
+    @apply static;
+
+    background-color: theme('colors.dark.elevatedSurface2');
+
+    code {
+      color: theme('colors.dark.onSurfacePrimary');
+    }
+  }
+  // code snippet block
+  & pre {
+    code {
+      @apply bg-transparent;
+
+      color: theme('colors.dark.onSurfacePrimary');
+    }
+  }
+
+  & .Alert {
+    @apply bg-blue-100 text-light-onSurfacePrimary;
+
+    & a {
+      @apply text-blue-600;
+    }
+
+    & code {
+      @apply text-blue-800 bg-blue-200;
+    }
+
+    &.Alert--orange {
+      @apply bg-orange-100;
+
+      & a {
+        @apply text-orange-600;
+      }
+
+      & code {
+        @apply text-orange-800 bg-orange-200;
+      }
+    }
+  }
+
+  .Promote {
+    // @apply shadow-md;
+    background-color: theme('colors.gray.200');
+
+    .Promote__Content {
+      .Promote__Content__Title {
+        color: theme('colors.light.onSurfacePrimary');
+      }
+
+      .Promote__Content__Description {
+        color: theme('colors.light.onSurfaceSecondary');
+      }
+
+      .Promote__Content__Signature {
+        @apply text-gray-500;
+      }
+    }
+
+    &:hover {
+      // @apply shadow-lg;
+      background-color: theme('colors.gray.300');
+      text-decoration: none;
+    }
+  }
+}
+
+.dark-mode .nuxt-content {
+  h2,
+  h3,
+  p {
+    color: theme('colors.dark.onSurfacePrimary');
+  }
+
+  & blockquote {
+    color: theme('colors.dark.onSurfaceSecondary');
+  }
+
+  & a {
+    @apply text-dalil-lightindigo;
+
+    &:hover {
+      @apply underline;
+    }
+
+    & code {
+      @apply text-dalil-lightindigo;
+
+      &:hover {
+        @apply text-dalil-indigo;
+      }
+    }
+  }
+  // inline code snippet
+  & code {
+    @apply bg-gray-800;
+
+    color: #e1e8f5;
+  }
+  // code snippet block
+  & pre {
+    background-color: #1e344c;
+
+    code {
+      @apply bg-transparent;
+
+      color: theme('colors.dark.onSurfacePrimary');
+    }
+  }
+
+  & .Alert {
+    // @apply bg-gray-600 text-dark-onSurfacePrimary;
+    background-color: #205d80;
+
+    & a {
+      @apply text-blue-300;
+    }
+
+    & code {
+      @apply text-blue-800 bg-blue-200;
+    }
+
+    &.Alert--orange {
+      // @apply bg-orange-200;
+      background-color: #4c4c4c;
+
+      & a {
+        @apply text-orange-600;
+      }
+
+      & code {
+        @apply text-orange-800 bg-orange-200;
+      }
+    }
+  }
+
+  .Promote {
+    @apply shadow-md;
+
+    background: theme('colors.dark.surface');
+
+    .Promote__Content {
+      .Promote__Content__Title {
+        color: theme('colors.dark.onSurfacePrimary');
+      }
+
+      .Promote__Content__Description {
+        color: theme('colors.dark.onSurfaceSecondary');
+      }
+
+      .Promote__Content__Signature {
+        @apply text-gray-500;
+      }
+    }
+
+    &:hover {
+      @apply shadow-lg;
+
+      background-color: #233344;
+      text-decoration: none;
+    }
+  }
+}
+
+.nuxt-content {
+  img {
+    @apply rounded;
+
+    margin: auto;
+  }
+
+  video {
+    width: 100%;
+  }
+
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
+    color: theme('colors.primary.dark');
+    font-family: 'open sans', 'cairo';
+
+    & a {
+      margin: 0 -1.5rem 0 -1.5rem;
+      padding: 0 1.5rem 1.7rem 0;
+    }
+
+    & a,
+    .icon-link {
+      @apply float-left text-green-600;
+
+      display: inline-block;
+      height: 16px;
+      margin-top: 4px;
+      margin-right: -1.5rem;
+      position: absolute;
+      width: 16px;
+
+      & .icon-link {
+        background-image: url('~assets/images/link.svg');
+        background-size: 16px 16px;
+        visibility: hidden;
+      }
+    }
+
+    &:hover {
+      & .icon-link {
+        visibility: visible;
+      }
+    }
+  }
+
+  h2{
+    @apply border-b pb-2 border-light-border;
+    width: 100%;
+
+  }
+  & h2 {
+    @apply relative text-2xl table;
+
+    margin-top: 2em;
+    margin-bottom: 1em;
+
+    /* &::after {
+      content: ' ';
+      width: 80%;
+
+      @apply block border-2 border-dalil-indigo mt-2 mb-1 rounded border-solid;
+    } */
+
+    & code {
+      @apply text-xl;
+    }
+
+    & a.icon-link {
+      @apply pt-3;
+    }
+  }
+
+  & h3 {
+    @apply relative text-xl table mt-8 mb-3;
+
+    a{
+      .icon-link{
+        visibility: visible!important;
+      }
+    }
+
+    /* &::after {
+      content: ' ';
+      width: 80%;
+
+      @apply block border-2 border-gray-600 mt-2 mb-1 rounded border-solid;
+    } */
+
+    & code {
+      @apply text-lg;
+    }
+
+    & a.icon {
+      @apply pt-2;
+    }
+  }
+  & h4{
+    @apply mb-1 mt-6 text-lg;
+    font-weight: 600;
+  }
+  & h5{
+    @apply mb-1 mt-3 font-bold text-base;
+  }
+
+  p {
+    @apply leading-9 pb-1 mb-2 transition-colors duration-300 ease-linear;
+  }
+
+  & li p {
+    @apply inline-block;
+  }
+
+  & blockquote {
+    @apply italic pr-5 border-r-4 text-sm border-gray-300;
+    &, p{
+      @apply leading-loose;
+      color: theme('colors.gray.700')!important;
+    }
+  }
+
+  & code {
+    @apply p-1 not-italic rounded text-sm;
+  }
+
+  & a {
+    overflow-wrap: break-word;
+
+    &:hover {
+      @apply underline;
+    }
+  }
+  // code snippet block
+  & pre {
+    @apply p-2 my-2 overflow-auto;
+
+    border-radius: 8px!important;
+
+    & code {
+      @apply bg-transparent p-0;
+    }
+  }
+  .code-group{
+    pre{
+      border-top-left-radius: 0!important;
+      border-top-right-radius: 0!important;
+    }
+  }
+
+  & b,
+  & strong {
+    @apply font-bold;
+  }
+
+  & .Alert {
+    @apply px-4 py-2 rounded my-4;
+
+    p {
+      @apply mb-0;
+    }
+  }
+
+  & .Promote {
+    @apply flex flex-col p-4 my-4 rounded;
+
+    & img {
+      height: auto;
+      width: 100%;
+
+      @apply mb-3 rounded;
+
+      @screen sm {
+        max-width: 240px;
+
+        @apply mb-0;
+      }
+    }
+
+    & .Promote__Content {
+      & .Promote__Content__Title {
+        @apply text-xl;
+      }
+
+      & .Promote__Content__Description {
+        @apply leading-relaxed py-1 pb-4 text-sm;
+      }
+
+      & .Promote__Content__Signature {
+        @apply text-xs m-0 p-0 leading-none;
+      }
+    }
+
+    @screen sm {
+      @apply flex-row;
+
+      & .Promote__Content {
+        @apply pl-4;
+      }
+    }
+  }
+}
+// lists
+.nuxt-content {
+  & ul,
+  & ol {
+    @apply list-inside py-1 pl-1;
+
+    & li {
+      @apply leading-8 pt-0 pb-2;
+    }
+
+    & ul,
+    & ol {
+      @apply pl-4 pt-1;
+    }
+  }
+
+  & ol {
+    @apply list-decimal;
+  }
+
+  & ul {
+    @apply list-disc;
+  }
+}
+
+/* highlight page in corner of code */
+.nuxt-content-highlight {
+  @apply relative;
+
+  & > .filename {
+    @apply absolute right-0 top-0 text-gray-400 font-light z-10 mr-2 mt-1 text-sm;
+  }
+
+  & > .copy {
+    @apply hidden absolute right-0 bottom-0 leading-none shadow-lg p-2 text-white text-sm uppercase rounded-md font-semibold mr-3 mb-3;
+
+    z-index: 4;
+
+    &:focus {
+      @apply outline-none;
+    }
+    &.copied{
+      @apply block;
+    }
+  }
+
+  &:hover {
+    & > .copy {
+      @apply block;
+    }
+  }
+}
+
+article{
+  > h1{
+    color: theme('colors.light.onSurfaceStrong');
+    font-weight: 700!important;
+    font-size: 2.1em!important;
+    margin-top: 0;
+    margin-bottom: .8888889em;
+    line-height: 1.1111111;
+  }
+}
+.nuxt-content {
+  font-family: 'open sans', 'droid';
+  .token{
+    &.number{
+      color: ffdc8e!important;
+    }
+    &.comment {
+      color: #acb5b9;
+    }
+    &.class-name{
+      color: #ff9292!important;
+    }
+  }
+}
+
+/* purgecss end ignore */
