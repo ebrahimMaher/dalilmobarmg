@@ -24,7 +24,7 @@ export default {
           const component = new CopyButton().$mount()
           block.appendChild(component.$el)
         }
-        console.log('done');
+
       }, 250)
     }
   }

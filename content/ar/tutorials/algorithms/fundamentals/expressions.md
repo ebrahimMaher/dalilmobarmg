@@ -1,12 +1,14 @@
 ---
-title: التعبيرات البرمجية
+title: التعبيرات (Expressions)
 description: إعداد بيئة العمل تمهيداً لكتابة أول كود برمجي
 position: 3
 category: fundamentals
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/01_get_started/01_installation?fontsize=14&hidenavigation=1&theme=dark
+updated: true
+contributors:
+  - ebrahimmaher
 ---
 
-## التعبيرات (Expressions)
+## التعبيرات البرمجية (Expressions)
 التعبير (expression) في البرمجة هو أي جزء من الكود يعالجه المفسر لينتج عنه قيمة أخرى، أو بمعنى آخر هي أي عمليات تتم على [أنواع البيانات](/tutorials/algorithms/fundamentals/datatypes) وكل نوع بيانات من اﻷنواع التي درسناها في الدرس السابق له تعبيرات خاصة به، مثال : 2+5 هو تعبير لأنه يعالجه المفسر ليستنتج قيمة أخرى وهي `7`، أو ﻷنه عملية تتم على نوع من أنواع البيانات وهو **الأعداد** كذلك `"hello " + "world"` هو تعبير لأنه عملية تتم على النصوص لتعطي قيمة `"hello world"`... باختصار أي شيء يمر عليه المفسر ليعالجه ثم يستبدله بقيمة أخرى هو تعبير.
 
 ففي المثال التالي:

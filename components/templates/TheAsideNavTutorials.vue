@@ -6,7 +6,7 @@
       class="h-full overflow-y-auto scrolling-touch text-center lg:text-right lg:h-auto lg:block lg:relative lg:sticky lg:top-24"
     >
       <nav
-        class="pt-6 lg:overflow-y-auto lg:block lg:pr-0 lg:pl-6 sticky?lg:max-h-(screen-24)"
+        class="pt-6 lg:overflow-y-auto lg:block lg:pr-0 lg:pl-4 sticky?lg:max-h-(screen-24)"
         :class="{ hidden: !showNav }"
       >
         <div v-for="(sublinks, group) in sortedLinks" :key="`links-${group}`">
@@ -38,7 +38,7 @@
               class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
             >
               <NuxtLink
-                class="aside-nav-item p-2 pl-4 flex rounded hover:bg-gray-100 hover:text-dalil-lightindigo dark:hover:text-dalil-lightindigo transition-colors duration-300 ease-linear"
+                class="aside-nav-item p-2 flex rounded hover:bg-gray-100 hover:text-dalil-lightindigo dark:hover:text-dalil-lightindigo transition-colors duration-300 ease-linear"
                 exact-active-class="text-dalil-lightindigo hover:text-primary-dark bg-indigo-50 hover:bg-indigo-100 active:bg-indigo-200 dark:bg-indigo-800 dark:text-white"
                 :to="toLink(group, link)"
               >
@@ -48,7 +48,8 @@
                 <template v-else>
                   {{ link.title }}
                   <div class="font-semibold mr-2 mt-1">
-                    <Badge v-if="link.new" color="indigo" :value="$t('new')" />
+                    <Badge v-if="link.new || dateIsNew(link.createdAt)" color="indigo" :value="$t('new')" />
+                    <Badge v-else-if="link.updated || dateIsNew(link.updatedAt)" color="green" :value="$t('updated')" />
                   </div>
                 </template>
               </NuxtLink>
@@ -96,12 +97,33 @@ export default {
     }
   },
   methods: {
+    dateIsNew(timestamp, days=2){
+      // ** createdAt must be in UTC **
+      if (!timestamp){
+        return false;
+      }
+      let createdAt = new Date(timestamp);
+      let timezoneOffset = new Date().getTimezoneOffset(); // to get user time in UTC
+
+      let now = new Date(),
+          nowUtc = new Date(now.getTime() + timezoneOffset * 60000),
+          nowTimestamp = nowUtc.getTime();
+
+      let createdAtTimestamp = createdAt.getTime(),
+          addedTimestamp = days*24*60*60*1000,
+          maxUtcTimestamp = createdAtTimestamp + addedTimestamp;
+
+      return maxUtcTimestamp > nowTimestamp;
+    },
     toLink(group, link) {
       return this.localePath({
         name: 'tutorials-algorithms-book-slug',
         params: { book: group, slug: link.slug }
       })
     }
+  },
+  mounted(){
+
   }
 }
 </script>

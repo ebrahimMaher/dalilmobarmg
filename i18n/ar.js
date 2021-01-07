@@ -10,6 +10,7 @@ module.exports = {
   iso: 'ar',
   name: 'دليل مبرمج',
   new: 'جديد',
+  updated: 'مُعدل',
 
   header: {
     links: [

@@ -74,6 +74,7 @@
     "lint:all:markdownlint": "yarn lint:markdownlint",
     "lint:all:stylelint": "yarn lint:stylelint --fix",
     "lint": "run-p lint:all:*",
+    "timestamp": "node ./_templates/new/blog/get_now_utc_timestamp.js",
     "new": "hygen new"
   },
   "husky": {

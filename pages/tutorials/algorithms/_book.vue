@@ -25,7 +25,7 @@ export default {
       const locale = app.i18n.defaultLocale;
 
       pages = await $content(`${locale}/tutorials/algorithms`, { deep: true })
-        .only(['slug', 'title', 'menu', 'category', 'position', 'new', 'contributors'])
+        .only(['slug', 'title', 'menu', 'category', 'position', 'new', 'updated', 'contributors', 'createdAt', 'updatedAt'])
         .sortBy('position')
         .sortBy('title')
         .sortBy('menu')
