@@ -123,7 +123,7 @@ export default {
           },
           {
             key: this.$t('footer.links.tutorials.algorithms'),
-            to: this.localePath('/tutorials/computer/essentials/intro')
+            to: this.localePath('/')
           },
           {
             key: this.$t('footer.links.tutorials.javascript'),
