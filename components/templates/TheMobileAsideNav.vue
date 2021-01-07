@@ -1,7 +1,7 @@
 <template>
   <div
     v-click-outside="clickOutsideHandler"
-    class="header_mobile_aside shadow-nuxt block lg:hidden fixed left-0 z-20 w-full sm:w-1/2"
+    class="header_mobile_aside shadow-dalilmobarmg block lg:hidden fixed left-0 z-20 w-full sm:w-1/2"
     :class="{ 'header_mobile_aside--open': show }"
   >
     <div

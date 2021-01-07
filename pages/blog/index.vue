@@ -1,5 +1,5 @@
 <template>
-  <div class="shadow-nuxt">
+  <div class="shadow-dalilmobarmg">
     <div class="container mx-auto px-4 lg:px-12 xl:px-20 pt-16 pb-8">
       <div class="flex flex-wrap justify-between mb-8">
         <div class="lg:w-6/12 lg:text-right text-center p-4 sm:p-0">

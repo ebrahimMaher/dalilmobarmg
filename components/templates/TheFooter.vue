@@ -4,13 +4,13 @@
 
       </div>
     <div
-      class="pb-8 lg:pb-0 lg:pt-8 bg-light-elevatedSurface lg:border-t border-light-border dark:border-dark-border dark:bg-dark-elevatedSurface transition-colors duration-300 ease-linear"
+      class="pb-8 lg:pb-0 lg:pt-8 bg-light-elevatedSurface border-t border-light-border dark:border-dark-border dark:bg-dark-elevatedSurface transition-colors duration-300 ease-linear"
     >
       <div class="container mx-auto px-4 ">
         <div
           class="flex flex-col sm:flex-row text-center sm:text-right items-center content-center justify-between pt-10 sm:py-10"
         >
-          <div class="flex-1 w-full sm:w-auto mb-8 sm:mb-0 sm:text-right">
+          <div v-show="$route.name !== 'index'" class="flex-1 w-full sm:w-auto mb-8 sm:mb-0 sm:text-right">
             <h3 class="font-bold uppercase text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary text-lg pb-4 transition-colors duration-300 ease-linear" >
               {{ $t(`footer.links.community.title`) }}
             </h3>
@@ -77,7 +77,7 @@
         </div>
       </div>
       <div
-        class="lg:border-t border-light-border dark:border-dark-border transition-colors duration-300 ease-linear"
+        class="border-t border-light-border dark:border-dark-border transition-colors duration-300 ease-linear leading-relaxed"
       >
         <div class="container mx-auto px-4 text-center py-6" >
           {{$t('common.footer_copyrights')}}

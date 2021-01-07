@@ -18,7 +18,9 @@
           class="text-gray-600 dark:text-gray-500"
           :class="{
             'border-t border-dashed dark:border-gray-800 first:border-t-0 font-semibold':
-              link.depth === 2
+              link.depth === 2,
+            'hidden md:block':
+              link.depth > 2,
           }"
         >
           <NuxtLink
@@ -45,7 +47,7 @@ export default {
       type: Array,
       required: true
     }
-  }
+  },
 }
 </script>
 

@@ -268,7 +268,11 @@
 
   }
   & h2 {
-    @apply relative text-2xl table;
+    @apply relative text-xl table;
+
+    @media (min-width: 1024px){
+      @apply text-2xl;
+    }
 
     margin-top: 2em;
     margin-bottom: 1em;
@@ -289,8 +293,19 @@
     }
   }
 
+  @media (max-width: 800px){
+    .icon-link{
+      visibility: hidden!important;
+      display: none!important;
+    }
+  }
+
   & h3 {
-    @apply relative text-xl table mt-8 mb-3;
+    @apply relative text-lg table mt-8 mb-5;
+
+    @media (min-width: 1024px){
+      @apply text-2xl;
+    }
 
     a{
       .icon-link{
@@ -314,7 +329,7 @@
     }
   }
   & h4{
-    @apply mb-1 mt-6 text-lg;
+    @apply mb-3 mt-6 text-lg;
     font-weight: 600;
   }
   & h5{
@@ -474,7 +489,9 @@ article{
   > h1{
     color: theme('colors.light.onSurfaceStrong');
     font-weight: 700!important;
-    font-size: 2.1em!important;
+    @media (min-width: 1024px){
+      font-size: 2.1em!important;
+    }
     margin-top: 0;
     margin-bottom: .8888889em;
     line-height: 1.1111111;

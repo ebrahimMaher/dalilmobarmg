@@ -1,7 +1,7 @@
 <template>
-  <div class="shadow-nuxt">
+  <div class="shadow-dalilmobarmg">
     <div class="container mx-auto px-4 lg:flex">
-      <TheMobileAsideNavNewDocs :links="links" />
+      <MobileAsideNav :links="links" />
       <TheAsideNavTutorials :links="links" tutorial="computer" class="hidden lg:block" />
       <div
         class="min-h-screen w-full lg:static lg:max-h-full lg:overflow-visible lg:w-7/8"

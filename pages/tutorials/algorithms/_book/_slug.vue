@@ -1,14 +1,12 @@
 <template>
   <div class="-mx-4 lg:mx-0 flex flex-col-reverse lg:flex-row">
     <div
-      class="lg:min-h-screen lg:w-5/6 w-full py-8 px-6 lg:px-12 lg:static lg:overflow-visible lg:max-h-full"
+      class="lg:min-h-screen lg:w-5/6 w-full lg:py-8 px-6 lg:px-12 lg:static lg:overflow-visible lg:max-h-full"
     >
-      <LangFallback :doc-link="docLink" :lang-fallback="langFallback" />
+      <!-- <LangFallback :doc-link="docLink" :lang-fallback="langFallback" /> -->
 
       <article>
-        <h1
-          class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
-        >
+        <h1 class=" text-2xl lg:text-3xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear" >
           {{ page.title }}
         </h1>
         <nuxt-content :document="page" />
@@ -127,7 +125,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 article h1 {
-  @apply font-medium relative text-3xl table mb-8;
+  @apply font-medium relative table mb-8;
 
   /* &::after {
     content: ' ';

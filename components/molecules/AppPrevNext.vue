@@ -9,15 +9,18 @@
           params: { book: prevBook, slug: prev.slug }
         })
       "
+      class="ml-1 lg:ml-0"
       :class="classes"
     >
       <IconArrowRight class="w-4 h-4 ml-1" />
-      <template v-if="prev.menu">
-        {{ prev.menu }}
-      </template>
-      <template v-else>
-        {{ prev.title }}
-      </template>
+      <div class="btn-text">
+        <template v-if="prev.menu">
+          {{ prev.menu }}
+        </template>
+        <template v-else>
+          {{ prev.title }}
+        </template>
+      </div>
     </NuxtLink>
     <span v-else>&nbsp;</span>
     <NuxtLink
@@ -29,14 +32,17 @@
           params: { book: nextBook, slug: next.slug }
         })
       "
+      class="mr-1 lg:mr-0"
       :class="classes"
     >
-      <template v-if="next.menu">
-        {{ next.menu }}
-      </template>
-      <template v-else>
-        {{ next.title }}
-      </template>
+      <div class="btn-text">
+        <template v-if="next.menu">
+          {{ next.menu }}
+        </template>
+        <template v-else>
+          {{ next.title }}
+        </template>
+      </div>
       <IconArrowLeft class="w-4 h-4 mr-1" />
     </NuxtLink>
     <span v-else>&nbsp;</span>
@@ -47,7 +53,7 @@
 export default {
   data(){
     return {
-      classes: "border border-primary-base transition duration-200 ease no-underline text-sm px-4 py-2 uppercase rounded transform hover:shadow-lg hover:bg-primary-base hover:text-white active:translate-y-0 active:shadow-md active:scale-95 text-primary-base font-semibold flex items-center"
+      classes: "btn border border-primary-base transition duration-200 ease no-underline text-xs lg:text-sm px-2 lg:px-4 py-2 uppercase rounded transform hover:shadow-lg hover:bg-primary-base hover:text-white active:translate-y-0 active:shadow-md active:scale-95 text-primary-base font-semibold flex items-center"
     }
   },
   props: {
@@ -86,3 +92,16 @@ export default {
   }
 }
 </script>
+<style lang="scss" scoped>
+.btn{
+  overflow: hidden;
+}
+.btn-text{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    max-width: 100%;
+}
+</style>

@@ -105,7 +105,7 @@ module.exports = {
     title: 'المساهمين',
     docs: 'وجدت خطأ أو تريد المساهمة في محتوى الدرس؟',
     blog: 'وجدت خطأ أو تريد المساهمة في محتوى المقال؟',
-    edit_on_github: 'ساهم على Github !'
+    edit_on_github: 'عدل الصفحة على Github'
   },
   codeSandbox: {
     open: 'افتح المثال'
@@ -138,7 +138,7 @@ module.exports = {
       community: {
         title: 'مجتمع دليل مبرمج',
         slack: 'اﻹنضمام إلى مجموعات التعلم',
-        github: 'المساهمة في التطوير والمحتوى'
+        github: 'المساهمة في التطوير'
       }
     }
   },
