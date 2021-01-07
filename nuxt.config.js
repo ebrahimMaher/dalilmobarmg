@@ -21,12 +21,12 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://dalilmobarmg.com/nuxt-card.png'
+        content: 'https://dalilmobarmg.com/dalilmobarmg-card.png'
       },
       {
         hid: 'og:image:secure_url',
         property: 'og:image:secure_url',
-        content: 'https://dalilmobarmg.com/nuxt-card.png'
+        content: 'https://dalilmobarmg.com/dalilmobarmg-card.png'
       },
       {
         hid: 'og:image:alt',
@@ -36,7 +36,7 @@ export default {
       {
         hid: 'twitter:image',
         name: 'twitter:image',
-        content: 'https://dalilmobarmg.com/nuxt-card.png'
+        content: 'https://dalilmobarmg.com/dalilmobarmg-card.png'
       }
     ],
     link: [

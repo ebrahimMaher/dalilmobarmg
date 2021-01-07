@@ -53,57 +53,15 @@ export default {
       ...i18nSeo,
 
       link: [
-        { rel: 'canonical', href: canonical },
-        {
-          rel: 'alternate',
-          hreflang: 'en',
-          href: `https://dalilmobarmg.com${pathWithSlash}`
-        },
-        {
-          rel: 'alternate',
-          hreflang: 'zh',
-          href: `https://zh.dalilmobarmg.com${pathWithSlash}`
-        },
-        {
-          rel: 'alternate',
-          hreflang: 'ru',
-          href: `https://ru.dalilmobarmg.com${pathWithSlash}`
-        },
-        {
-          rel: 'alternate',
-          hreflang: 'ja',
-          href: `https://ja.dalilmobarmg.com${pathWithSlash}`
-        },
-        {
-          rel: 'alternate',
-          hreflang: 'ko',
-          href: `https://ko.dalilmobarmg.com${pathWithSlash}`
-        },
-        {
-          rel: 'alternate',
-          hreflang: 'fr',
-          href: `https://fr.dalilmobarmg.com${pathWithSlash}`
-        },
-        {
-          rel: 'alternate',
-          hreflang: 'id',
-          href: `https://id.dalilmobarmg.com${pathWithSlash}`
-        },
-
         ...i18nSeo.link
       ]
     }
   },
   computed: {
-    cookieSpacerStyles() {
-      return this.showCookieBanner ? 'pb-20 md:pb-4 lg:pb-20' : ''
-    }
+
   },
   mounted() {
-    const bannerCookie = 'cookieconsent_status'
-    const docCookies = `; ${document.cookie}`
 
-    this.showCookieBanner = !docCookies.includes(bannerCookie)
   }
 }
 </script>

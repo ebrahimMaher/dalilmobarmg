@@ -19,7 +19,7 @@ npm run dev
 ```
 
 ## New Lesson
-### Tutorial Meta
+### Lesson Meta
 - `contributers`: **array of contributers** and it can be just a name or **ID**, to use ID you must add contributer object to `store/index.js` like this: `{id: 'ebrahimmaher', name: 'Ebrahim Maher', github: 'ebrahimMaher'}` then avatar will be imported from github, also if clicked, github profile will be opened
 - `new`: if true, new badge will be always visible
 - `updated`: if true, updated badge will be always visible
