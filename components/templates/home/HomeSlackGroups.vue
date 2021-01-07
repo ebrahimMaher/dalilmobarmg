@@ -36,7 +36,7 @@
             </div>
           </div>
           <div class="hidden lg:block lg:w-5/12">
-            <img v-if="$colorMode.preference === 'dark'" src="~/assets/illustrations/community.svg" class="inline-block" />
+            <img src="~/assets/illustrations/community.svg" class="inline-block" />
 
           </div>
         </div>
