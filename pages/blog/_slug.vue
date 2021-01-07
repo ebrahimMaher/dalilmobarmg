@@ -47,7 +47,10 @@ export default {
     try {
       post = await $content(path, slug).fetch()
     } catch (e) {
-      return error({ statusCode: 404, message: 'Page not found' })
+      // fix bug of 404 without slug (index page)
+      if (slug){
+        return error({ statusCode: 404, message: 'Page not found' })
+      }
     }
 
     if (app.i18n.defaultLocale !== app.i18n.locale) {

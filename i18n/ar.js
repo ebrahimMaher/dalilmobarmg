@@ -16,7 +16,7 @@ module.exports = {
       {
         name: 'الرئيسية',
         icon: 'home',
-        slug: '/'
+        slug: 'home'
       },
       {
         name: 'مبادئ البرمجة',
@@ -26,7 +26,7 @@ module.exports = {
       {
         name: 'اﻹختبارات',
         icon: 'code',
-        slug: 'examples',
+        slug: 'tests',
         disabled: true
       },
       {
