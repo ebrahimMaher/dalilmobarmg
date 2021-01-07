@@ -1,5 +1,5 @@
 <template>
-  <button ref="copy" class="copy transition ease duration-200 p-4" :class="{'copied bg-green-500 hover:bg-green-600 focus:bg-green-700': copied, 'bg-primary-base hover:bg-primary-light focus:bg-primary-dark': !copied}">
+  <button ref="copy" class="dalil-code-copy copy transition ease duration-200 p-4" :class="{'copied bg-green-500 hover:bg-green-600 focus:bg-green-700': copied, 'bg-primary-base hover:bg-primary-light focus:bg-primary-dark': !copied}">
     <IconClipboardCheck v-if="copied" class="w-6 h-6" />
     <IconClipboardCopy v-else class="w-6 h-6" />
   </button>
