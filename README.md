@@ -53,8 +53,8 @@ description: إعداد بيئة العمل تمهيداً لكتابة أول �
 position: 4
 category: fundamentals
 new: false
-createdAt: 1610001603529,
-updatedAt: 1610001603529,
+createdAt: 1610001603529
+updatedAt: 1610001603529
 updated: false
 contributors:
   - ebrahimmaher
