@@ -1,5 +1,5 @@
 <template>
-    <div class="tutorial-card flex flex-col justify-between bg-light-elevatedSurface dark:bg-dark-elevatedSurface card rounded shadow hover:shadow-lg transition ease-linear duration-200 p-3 lg:p-5">
+    <div class="tutorial-card flex flex-col justify-between bg-light-elevatedSurface dark:bg-dark-elevatedSurface card rounded shadow-md hover:shadow-lg transition ease-linear duration-200 p-3 lg:p-5">
         <div>
             <div class="card-icon h-48 mx-auto text-center w-full mb-4">
               <slot name="icon" />

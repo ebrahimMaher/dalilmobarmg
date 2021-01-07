@@ -50,11 +50,10 @@
 </template>
 
 <script>
-import DalilLogo from '~/assets/images/logo.svg?inline'
 
 export default {
   components: {
-    DalilLogo
+
   },
   data() {
     return {

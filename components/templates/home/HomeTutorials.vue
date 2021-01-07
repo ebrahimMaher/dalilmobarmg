@@ -5,12 +5,12 @@
         <div class="margin-to-top grid grid-cols-1 lg:grid-cols-3 gap-4">
           <TutorialCard :title="$t('homepage.tutorials.computer_and_systems.title')" :description="$t('homepage.tutorials.computer_and_systems.description')" buttonClasses="bg-blue-700 hover:bg-blue-600 text-white">
             <template v-slot:icon>
-              <ComputerIllutsration class="max-h-full"/>
+              <img src="~/assets/illustrations/operating-system.svg" class="max-h-full" />
             </template>
           </TutorialCard>
           <TutorialCard :to="{name: 'tutorials-algorithms-book-slug', params: {book: 'environment', slug: 'intro'}}" :title="$t('homepage.tutorials.algorithms.title')" :description="$t('homepage.tutorials.algorithms.description')" color="primary">
             <template v-slot:icon>
-              <AlgorithmsIllutsration class="max-h-full" />
+              <img src="~/assets/illustrations/algorithms.svg" class="max-h-full" />
             </template>
           </TutorialCard>
           <!-- disabled for now, enabled classes: yellow-500 hover:bg-yellow-400 -->
@@ -27,16 +27,11 @@
 
 <script>
 import TutorialCard from '~/components/global/TutorialCard'
-import AlgorithmsIllutsration from '~/assets/illustrations/algorithms.svg?inline'
-import ComputerIllutsration from '~/assets/illustrations/operating-system.svg?inline'
 // import JSIllustration from '~/assets/illustrations/js.png'
 
 export default {
   components: {
     TutorialCard,
-    // JSIllustration,
-    ComputerIllutsration,
-    AlgorithmsIllutsration
   }
 }
 </script>
@@ -44,7 +39,7 @@ export default {
 @media (min-width: 1024px){
   /* move cards up to previous section */
   .section-wrapper{
-    margin-top: 8rem!important;
+    margin-top: 9.5rem!important;
   }
   .margin-to-top{
     margin-top: -15rem!important;

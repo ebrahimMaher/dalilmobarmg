@@ -38,7 +38,7 @@
             </template>
           </i18n>
         </div>
-        <BlogIllustration
+        <img src="~/assets/illustrations/blog.svg"
           class="w-2/3 mx-auto lg:mx-0 lg:w-3/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"
         />
       </div>
@@ -55,11 +55,10 @@
 </template>
 
 <script>
-import BlogIllustration from '~/assets/illustrations/blog.svg?inline'
 
 export default {
   components: {
-    BlogIllustration
+
   },
   async asyncData({ $content, app }) {
     let posts = await $content(app.i18n.defaultLocale, 'blog')

@@ -3,7 +3,7 @@
     <div class="container mx-auto px-4">
       <div class="flex flex-col lg:flex-row justify-between py-10 sm:py-24">
         <figure class="w-full max-w-3/4 mx-auto lg:hidden">
-            <HomeVector />
+            <img src="~/assets/images/home-vector.svg" />
         </figure>
         <div class="w-full lg:w-6/12 xl:w-8/12 text-center lg:text-right py-4 sm:p-0 lg:ml-12">
           <!--welcome title i18n -->
@@ -21,7 +21,7 @@
           <!--welcome description i18n -->
           <i18n path="homepage.welcome.description" tag="h2" class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-8 mb-6" > </i18n>
 
-          <div class="flex flex-col sm:block text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary my-6">
+          <div class="flex flex-col sm:block text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary my-8">
             <a href="#non-profit" class="py-2 px-3 bg-gray-100 hover:bg-indigo-50 rounded text-indigo-800 hover:text-light-onSurfacePrimary dark:hover:text-dark-onSurfacePrimary transition ease-out duration-200" >
               {{ $t('homepage.welcome.non_profit') }}
             </a>
@@ -49,8 +49,7 @@
           </div>
         </div>
         <figure class="hidden lg:block lg:w-4/12">
-          <!-- <AppMedia :src="videoUrl" class="mb-4" /> -->
-            <HomeVector />
+            <img src="~/assets/images/home-vector.svg" />
         </figure>
       </div>
     </div>
@@ -58,12 +57,10 @@
 </template>
 
 <script>
-import HomeVector from '~/assets/images/home-vector.svg?inline'
 import TerminalIcon from '~/components/atoms/icons/IconTerminal.vue'
 import BlogIcon from '~/components/atoms/icons/IconBlog.vue'
 export default {
   components: {
-    HomeVector,
     BlogIcon,
     TerminalIcon
   },

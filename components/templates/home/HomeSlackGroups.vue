@@ -7,8 +7,8 @@
         <div class="flex justify-between pb-4">
           <div class="w-full lg:w-6/12 xl:w-7/12 lg:ml-12 pt-8">
             <div class="flex items-center">
-              <div class="ml-6"><DalilLogo height="35" /></div>
-              <div><Slack height="30" /></div>
+              <div class="ml-6"><DalilLogo style="height: 35px" /></div>
+              <div><img src="~/assets/images/slack.svg" style="height: 30px" /></div>
             </div>
             <hr class="lg:w-5/6 my-6">
             <div>
@@ -33,7 +33,7 @@
             </div>
           </div>
           <div class="hidden lg:block lg:w-5/12">
-            <CommunityIllustration class="inline-block" />
+            <img src="~/assets/illustrations/community.svg" class="inline-block" />
           </div>
         </div>
       </section>
@@ -42,18 +42,12 @@
 </template>
 
 <script>
-import MentorIllustration from '~/assets/illustrations/mentorship.svg?inline'
-import CommunityIllustration from '~/assets/illustrations/community.svg?inline'
-
-import DalilLogo from '~/assets/images/logo.svg?inline'
-import Slack from '~/assets/images/slack.svg?inline'
+// import MentorIllustration from '~/assets/illustrations/mentorship.svg?inline'
+import DalilLogo from '~/components/global/DalilLogo'
 import IconGroup from '~/components/atoms/icons/IconGroup'
 export default {
   components: {
-    MentorIllustration,
-    CommunityIllustration,
     DalilLogo,
-    Slack,
     IconGroup
   }
 }
