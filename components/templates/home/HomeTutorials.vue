@@ -1,6 +1,6 @@
 <template>
   <div class="section-wrapper bg-light-surface dark:bg-dark-surface">
-    <div class="container mx-auto px-4 py-16">
+    <div class="container mx-auto px-4 py-6 lg:py-16">
       <section class="rounded py-2 lg:py-6 md:px-6">
         <div class="margin-to-top grid grid-cols-1 lg:grid-cols-3 gap-4">
           <TutorialCard :to="{name: 'tutorials-computer-book-slug', params: {book: 'essentials', slug: 'intro'}}" :title="$t('homepage.tutorials.computer_and_systems.title')" :description="$t('homepage.tutorials.computer_and_systems.description')" buttonClasses="bg-blue-700 hover:bg-blue-600 text-white">

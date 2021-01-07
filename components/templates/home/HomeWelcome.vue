@@ -1,27 +1,34 @@
 <template>
   <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface relative">
     <div class="container mx-auto px-4">
-      <div class="flex flex-col lg:flex-row justify-between py-10 sm:py-24">
-        <figure class="w-full max-w-3/4 mx-auto lg:hidden">
+      <div class="flex flex-col lg:flex-row justify-between py-4 sm:py-24">
+        <figure class="w-5/6 lg:w-full md:max-w-3/4 mx-auto lg:hidden">
             <img src="~/assets/images/home-vector.svg" />
         </figure>
         <div class="w-full lg:w-6/12 xl:w-8/12 text-center lg:text-right py-4 sm:p-0 lg:ml-12">
           <!--welcome title i18n -->
-          <i18n
-            path="homepage.welcome.title"
-            tag="h1"
-            class="text-4xl xl:text-5xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium tracking-normal leading-tight mb-6"
-            style="font-size: 2.9rem;!important"
-          >
+          <i18n path="homepage.welcome.title" tag="h1" class="hidden md:block text-4xl xl:text-5xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium tracking-normal leading-tight mb-6" >
             <template #name>
               <span class="font-semibold text-primary-base">{{$t('name')}} | </span>
             </template>
           </i18n>
 
-          <!--welcome description i18n -->
-          <i18n path="homepage.welcome.description" tag="h2" class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-8 mb-6" > </i18n>
+          <div class="block md:hidden">
+            <div class="text-4xl mb-2">
+              <h1 class="font-semibold text-primary-base">{{$t('name')}}</h1>
+            </div>
+            <i18n path="homepage.welcome.title" tag="h2" class="text-2xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium tracking-normal leading-tight mb-5" >
 
-          <div class="flex flex-col sm:block text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary my-8">
+            </i18n>
+          </div>
+
+          <!--welcome description i18n -->
+          <i18n path="homepage.welcome.description" tag="h2" class="hidden lg:block xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-8 mb-6" > </i18n>
+
+          <i18n path="homepage.welcome.short_description" tag="h2" class="lg:hidden text-sm text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-6 mb-2" > </i18n>
+
+
+          <div class="hidden sm:block text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary my-8">
             <a href="#non-profit" class="py-2 px-3 bg-gray-100 hover:bg-indigo-50 rounded text-indigo-800 hover:text-light-onSurfacePrimary dark:hover:text-dark-onSurfacePrimary transition ease-out duration-200" >
               {{ $t('homepage.welcome.non_profit') }}
             </a>

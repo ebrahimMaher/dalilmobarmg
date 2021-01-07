@@ -51,7 +51,7 @@ module.exports = {
         indigo: indigoPalette,
         blue: bluePalette,
         light: {
-          surface: '#faf7fd',
+          surface: '#f9f8fb',
           onSurfaceStrong: '#0E0D20',
           onSurfacePrimary: '#35265F',
           onSurfaceSecondary: '#606F7B',
