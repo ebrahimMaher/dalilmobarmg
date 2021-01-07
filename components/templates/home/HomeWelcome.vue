@@ -9,13 +9,13 @@
           <!--welcome title i18n -->
           <i18n path="homepage.welcome.title" tag="h1" class="hidden md:block text-4xl xl:text-5xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium tracking-normal leading-tight mb-6" >
             <template #name>
-              <span class="font-semibold text-primary-base">{{$t('name')}} | </span>
+              <span class="font-semibold text-primary-base dark:text-dark-primaryText">{{$t('name')}} | </span>
             </template>
           </i18n>
 
           <div class="block md:hidden">
             <div class="text-4xl mb-2">
-              <h1 class="font-semibold text-primary-base">{{$t('name')}}</h1>
+              <h1 class="font-semibold text-primary-base dark:text-dark-onSurfacePrimary">{{$t('name')}}</h1>
             </div>
             <i18n path="homepage.welcome.title" tag="h2" class="text-2xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium tracking-normal leading-tight mb-5" >
 

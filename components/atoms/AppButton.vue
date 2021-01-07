@@ -21,7 +21,7 @@
     target="_blank"
     rel="noopener"
     class="transition duration-200 ease-in-out no-underline inline-block font-medium text-sm px-4 py-2 shadow uppercase rounded"
-    :class="`${variant} ${classes} ${disabled ? 'disabled' : 'hover:shadow-md'}`"
+    :class="`${variant} ${classes} ${disabled ? 'disabled dark:bg-dark-surface' : 'hover:shadow-md'}`"
     :disabled="disabled"
     @click="clicked"
   >

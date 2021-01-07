@@ -8,7 +8,10 @@
           <div class="w-full lg:w-6/12 xl:w-7/12 lg:ml-12 lg:pt-4">
             <div class="flex justify-center lg:justify-start items-center">
               <div class="hidden lg:block ml-6"><DalilLogo style="height: 35px" /></div>
-              <div><img src="~/assets/images/slack.svg" style="height: 30px" /></div>
+              <div>
+                <img v-if="$colorMode.preference === 'dark'" src="~/assets/images/slack-white.svg" style="height: 30px" />
+                <img v-else src="~/assets/images/slack.svg" style="height: 30px" />
+              </div>
             </div>
             <hr class="lg:w-5/6 my-6">
             <div>
@@ -24,7 +27,7 @@
               </template>
             </i18n>
             <div class="text-center lg:text-right mt-8">
-              <AppButton :variant="null" :href="$config.slackInvitationLink" class="bg-yellow-500 hover:bg-yellow-400 py-3 px-6 text-base" data-cy="slack" >
+              <AppButton :variant="null" :href="$config.slackInvitationLink" class="bg-yellow-500 hover:bg-yellow-400 py-3 px-6 text-base text-light-onSurfaceStrong" data-cy="slack" >
                 <div class="flex">
                   <IconGroup class="w-6 h-6 ml-2" />
                   {{ $t('homepage.slack.button') }}
@@ -33,7 +36,8 @@
             </div>
           </div>
           <div class="hidden lg:block lg:w-5/12">
-            <img src="~/assets/illustrations/community.svg" class="inline-block" />
+            <img v-if="$colorMode.preference === 'dark'" src="~/assets/illustrations/community.svg" class="inline-block" />
+
           </div>
         </div>
       </section>

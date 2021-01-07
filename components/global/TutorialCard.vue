@@ -6,7 +6,7 @@
             </div>
             <div>
             <div class="title mb-3">
-                <h2 class="text-lg font-semibold text-primary-dark text-center" v-if="title">{{title}}</h2>
+                <h2 class="text-lg font-semibold text-primary-dark dark:text-dark-primaryText text-center" v-if="title">{{title}}</h2>
                 <slot v-else name="title" />
             </div>
             </div>

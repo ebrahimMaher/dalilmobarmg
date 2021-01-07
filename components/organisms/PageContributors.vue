@@ -36,7 +36,7 @@
           :href="docLink"
           target="_blank"
           rel="noopener"
-          class="text-primary-base hover:underline"
+          class="text-primary-base dark:text-dark-primaryText hover:underline"
         >
           {{ $t('contribute.edit_on_github') }}
         </a>

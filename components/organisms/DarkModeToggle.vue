@@ -1,10 +1,10 @@
 <template>
   <button
-    class="relative overflow-hidden px-4 flex items-center bg-gray-100 hover:bg-gray-200 focus:bg-gray-300 dark:bg-dark-surface dark:text-dark-onSurfaceSecondary rounded-full h-10 outline-none text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
+    class="relative overflow-hidden px-3 flex items-center bg-gray-100 hover:bg-gray-200 focus:bg-gray-300 dark:bg-dark-surface rounded-full h-10 outline-none text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary ease-linear transform active:scale-95 transition-transform duration-100"
     @click="setCurrentTheme"
   >
     <span
-      class="relative ml-2 overflow-hidden inline-block w-5 h-5 flex items-center justify-center"
+      class="relative overflow-hidden inline-block w-5 h-5 flex items-center justify-center"
     >
       <MoonIcon
         class="w-5 h-5 absolute"
@@ -19,11 +19,11 @@
         :class="$colorMode.preference === 'light' ? 'show' : 'hide'"
       />
     </span>
-    <transition name="from-bottom-to-bottom" mode="out-in">
+    <!-- <transition name="from-bottom-to-bottom" mode="out-in">
       <span
         v-if="$colorMode.preference === 'dark'"
         key="dark"
-        class="inline-block font-medium ml-1"
+        class="inline-block font-medium ml-1 mr-2"
       >
         الليلي
       </span>
@@ -41,7 +41,7 @@
       >
         العادي
       </span>
-    </transition>
+    </transition> -->
   </button>
 </template>
 

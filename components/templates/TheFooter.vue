@@ -4,13 +4,13 @@
 
       </div>
     <div
-      class="pb-8 lg:pb-0 lg:pt-8 bg-light-elevatedSurface border-t border-light-border dark:border-dark-border dark:bg-dark-elevatedSurface transition-colors duration-300 ease-linear"
+      class="pb-8 lg:pb-0 lg:pt-8 bg-light-elevatedSurface border-t border-light-border dark:border-dark-border dark:bg-dark-elevatedSurface"
     >
       <div class="container mx-auto px-4 ">
         <div
           class="flex flex-col sm:flex-row text-center sm:text-right items-center content-center justify-between pt-10 sm:py-10"
         >
-          <div v-show="$route.name !== 'index'" class="flex-1 w-full sm:w-auto mb-8 sm:mb-0 sm:text-right">
+          <div class="flex-1 w-full sm:w-auto mb-8 sm:mb-0 sm:text-right" :class="{'hidden lg:block': $route.name !== 'index'}">
             <h3 class="font-bold uppercase text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary text-lg pb-4 transition-colors duration-300 ease-linear" >
               {{ $t(`footer.links.community.title`) }}
             </h3>

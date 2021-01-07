@@ -1,6 +1,6 @@
 <template>
   <aside
-    class="opacity-transition block bg-gray-100 mt-8 -mx-4 lg:bg-transparent lg:mt-0 lg:mx-0 lg:inset-0 z-90 lg:mb-0 lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-1/4 lg:block border-l"
+    class="opacity-transition block bg-gray-100 mt-8 -mx-4 lg:bg-transparent lg:mt-0 lg:mx-0 lg:inset-0 z-90 lg:mb-0 lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-1/4 lg:block border-l dark:border-dark-border"
   >
     <div
       class="h-full overflow-y-auto scrolling-touch text-center lg:text-right lg:h-auto lg:block lg:relative lg:sticky lg:top-24"
@@ -44,7 +44,7 @@
                 >
                   <NuxtLink
                     class="aside-nav-item p-2 flex rounded hover:bg-gray-100 hover:text-dalil-lightindigo dark:hover:text-dalil-lightindigo transition-colors duration-300 ease-linear"
-                    exact-active-class="text-dalil-lightindigo hover:text-primary-dark bg-indigo-50 hover:bg-indigo-100 active:bg-indigo-200 dark:bg-indigo-800 dark:text-white"
+                    exact-active-class="text-dalil-lightindigo hover:text-primary-dark dark:text-dark-primaryText bg-indigo-50 hover:bg-indigo-100 active:bg-indigo-200 dark:bg-indigo-800 dark:text-white"
                     :to="toLink(group, link)"
                   >
                     <template v-if="link.menu">

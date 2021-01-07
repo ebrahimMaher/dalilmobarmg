@@ -7,7 +7,7 @@
         <nuxt-link
           v-if="!link.href"
           :key="link.slug"
-          class="block md:flex md:justify-center w-full p-2 md:p-4 text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary hover:no-underline hover:text-primary-base dark:hover:text-primary-base text-center visited:text-dalil-gray transition-colors duration-300 ease-linear"
+          class="block md:flex md:justify-center w-full p-2 md:p-4 text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary hover:no-underline hover:dark:text-dark-primaryText hover:text-primary-base dark:hover:text-primary-base text-center visited:text-dalil-gray transition-colors duration-300 ease-linear"
           :to="
             localePath({
               name: link.slug,

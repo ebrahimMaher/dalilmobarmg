@@ -1,6 +1,6 @@
 <template>
   <header
-    class="sticky top-0 left-0 right-0 z-30 bg-light-elevatedSurface dark:bg-dark-elevatedSurface border-b h-16 lg:h-20 transition-colors duration-300 ease-linear"
+    class="sticky top-0 left-0 right-0 z-30 bg-light-elevatedSurface dark:bg-dark-elevatedSurface border-b dark:border-dark-border h-16 lg:h-20 ease-linear"
   ><!-- :class="{ shadow: !onTop, 'shadow-reverse': onTop }" -->
     <div
       class="container relative mx-auto px-4 flex items-center lg:py-6 h-full"
@@ -12,7 +12,7 @@
       >
         <h1 class="m-0 h-0 w-0 overflow-hidden"> دليل مبرمج </h1>
         <DalilLogo
-          class="h-6 lg:h-8 text-primary-base dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
+          class="dark:fill-white h-6 lg:h-8 text-primary-base dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
         />
       </NuxtLink>
       <!-- Center Navigation -->
@@ -27,7 +27,7 @@
               <NuxtLink
                 v-if="!link.href"
                 :disabled="link.disabled"
-                class="block font-medium uppercase hover:no-underline light:hover:text-dalil-lightindigo dark:hover:text-dalil-lightindigo text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
+                class="block font-medium uppercase hover:no-underline light:hover:text-dalil-lightindigo dark:hover:text-dalil-lightindigo text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary ease-linear"
                 :to="
                   localePath({
                     name: link.slug,

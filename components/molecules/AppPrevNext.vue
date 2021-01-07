@@ -53,7 +53,7 @@
 export default {
   data(){
     return {
-      classes: "btn border border-primary-base transition duration-200 ease no-underline text-xs lg:text-sm px-2 lg:px-4 py-2 uppercase rounded transform hover:shadow-lg hover:bg-primary-base hover:text-white active:translate-y-0 active:shadow-md active:scale-95 text-primary-base font-semibold flex items-center"
+      classes: "btn border border-primary-base transition duration-200 ease no-underline text-xs lg:text-sm px-2 lg:px-4 py-2 uppercase rounded transform hover:shadow-lg hover:bg-primary-base hover:text-white active:translate-y-0 active:shadow-md active:scale-95 dark:text-dark-primaryText text-primary-base font-semibold flex items-center"
     }
   },
   props: {

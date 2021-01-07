@@ -24,7 +24,7 @@
 
       </article>
     </div>
-    <AffixBlock v-if="$route.params.category !== 'tests'" class="border-r pr-4">
+    <AffixBlock v-if="$route.params.category !== 'tests'" class="border-r dark:border-dark-border pr-4">
       <AppToc
         v-if="page.toc && page.toc.length"
         :toc="page.toc"

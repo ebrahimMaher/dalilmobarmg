@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-light-elevatedSurface border-t dark:bg-dark-surface">
+  <div class="bg-light-elevatedSurface border-t dark:bg-dark-surface dark:border-dark-border">
     <div class="container mx-auto px-4 py-6">
       <section class="rounded lg:py-6 sm:p-6">
         <!-- why title i18n -->
@@ -26,7 +26,8 @@
               <AppButton :variant="null" :href="$config.GithubLink" class="bg-black text-white hover:bg-gray-900 py-3 px-6 text-base" data-cy="slack" >
                 <div class="flex">
                   <div class="ml-3">
-                    <img src="~/assets/icons/github-3.svg" class="w-6 h-6" />
+                    <img v-if="$colorMode.preference === 'dark'" src="~/assets/icons/github-3-white.svg" class="w-6 h-6" />
+                    <img v-else src="~/assets/icons/github-3.svg" class="w-6 h-6" />
                   </div>
                   {{ $t('homepage.github.button') }}
                 </div>
