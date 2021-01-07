@@ -1,7 +1,7 @@
 import webpack from 'webpack'
 
 export default {
-  target: 'server',
+  target: process.env.DEPLOY_TARGET || 'server',
   ssr: true,
   head: {
     htmlAttrs: {
@@ -101,9 +101,6 @@ export default {
   ],
   env: {
     URL: process.env.URL || false,
-    DOC_SEARCH_API_KEY:
-      process.env.DOC_SEARCH_API_KEY || 'ff80fbf046ce827f64f06e16f82f1401',
-    NUXT_API: process.env.NUXT_API || 'https://api.nuxtjs.com'
   },
   publicRuntimeConfig: {
     dalilLocale: process.env.NUXT_LOCALE || 'ar',
