@@ -107,7 +107,7 @@
         @apply text-gray-500;
       }
     }
-
+z
     &:hover {
       // @apply shadow-lg;
       background-color: theme('colors.gray.300');
@@ -301,7 +301,7 @@
   }
 
   & h3 {
-    @apply relative text-lg table mt-8 mb-5;
+    @apply relative text-lg table mt-10 mb-5;
 
     @media (min-width: 1024px){
       @apply text-2xl;
