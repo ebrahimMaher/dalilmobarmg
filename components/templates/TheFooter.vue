@@ -1,12 +1,12 @@
 <template>
-  <footer class="z-10 relative pb-16 lg:pb-0 lg:block">
+  <footer class="z-10 relative lg:block">
     <div>
 
       </div>
     <div
-      class="lg:pt-8 bg-light-elevatedSurface lg:border-t border-light-border dark:border-dark-border dark:bg-dark-elevatedSurface transition-colors duration-300 ease-linear"
+      class="pb-8 lg:pb-0 lg:pt-8 bg-light-elevatedSurface lg:border-t border-light-border dark:border-dark-border dark:bg-dark-elevatedSurface transition-colors duration-300 ease-linear"
     >
-      <div class="container mx-auto px-4">
+      <div class="container mx-auto px-4 ">
         <div
           class="flex flex-col sm:flex-row text-center sm:text-right items-center content-center justify-between pt-10 sm:py-10"
         >
@@ -41,7 +41,7 @@
             :key="title"
             class="flex-1 w-full sm:w-auto mb-8 sm:mb-0"
             :class="{
-              'sm:text-center': index === 0,
+              'sm:text-center hidden lg:block': index === 0,
               'sm:text-left': index === 1
             }"
           >
