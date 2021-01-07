@@ -38,8 +38,8 @@ body {
   min-width: 320px;
 }
 
-a.nuxt-link-exact-active,
-a.nuxt-link-active {
+a.nuxt-link-exact-active:not(.tutorial-button),
+a.nuxt-link-active:not(.tutorial-button) {
   @apply text-dalil-lightindigo;
 }
 

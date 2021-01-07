@@ -16,23 +16,27 @@ module.exports = {
     links: [
       {
         name: 'الرئيسية',
-        icon: 'home',
         slug: 'home'
       },
       {
-        name: 'مبادئ البرمجة',
-        icon: 'books',
-        slug: 'tutorials-algorithms-book-slug'
+        name: 'أساسيات الحاسوب',
+        slug: 'tutorials-computer-book-slug',
+        param_book: 'essentials',
+        param_slug: 'intro'
+      },
+      {
+        name: 'مبادئ البرمجة والخوارزميات',
+        slug: 'tutorials-algorithms-book-slug',
+        param_book: 'environment',
+        param_slug: 'intro'
       },
       {
         name: 'اﻹختبارات',
-        icon: 'code',
         slug: 'tests',
         disabled: true
       },
       {
         name: 'المدونة',
-        icon: 'blog',
         slug: 'blog'
       },
     ],
@@ -111,6 +115,9 @@ module.exports = {
       algorithms: {
         environment: 'إعداد بيئة العمل',
         fundamentals: 'اﻷساسيات',
+      },
+      computer: {
+        essentials: 'اﻷساسيات',
       }
     }
   },

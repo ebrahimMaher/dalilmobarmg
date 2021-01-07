@@ -119,11 +119,11 @@ export default {
         tutorials: [
           {
             key: this.$t('footer.links.tutorials.computer_and_systems'),
-            to: this.localePath('/tutorials/algorithms/environment/intro')
+            to: this.localePath('/tutorials/computer/essentials/intro')
           },
           {
             key: this.$t('footer.links.tutorials.algorithms'),
-            to: this.localePath('/')
+            to: this.localePath('/tutorials/algorithms/environment/intro')
           },
           {
             key: this.$t('footer.links.tutorials.javascript'),

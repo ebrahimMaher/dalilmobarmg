@@ -3,7 +3,7 @@
     <div class="container mx-auto px-4 py-16">
       <section class="rounded py-2 lg:py-6 md:px-6">
         <div class="margin-to-top grid grid-cols-1 lg:grid-cols-3 gap-4">
-          <TutorialCard :title="$t('homepage.tutorials.computer_and_systems.title')" :description="$t('homepage.tutorials.computer_and_systems.description')" buttonClasses="bg-blue-700 hover:bg-blue-600 text-white">
+          <TutorialCard :to="{name: 'tutorials-computer-book-slug', params: {book: 'essentials', slug: 'intro'}}" :title="$t('homepage.tutorials.computer_and_systems.title')" :description="$t('homepage.tutorials.computer_and_systems.description')" buttonClasses="bg-blue-700 hover:bg-blue-600 text-white">
             <template v-slot:icon>
               <img src="~/assets/illustrations/operating-system.svg" class="max-h-full" />
             </template>

@@ -1,8 +1,8 @@
 ---
 title: المتغيرات (variables)
 description: إعداد بيئة العمل تمهيداً لكتابة أول كود برمجي
-position: 4
-category: fundamentals
+position: 1
+category: essentials
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/01_get_started/01_installation?fontsize=14&hidenavigation=1&theme=dark
 ---
 

@@ -16,7 +16,7 @@
             </div>
         </div>
         <div class="actions w-full mt-5">
-            <AppButton :disabled="soon" :to="to" :variant="color === 'primary' ? 'primary' : null" class="w-full text-center block py-3 px-6 text-base" :classes="buttonClasses">
+            <AppButton :disabled="soon" :to="to" :variant="color === 'primary' ? 'primary' : null" class="tutorial-button w-full text-center block py-3 px-6 text-base" :classes="buttonClasses">
                 <div class="flex w-full justify-center items-center">
                   <i class="icon ml-2 w-5">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">

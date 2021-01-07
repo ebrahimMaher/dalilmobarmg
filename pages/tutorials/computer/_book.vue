@@ -1,0 +1,41 @@
+<template>
+  <div class="shadow-nuxt">
+    <div class="container mx-auto px-4 lg:flex">
+      <TheMobileAsideNavNewDocs :links="links" />
+      <TheAsideNavTutorials :links="links" tutorial="computer" class="hidden lg:block" />
+      <div
+        class="min-h-screen w-full lg:static lg:max-h-full lg:overflow-visible lg:w-7/8"
+      >
+        <nuxt-child />
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import groupBy from 'lodash.groupby'
+
+export default {
+  async asyncData({ $content, app, params, redirect }) {
+    let pages = []
+    if (!params.book) {
+      return redirect('/tutorials/computer/environment/intro') // TODO: update it to default lesson of computer tutorial
+    }
+    try {
+      const locale = app.i18n.defaultLocale;
+
+      pages = await $content(`${locale}/tutorials/computer`, { deep: true })
+        .only(['slug', 'title', 'menu', 'category', 'position', 'new', 'updated', 'contributors', 'createdAt', 'updatedAt'])
+        .sortBy('position')
+        .sortBy('title')
+        .sortBy('menu')
+        .where({ position: { $gte: 0 } })
+        .fetch()
+    } catch (e) {}
+
+    return {
+      links: groupBy(pages, 'category')
+    }
+  }
+}
+</script>

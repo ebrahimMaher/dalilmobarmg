@@ -1,5 +1,5 @@
 <template>
-  <div :class="cookieSpacerStyles">
+  <div>
     <TheHeader />
     <main
       class="lg:block relative bg-light-elevatedSurface dark:bg-dark-elevatedSurface transition-colors duration-300 ease-linear"
@@ -7,7 +7,6 @@
       <Nuxt />
     </main>
     <TheFooter />
-    <TheMobileBottomNav />
   </div>
 </template>
 

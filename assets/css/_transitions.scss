@@ -1,0 +1,36 @@
+.expand-y-enter-active,
+.expand-y-leave-active{
+  // Most important part
+  overflow: hidden;
+  transition-property: height!important;
+  transition-duration: .4s!important; // Durations can be changed without touching JS
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275)!important; // Timing functions also!
+}
+.expand-y-enter, .expand-y-leave-to{
+  height: 0!important;
+}
+.expand-y-enter-to, .expand-y-leave{
+  height: auto!important;
+}
+
+.fade-transition-enter-active, .fade-transition-leave-active{
+  transition: opacity 0.2s ease!important;
+}
+.fade-transition-enter, .fade-transition-leave-to{
+  opacity: 0!important;
+}
+.fade-transition-enter-to, .fade-transition-leave{
+  opacity: 1!important;
+}
+
+.fade-down-transition-enter-active, .fade-down-transition-leave-active{
+  transition: opacity 0.1s ease, transform 0.2s ease!important;
+}
+.fade-down-transition-enter, .fade-down-transition-leave-to{
+  transform: translateY(-25px);
+  opacity: 0!important;
+}
+.fade-down-transition-enter-to, .fade-down-transition-leave{
+  transform: none;
+  opacity: 1!important;
+}
