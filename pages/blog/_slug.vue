@@ -119,7 +119,7 @@ export default {
         {
           hid: 'og:url',
           property: 'og:url',
-          content: `https://dalilmobarmg.com/blog/${this.post.slug}`
+          content: `https://www.dalilmobarmg.com/blog/${this.post.slug}`
         },
         { hid: 'og:image', property: 'og:image', content: this.socialImage },
         // Twitter Card

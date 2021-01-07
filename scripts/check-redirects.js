@@ -8,7 +8,7 @@ const core = require('@actions/core')
 
 const logger = consola.withTag('redirect-tester')
 
-let baseURL = process.env.BASE_URL || 'https://dalilmobarmg.com'
+let baseURL = process.env.BASE_URL || 'https://www.dalilmobarmg.com'
 if (baseURL.endsWith('/')) baseURL = baseURL.slice(0, -1)
 
 const redirects = fs

@@ -19,7 +19,7 @@ export default {
     const i18nSeo = this.$nuxtI18nSeo()
     const { path } = this.$route
     const pathWithSlash = path.endsWith('/') ? path : `${path}/`
-    let canonical = `https://dalilmobarmg.com${pathWithSlash}`
+    let canonical = `https://www.dalilmobarmg.com${pathWithSlash}`
     if (this.$i18n.locale !== 'ar') {
       canonical = `https://${this.$i18n.locale}.dalilmobarmg.com${pathWithSlash}`
     }

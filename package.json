@@ -98,7 +98,7 @@
   "bugs": {
     "url": "https://github.com/ebrahimMaher/dalilmobarmg/issues"
   },
-  "homepage": "https://dalilmobarmg.com",
+  "homepage": "https://www.dalilmobarmg.com",
   "lint-staged": {
     "*.{js,vue}": "eslint --fix",
     "*.{md}": "markdownlint",

@@ -22,12 +22,12 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://dalilmobarmg.com/dalilmobarmg-card.png'
+        content: 'https://www.dalilmobarmg.com/dalilmobarmg-card.png'
       },
       {
         hid: 'og:image:secure_url',
         property: 'og:image:secure_url',
-        content: 'https://dalilmobarmg.com/dalilmobarmg-card.png'
+        content: 'https://www.dalilmobarmg.com/dalilmobarmg-card.png'
       },
       {
         hid: 'og:image:alt',
@@ -37,7 +37,7 @@ export default {
       {
         hid: 'twitter:image',
         name: 'twitter:image',
-        content: 'https://dalilmobarmg.com/dalilmobarmg-card.png'
+        content: 'https://www.dalilmobarmg.com/dalilmobarmg-card.png'
       }
     ],
     link: [
@@ -121,7 +121,7 @@ export default {
         iso: 'ar',
         file: 'ar.js',
         name: 'العربية',
-        domain: 'https://dalilmobarmg.com'
+        domain: 'https://www.dalilmobarmg.com'
       },
     ],
     vueI18n: {

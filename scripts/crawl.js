@@ -10,7 +10,7 @@ const excludedExtensions = process.env.EXCLUDE
   : ['svg', 'png', 'jpg', 'sketch', 'ico', 'gif']
 const crawlExternal = !!process.env.CRAWL_EXTERNAL || false
 
-let baseURL = process.env.BASE_URL || 'https://dalilmobarmg.com'
+let baseURL = process.env.BASE_URL || 'https://www.dalilmobarmg.com'
 if (baseURL.endsWith('/')) baseURL = baseURL.slice(0, -1)
 const startingURL = baseURL + '/'
 
