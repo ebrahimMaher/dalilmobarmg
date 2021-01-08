@@ -53,8 +53,8 @@
                     <template v-else>
                       {{ link.title }}
                       <div class="font-semibold mr-2 mt-1">
-                        <Badge v-if="link.new || dateIsNew(link.createdAt)" color="indigo" :value="$t('new')" />
-                        <Badge v-else-if="link.updated || dateIsNew(link.updatedAt)" color="green" :value="$t('updated')" />
+                        <Badge v-if="link.new || dateIsNew(link.createdAt)" color-class="bg-indigo-600 hover:bg-indigo-500" :value="$t('new')" />
+                        <Badge v-else-if="link.updated || dateIsNew(link.updatedAt)" color-class="bg-green-600 hover:bg-green-500" :value="$t('updated')" />
                       </div>
                     </template>
                   </NuxtLink>

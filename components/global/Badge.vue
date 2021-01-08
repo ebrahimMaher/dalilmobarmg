@@ -1,5 +1,5 @@
 <template>
-  <div class="e-badge text-white text-ss align-top px-1 rounded-sm" :class="classes">
+  <div class="e-badge text-white text-ss align-top px-1 rounded-sm" :class="colorClass">
     {{value}}
   </div>
 </template>
@@ -11,7 +11,7 @@ export default {
   },
   props: {
     value: {},
-    color: {type: String, default: 'indigo'}
+    colorClass: {type: String, default: 'bg-indigo-600 hover:bg-indigo-500'}
   },
   data() {
     return {
@@ -19,10 +19,6 @@ export default {
     }
   },
   computed: {
-    classes(){
-      const color = this.color;
-      return `bg-${color}-600 hover:bg-${color}-500`;
-    }
   },
 }
 </script>
