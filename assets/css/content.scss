@@ -163,6 +163,9 @@
 
   & code {
     @apply p-1 not-italic rounded text-sm;
+
+    direction: ltr!important;
+    display: inline-block!important;
   }
 
   & a {
