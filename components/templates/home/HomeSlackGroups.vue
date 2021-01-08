@@ -13,7 +13,7 @@
                 <img v-else src="~/assets/images/slack.svg" style="height: 30px" />
               </div>
             </div>
-            <hr class="lg:w-5/6 my-6">
+            <hr class="lg:w-5/6 my-6 dark:border-dark-border">
             <div>
               <i18n path="homepage.slack.short_title" tag="h2" class="font-semibold lg:font-medium text-center md:text-right text-2xl md:text-3xl lg:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary tracking-normal leading-tight mb-6" > </i18n>
             </div>

@@ -1,0 +1,112 @@
+
+.dark-mode .nuxt-content {
+  h2{
+    @apply border-b pb-2 border-dark-border;
+    width: 100%;
+  }
+
+  h2,
+  h3{
+    color: theme('colors.dark.onSurfaceStrong')!important;
+  }
+  p {
+    color: theme('colors.dark.onSurfacePrimary');
+  }
+
+  & blockquote {
+    color: theme('colors.dark.onSurfaceSecondary');
+  }
+
+  & a {
+    @apply text-dalil-lightindigo;
+
+    &:hover {
+      @apply underline;
+    }
+
+    & code {
+      @apply text-dalil-lightindigo;
+
+      &:hover {
+        @apply text-dalil-indigo;
+      }
+    }
+  }
+  // inline code snippet
+  & code {
+    @apply bg-gray-800;
+
+    color: #e1e8f5;
+  }
+  // code snippet block
+  & pre {
+    @apply border border-dark-border;
+    background-color: theme('colors.dark.surface');
+
+    code {
+      @apply bg-transparent;
+
+      color: theme('colors.dark.onSurfacePrimary');
+    }
+  }
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
+    color: theme('colors.dark.onSurfaceStrong');
+  }
+
+  & .Alert {
+    // @apply bg-gray-600 text-dark-onSurfacePrimary;
+    background-color: #205d80;
+
+    & a {
+      @apply text-blue-300;
+    }
+
+    & code {
+      @apply text-blue-800 bg-blue-200;
+    }
+
+    &.Alert--orange {
+      // @apply bg-orange-200;
+      background-color: #4c4c4c;
+
+      & a {
+        @apply text-orange-600;
+      }
+
+      & code {
+        @apply text-orange-800 bg-orange-200;
+      }
+    }
+  }
+
+  .Promote {
+    @apply shadow-md;
+
+    background: theme('colors.dark.surface');
+
+    .Promote__Content {
+      .Promote__Content__Title {
+        color: theme('colors.dark.onSurfacePrimary');
+      }
+
+      .Promote__Content__Description {
+        color: theme('colors.dark.onSurfaceSecondary');
+      }
+
+      .Promote__Content__Signature {
+        @apply text-gray-500;
+      }
+    }
+
+    &:hover {
+      @apply shadow-lg;
+
+      background-color: #233344;
+      text-decoration: none;
+    }
+  }
+}

@@ -8,7 +8,7 @@
     <nav>
       <scrollactive
         highlight-first-item
-        active-class="text-indigo-500"
+        active-class="toc-active-item"
         tag="ul"
         :offset="100"
       >
@@ -51,7 +51,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .affix {
   height: calc(100vh - 6rem);
   top: 6rem;
@@ -59,5 +59,13 @@ export default {
 
 li {
   list-style: none;
+}
+.toc-active-item{
+  @apply text-light-onSurfacePrimary font-bold;
+}
+.dark-mode{
+  .toc-active-item{
+    @apply text-dark-onSurfaceStrong
+  }
 }
 </style>

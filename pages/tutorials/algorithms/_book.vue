@@ -1,7 +1,7 @@
 <template>
   <div class="shadow-dalilmobarmg">
     <div class="container mx-auto px-4 lg:flex">
-      <MobileAsideNav :links="links" />
+      <MobileAsideNav tutorial="algorithms" :links="links" />
       <TheAsideNavTutorials :links="links" tutorial="algorithms" class="hidden lg:block" />
       <div
         class="min-h-screen w-full lg:static lg:max-h-full lg:overflow-visible lg:w-7/8"

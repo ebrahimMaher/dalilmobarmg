@@ -23,10 +23,10 @@
               </template>
             </i18n>
             <div class="mt-8">
-              <AppButton :variant="null" :href="$config.GithubLink" class="bg-black text-white hover:bg-gray-900 py-3 px-6 text-base" data-cy="slack" >
+              <AppButton :variant="null" :href="$config.GithubLink" class="bg-black dark:bg-white text-white dark:text-black hover:bg-gray-900 dark:hover:bg-gray-400 py-3 px-6 text-base" data-cy="slack" >
                 <div class="flex">
                   <div class="ml-3">
-                    <img v-if="$colorMode.preference === 'dark'" src="~/assets/icons/github-3-white.svg" class="w-6 h-6" />
+                    <img v-if="$colorMode.preference === 'light'" src="~/assets/icons/github-3-white.svg" class="w-6 h-6" />
                     <img v-else src="~/assets/icons/github-3.svg" class="w-6 h-6" />
                   </div>
                   {{ $t('homepage.github.button') }}

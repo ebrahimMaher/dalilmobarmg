@@ -60,8 +60,8 @@ module.exports = {
         },
         dark: {
           surface: '#070709',
-          onSurfaceStrong: '#fff',
-          onSurfacePrimary: '#c9c9de',
+          onSurfaceStrong: '#f0f0f2',
+          onSurfacePrimary: '#a6a6b4',
           primaryText: '#a294ee',
           onSurfaceSecondary: '#B8C2CC',
           elevatedSurface: '#0e0e10',

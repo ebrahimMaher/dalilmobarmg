@@ -27,7 +27,7 @@
               </li>
 
               <li class="py-2">
-                <a :href="$config.GithubLink" target="_blank" class="transition duration-200 ease no-underline inline-flex btn px-4 py-3 bg-black rounded hover:bg-gray-900 text-white">
+                <a :href="$config.GithubLink" target="_blank" class="transition duration-200 ease no-underline inline-flex btn px-4 py-3 bg-black dark:bg-white text-white dark:text-black hover:bg-gray-900 dark:hover:bg-gray-400 rounded">
                   <GithubIcon class="w-6 h-6 ml-2" />
                   {{ $t('footer.links.community.github') }}
                 </a>

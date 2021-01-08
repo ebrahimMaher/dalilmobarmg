@@ -21,7 +21,7 @@
                 :is="$route.params.book === group ? `h3` : 'nuxt-link'"
                 :key="`title-${group}`"
                 :to="{
-                  name: 'tutorials-algorithms-book-slug',
+                  name: `tutorials-${tutorial}-book-slug`,
                   params: { book: group, slug: sublinks[0].slug }
                 }"
                 class="flex items-center uppercase text-gray-600 pb-2"
@@ -36,7 +36,7 @@
                   class="w-4 h-4 ml-2"
                 />
                 <ChevronRightIcon v-else class="w-4 h-4 ml-2" />
-                <span>{{ $t(`content.tutorials.algorithms.${group}`) }}</span>
+                <span>{{ $t(`content.tutorials.${tutorial}.${group}`) }}</span>
               </component>
               <ul
                 v-if="$route.params.book === group"
@@ -69,7 +69,7 @@
       </div>
     </div>
     <button
-      class="bookmark-button rounded-full flex items-center justify-center transform active:scale-95 active:text-white active:bg-dalil-indigo transition duration-100 ease-linear"
+      class="bookmark-button lg:hidden rounded-full flex items-center justify-center transform active:scale-95 active:text-white active:bg-dalil-indigo transition duration-100 ease-linear"
       :class="{'text-white bg-dalil-indigo': show, 'text-dalil-indigo bg-light-elevatedSurface dark:bg-dark-elevatedSurface': !show}"
       @click.prevent.stop="toggle"
     >
@@ -104,7 +104,10 @@ export default {
     links: {
       type: Object,
       default: () => []
-    }
+    },
+    tutorial: {
+
+    },
   },
   data() {
     return {
@@ -115,7 +118,7 @@ export default {
     sortedLinks() {
       const links = {}
       sortBy(Object.keys(this.links), link => {
-        return Object.keys(this.$i18n.t('content.tutorials.algorithms')).indexOf(link)
+        return Object.keys(this.$i18n.t('content.tutorials.' + this.tutorial)).indexOf(link)
       }).forEach(key => {
         links[key] = this.links[key]
       })
@@ -134,7 +137,7 @@ export default {
     },
     toLink(group, link) {
       return this.localePath({
-        name: 'tutorials-algorithms-book-slug',
+        name: `tutorials-${this.tutorial}-book-slug`,
         params: { book: group, slug: link.slug }
       })
     }

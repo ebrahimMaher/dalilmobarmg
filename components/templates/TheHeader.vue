@@ -27,7 +27,7 @@
               <NuxtLink
                 v-if="!link.href"
                 :disabled="link.disabled"
-                class="block font-medium uppercase hover:no-underline light:hover:text-dalil-lightindigo dark:hover:text-dalil-lightindigo text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary ease-linear"
+                class="block font-medium uppercase hover:no-underline light:hover:text-dalil-lightindigo dark:hover:text-dark-onSurfaceStrong text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary ease-linear"
                 :to="
                   localePath({
                     name: link.slug,

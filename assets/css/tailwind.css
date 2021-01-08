@@ -42,6 +42,10 @@ a.nuxt-link-exact-active:not(.tutorial-button),
 a.nuxt-link-active:not(.tutorial-button) {
   @apply text-dalil-lightindigo;
 }
+.dark-mode a.nuxt-link-exact-active:not(.tutorial-button),
+.dark-mode a.nuxt-link-active:not(.tutorial-button){
+  @apply text-dark-onSurfaceStrong;
+}
 
 .opacity-transition {
   transition: opacity 0.5s ease-out;

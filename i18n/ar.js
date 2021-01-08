@@ -11,6 +11,8 @@ module.exports = {
   name: 'دليل مبرمج',
   new: 'جديد',
   updated: 'مُعدل',
+  copy: 'نسخ',
+  copy_done: 'تم النسخ',
 
   header: {
     links: [

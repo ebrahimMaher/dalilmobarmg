@@ -21,7 +21,7 @@
             :class="{
               'hover:text-dalil-lightindigo block':
                 $route.params.book !== group && visibleGroup !== group,
-              'font-bold text-dalil-lightindigo': $route.params.book === group,
+              'font-bold text-dalil-lightindigo dark:text-dark-onSurfaceStrong': $route.params.book === group,
               'text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary': $route.params.book !== group
             }"
             @click.prevent="visibleGroup === group ? visibleGroup = '' : visibleGroup = group"
@@ -43,7 +43,7 @@
                   class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
                 >
                   <NuxtLink
-                    class="aside-nav-item p-2 flex rounded hover:bg-gray-100 hover:text-dalil-lightindigo dark:hover:text-dalil-lightindigo transition-colors duration-300 ease-linear"
+                    class="aside-nav-item p-2 flex rounded hover:bg-gray-100 dark:hover:bg-dark-surface hover:text-dalil-lightindigo dark:hover:text-dark-onSurfaceStrong transition-colors duration-300 ease-linear"
                     exact-active-class="text-dalil-lightindigo hover:text-primary-dark dark:text-dark-primaryText bg-indigo-50 hover:bg-indigo-100 active:bg-indigo-200 dark:bg-indigo-800 dark:text-white"
                     :to="toLink(group, link)"
                   >

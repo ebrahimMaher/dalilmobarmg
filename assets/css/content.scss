@@ -116,102 +116,9 @@
   }
 }
 
-.dark-mode .nuxt-content {
-  h2,
-  h3,
-  p {
-    color: theme('colors.dark.onSurfacePrimary');
-  }
+/* Dark Content Style */
+@import './content-dark';
 
-  & blockquote {
-    color: theme('colors.dark.onSurfaceSecondary');
-  }
-
-  & a {
-    @apply text-dalil-lightindigo;
-
-    &:hover {
-      @apply underline;
-    }
-
-    & code {
-      @apply text-dalil-lightindigo;
-
-      &:hover {
-        @apply text-dalil-indigo;
-      }
-    }
-  }
-  // inline code snippet
-  & code {
-    @apply bg-gray-800;
-
-    color: #e1e8f5;
-  }
-  // code snippet block
-  & pre {
-    background-color: #1e344c;
-
-    code {
-      @apply bg-transparent;
-
-      color: theme('colors.dark.onSurfacePrimary');
-    }
-  }
-
-  & .Alert {
-    // @apply bg-gray-600 text-dark-onSurfacePrimary;
-    background-color: #205d80;
-
-    & a {
-      @apply text-blue-300;
-    }
-
-    & code {
-      @apply text-blue-800 bg-blue-200;
-    }
-
-    &.Alert--orange {
-      // @apply bg-orange-200;
-      background-color: #4c4c4c;
-
-      & a {
-        @apply text-orange-600;
-      }
-
-      & code {
-        @apply text-orange-800 bg-orange-200;
-      }
-    }
-  }
-
-  .Promote {
-    @apply shadow-md;
-
-    background: theme('colors.dark.surface');
-
-    .Promote__Content {
-      .Promote__Content__Title {
-        color: theme('colors.dark.onSurfacePrimary');
-      }
-
-      .Promote__Content__Description {
-        color: theme('colors.dark.onSurfaceSecondary');
-      }
-
-      .Promote__Content__Signature {
-        @apply text-gray-500;
-      }
-    }
-
-    &:hover {
-      @apply shadow-lg;
-
-      background-color: #233344;
-      text-decoration: none;
-    }
-  }
-}
 
 .nuxt-content {
   img {
@@ -263,9 +170,8 @@
   }
 
   h2{
-    @apply border-b pb-2 border-light-border;
+    @apply border-b pb-2 border-light-border; // dark:border-dark-border
     width: 100%;
-
   }
   & h2 {
     @apply relative text-xl table;
@@ -466,7 +372,7 @@
   }
 
   & > .copy {
-    @apply hidden absolute right-0 bottom-0 leading-none shadow-lg p-2 text-white text-sm uppercase rounded-md font-semibold mr-3 mb-3;
+    @apply hidden absolute items-center right-0 bottom-0 leading-none shadow-lg p-2 text-white text-sm uppercase rounded-md font-semibold mr-3 mb-3;
 
     z-index: 4;
 
@@ -474,13 +380,13 @@
       @apply outline-none;
     }
     &.copied{
-      @apply block;
+      @apply flex;
     }
   }
 
   &:hover {
     & > .copy {
-      @apply block;
+      @apply flex;
     }
   }
 }
@@ -512,4 +418,3 @@ article{
   }
 }
 
-/* purgecss end ignore */
