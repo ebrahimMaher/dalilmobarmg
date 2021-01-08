@@ -3,7 +3,10 @@ title: المتغيرات (variables)
 description: إعداد بيئة العمل تمهيداً لكتابة أول كود برمجي
 position: 4
 category: fundamentals
-new: true
+createdAt: 1609951404433
+updatedAt: 1609951404433
+new: false
+updated: false
 contributors:
   - ebrahimmaher
 ---

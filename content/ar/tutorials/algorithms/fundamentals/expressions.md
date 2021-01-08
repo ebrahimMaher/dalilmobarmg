@@ -3,7 +3,10 @@ title: التعبيرات (Expressions)
 description: إعداد بيئة العمل تمهيداً لكتابة أول كود برمجي
 position: 3
 category: fundamentals
-updated: true
+createdAt: 1609951404433
+updatedAt: 1609951404433
+new: false
+updated: false
 contributors:
   - ebrahimmaher
 ---

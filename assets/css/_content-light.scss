@@ -9,14 +9,11 @@
 
   h1, h2, h3, h4, h5, h6{
     & code{
-      @apply bg-indigo-50 text-primary-dark;
+      @apply bg-indigo-50 text-primary-dark border border-indigo-50;
     }
   }
   p {
     color: theme('colors.light.onSurfacePrimary');
-  }
-  h2, h3{
-    @apply font-bold;
   }
 
   blockquote {

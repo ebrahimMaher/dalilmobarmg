@@ -1,6 +1,6 @@
 <template>
   <button
-    class="relative overflow-hidden px-3 lg:px-4 flex items-center bg-gray-100 hover:bg-gray-200 focus:bg-gray-300 dark:bg-dark-surface rounded-full h-10 w-10 lg:w-auto outline-none text-light-onSurfacePrimary dark:text-dark-primaryText ease-linear transform active:scale-95 transition-transform duration-100"
+    class="relative overflow-hidden px-3 lg:px-4 flex items-center bg-gray-100 hover:bg-gray-200 focus:bg-gray-300 dark:bg-dark-surface rounded-full h-10 outline-none text-light-onSurfacePrimary dark:text-dark-primaryText ease-linear transform active:scale-95 transition-transform duration-100"
     @click="setCurrentTheme"
   >
     <span

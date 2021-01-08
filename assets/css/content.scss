@@ -18,6 +18,9 @@
     width: 100%;
   }
 
+  h2, h3{
+    @apply font-semibold;
+  }
   & h2,
   & h3,
   & h4,
@@ -128,6 +131,10 @@
   & h4{
     @apply mb-3 mt-6 text-lg;
     font-weight: 600;
+
+    & code{
+      @apply py-1 px-2;
+    }
   }
   & h5{
     @apply mb-1 mt-3 font-bold text-base;
