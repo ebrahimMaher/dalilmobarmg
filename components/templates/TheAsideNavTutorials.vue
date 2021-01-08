@@ -43,7 +43,7 @@
                   class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
                 >
                   <NuxtLink
-                    class="aside-nav-item p-2 flex rounded hover:bg-gray-100 dark:hover:bg-dark-surface hover:text-dalil-lightindigo dark:hover:text-dark-onSurfaceStrong transition-colors duration-300 ease-linear"
+                    class="aside-nav-item p-2 flex rounded hover:bg-gray-100 dark:hover:bg-dark-surface hover:text-dalil-lightindigo dark:hover:text-dark-onSurfaceStrong"
                     exact-active-class="text-dalil-lightindigo hover:text-primary-dark dark:text-dark-primaryText bg-indigo-50 border border-indigo-50 hover:bg-indigo-100 dark:bg-dark-surface dark:border-dark-border dark:text-white"
                     :to="toLink(group, link)"
                   >

@@ -9,8 +9,10 @@
       <scrollactive
         highlight-first-item
         active-class="toc-active-item"
-        tag="ul"
         :offset="100"
+        :duration="500" bezier-easing-value=".5,0,.35,1"
+        always-track
+        :modify-url="false"
       >
         <li
           v-for="link of toc"
@@ -23,8 +25,8 @@
               link.depth > 2,
           }"
         >
-          <NuxtLink
-            :to="`#${link.id}`"
+          <a
+            :href="`#${link.id}`"
             data-cy="toc"
             class="block text-sm scrollactive-item transition-transform ease-in-out duration-300 transform hover:translate-x-1"
             :class="{
@@ -33,7 +35,7 @@
             }"
           >
             {{ link.text }}
-          </NuxtLink>
+          </a>
         </li>
       </scrollactive>
     </nav>
@@ -61,7 +63,7 @@ li {
   list-style: none;
 }
 .toc-active-item{
-  @apply text-light-onSurfacePrimary font-bold;
+  @apply text-dalil-lightindigo font-bold;
 }
 .dark-mode{
   .toc-active-item{

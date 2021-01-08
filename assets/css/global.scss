@@ -1,5 +1,5 @@
 html{
-    scroll-behavior: smooth;
+    // scroll-behavior: smooth; // stopped because of router bugs!
     &, *{
       -webkit-tap-highlight-color: transparent;
       &:focus{
