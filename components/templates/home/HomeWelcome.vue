@@ -56,7 +56,8 @@
           </div>
         </div>
         <figure class="hidden lg:block lg:w-4/12">
-            <img src="~/assets/images/home-vector.svg" />
+            <img v-if="$colorMode.preference === 'dark'" src="~/assets/images/home-vector-transparent.svg" />
+            <img v-else src="~/assets/images/home-vector.svg" />
         </figure>
       </div>
     </div>
