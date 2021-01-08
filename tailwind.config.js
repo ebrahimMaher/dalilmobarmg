@@ -41,7 +41,8 @@ module.exports = {
         dalil: {
           gray: '#35215E',
           lightindigo: '#3B37E3',
-          indigo: '#370F84'
+          indigo: '#370F84',
+          dark: '#8c8af8'
         },
         primary: {
           base: '#4927d0',
@@ -59,14 +60,14 @@ module.exports = {
           border: defaultTheme.colors.gray['300']
         },
         dark: {
-          surface: '#070709',
+          surface: '#0b0b0e',
           onSurfaceStrong: '#f0f0f2',
-          onSurfacePrimary: '#a6a6b4',
+          onSurfacePrimary: '#a8a8b2',
           primaryText: '#a294ee',
           onSurfaceSecondary: '#B8C2CC',
           elevatedSurface: '#0e0e10',
           elevatedSurface2: '#202042',
-          border: '#2c2c37'
+          border: '#22222a'
         }
       },
       fill: theme => ({

@@ -22,7 +22,7 @@
       </div>
       <p v-if="docLink && $route.params.book" class="text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary pt-3 mb-8 transition-colors duration-300 ease-linear" >
         {{ $t('contribute.docs') }}
-        <a :href="docLink" target="_blank" rel="noopener" class="btn py-3 px-4 lg:p-0 transform lg:transform-none active:scale-95 transition duration-100 border-2 border-black lg:border-0 rounded lg:rounded-none justify-center text-black lg:text-primary-base lg:hover:underline flex mt-3 lg:mt-0 lg:inline-block" >
+        <a :href="docLink" target="_blank" rel="noopener" class="btn py-3 px-4 lg:p-0 transform lg:transform-none active:scale-95 transition duration-100 border-2 border-black dark:border-dark-border lg:border-0 rounded lg:rounded-none justify-center text-black dark:text-dark-onSurfaceStrong lg:text-primary-base lg:dark:text-dark-primaryText lg:hover:underline flex mt-3 lg:mt-0 lg:inline-block" >
           <GithubIcon class="lg:hidden fill-black w-6 h-6 ml-3" />
           {{ $t('contribute.edit_on_github') }}
         </a>

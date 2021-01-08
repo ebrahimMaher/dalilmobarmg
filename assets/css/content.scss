@@ -1,120 +1,7 @@
 /* purgecss start ignore */
-.light-mode .nuxt-content {
-  h2:before, h3:before{
-    content: "";
-    display: block;
-    margin-top: -96px;
-    height: 96px;
-    visibility: hidden;
-  }
-  p {
-    color: theme('colors.light.onSurfacePrimary');
-  }
-  h2, h3{
-    @apply font-bold;
-  }
 
-  blockquote {
-    color: theme('colors.light.onSurfaceSecondary');
-  }
-
-  .nuxt-content-highlight{
-    @apply my-6;
-    & code {
-      @apply border-0;
-    }
-  }
-  .code-block.active .nuxt-content-highlight {
-    margin-top: 0;
-  }
-
-  & a {
-    @apply text-dalil-lightindigo;
-
-    &:hover {
-      @apply underline;
-    }
-
-    & code {
-      @apply text-dalil-lightindigo;
-
-      &:hover {
-        @apply text-dalil-indigo;
-      }
-    }
-  }
-  // inline code snippet
-  & code {
-    @apply bg-red-100 text-red-700 mx-1;
-  }
-
-  & pre {
-    @apply static;
-
-    background-color: theme('colors.dark.elevatedSurface2');
-
-    code {
-      color: theme('colors.dark.onSurfacePrimary');
-    }
-  }
-  // code snippet block
-  & pre {
-    code {
-      @apply bg-transparent;
-
-      color: theme('colors.dark.onSurfacePrimary');
-    }
-  }
-
-  & .Alert {
-    @apply bg-blue-100 text-light-onSurfacePrimary;
-
-    & a {
-      @apply text-blue-600;
-    }
-
-    & code {
-      @apply text-blue-800 bg-blue-200;
-    }
-
-    &.Alert--orange {
-      @apply bg-orange-100;
-
-      & a {
-        @apply text-orange-600;
-      }
-
-      & code {
-        @apply text-orange-800 bg-orange-200;
-      }
-    }
-  }
-
-  .Promote {
-    // @apply shadow-md;
-    background-color: theme('colors.gray.200');
-
-    .Promote__Content {
-      .Promote__Content__Title {
-        color: theme('colors.light.onSurfacePrimary');
-      }
-
-      .Promote__Content__Description {
-        color: theme('colors.light.onSurfaceSecondary');
-      }
-
-      .Promote__Content__Signature {
-        @apply text-gray-500;
-      }
-    }
-
-    &:hover {
-      // @apply shadow-lg;
-      background-color: theme('colors.gray.300');
-      text-decoration: none;
-    }
-  }
-}
+/* Light Content Style */
+@import './content-light';
 
 /* Dark Content Style */
 @import './content-dark';
@@ -244,6 +131,11 @@
 
   p {
     @apply leading-9 pb-1 mb-2 transition-colors duration-300 ease-linear;
+
+    a{
+      @apply border-b;
+      padding: 7px 0;
+    }
   }
 
   & li p {
@@ -251,7 +143,7 @@
   }
 
   & blockquote {
-    @apply italic pr-5 border-r-4 text-sm border-gray-300;
+    @apply italic pr-5 border-r-4 text-sm border-gray-300 my-5;
     &, p{
       @apply leading-loose;
       color: theme('colors.gray.700')!important;
@@ -264,14 +156,10 @@
 
   & a {
     overflow-wrap: break-word;
-
-    &:hover {
-      @apply underline;
-    }
   }
   // code snippet block
   & pre {
-    @apply p-2 my-2 overflow-auto;
+    @apply p-2 overflow-auto;
 
     border-radius: 8px!important;
 
@@ -405,6 +293,21 @@ article{
 }
 .nuxt-content {
   font-family: 'open sans', 'droid';
+
+  code{
+    @apply mx-1;
+  }
+
+  .nuxt-content-highlight{
+    @apply my-6;
+
+    pre{
+      @apply my-2;
+      code{
+        @apply mx-0;
+      }
+    }
+  }
   .token{
     &.number{
       color: ffdc8e!important;

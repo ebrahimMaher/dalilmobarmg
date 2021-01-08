@@ -1,0 +1,117 @@
+.light-mode .nuxt-content {
+  h2:before, h3:before{
+    content: "";
+    display: block;
+    margin-top: -96px;
+    height: 96px;
+    visibility: hidden;
+  }
+  p {
+    color: theme('colors.light.onSurfacePrimary');
+  }
+  h2, h3{
+    @apply font-bold;
+  }
+
+  blockquote {
+    color: theme('colors.light.onSurfaceSecondary');
+  }
+
+  .nuxt-content-highlight{
+    & code {
+      @apply border-0;
+    }
+  }
+  .code-block.active .nuxt-content-highlight {
+    margin-top: 0;
+  }
+
+  & a {
+    @apply text-dalil-lightindigo border-light-border transform;
+    &:hover {
+      @apply bg-light-surface;
+    }
+
+    & code {
+      @apply text-dalil-lightindigo;
+
+      &:hover {
+        @apply text-dalil-indigo;
+      }
+      &:active {
+        @apply scale-95;
+      }
+    }
+  }
+  // inline code snippet
+  & code {
+    @apply bg-red-100 text-red-700;
+  }
+
+  & pre {
+    @apply static;
+
+    background-color: theme('colors.dark.elevatedSurface2');
+
+    code {
+      color: theme('colors.dark.onSurfacePrimary');
+    }
+  }
+  // code snippet block
+  & pre {
+    code {
+      @apply bg-transparent;
+
+      color: theme('colors.dark.onSurfacePrimary');
+    }
+  }
+
+  & .Alert {
+    @apply bg-blue-100 text-light-onSurfacePrimary;
+
+    & a {
+      @apply text-blue-600;
+    }
+
+    & code {
+      @apply text-blue-800 bg-blue-200;
+    }
+
+    &.Alert--orange {
+      @apply bg-orange-100;
+
+      & a {
+        @apply text-orange-600;
+      }
+
+      & code {
+        @apply text-orange-800 bg-orange-200;
+      }
+    }
+  }
+
+  .Promote {
+    // @apply shadow-md;
+    background-color: theme('colors.gray.200');
+
+    .Promote__Content {
+      .Promote__Content__Title {
+        color: theme('colors.light.onSurfacePrimary');
+      }
+
+      .Promote__Content__Description {
+        color: theme('colors.light.onSurfaceSecondary');
+      }
+
+      .Promote__Content__Signature {
+        @apply text-gray-500;
+      }
+    }
+
+    &:hover {
+      // @apply shadow-lg;
+      background-color: theme('colors.gray.300');
+      text-decoration: none;
+    }
+  }
+}

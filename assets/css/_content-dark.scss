@@ -11,17 +11,25 @@
   }
   p {
     color: theme('colors.dark.onSurfacePrimary');
+
+    strong{
+      color: theme('colors.dark.onSurfaceStrong');
+    }
   }
 
   & blockquote {
-    color: theme('colors.dark.onSurfaceSecondary');
+    p{
+      color: theme('colors.gray.400')!important;
+    }
+    @apply border-primary-light;
   }
 
+
   & a {
-    @apply text-dalil-lightindigo;
+    @apply text-dark-onSurfaceStrong border-dark-border;
 
     &:hover {
-      @apply underline;
+      @apply bg-dark-surface;
     }
 
     & code {
@@ -34,9 +42,7 @@
   }
   // inline code snippet
   & code {
-    @apply bg-gray-800;
-
-    color: #e1e8f5;
+    @apply bg-dark-surface border border-dark-border text-dark-primaryText;
   }
   // code snippet block
   & pre {
@@ -44,7 +50,7 @@
     background-color: theme('colors.dark.surface');
 
     code {
-      @apply bg-transparent;
+      @apply bg-transparent border-none;
 
       color: theme('colors.dark.onSurfacePrimary');
     }

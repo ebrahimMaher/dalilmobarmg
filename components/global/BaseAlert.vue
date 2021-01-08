@@ -1,10 +1,11 @@
 <template>
-  <div class="alert border-r-4 p-4 mb-4" :class="`alert-${type}`">
+  <div class="alert dark:bg-transparent border-r-4 p-4 mb-4" :class="`alert-${type}`">
     <div class="flex items-start">
       <div class="flex-shrink-0 self-start pt-1">
-        <IconInfo v-if="type === 'info'" class="alert-icon" />
-        <IconNext v-else-if="type === 'next'" class="alert-next" />
-        <IconStar v-else-if="type === 'star'" class="alert-star" />
+        <IconInfo v-if="type === 'info' || type === 'success'" class="alert-icon" />
+        <IconNext v-else-if="type === 'next'" class="alert-icon alert-next" />
+        <IconTip v-else-if="type === 'tip'" class="alert-icon" />
+        <IconStar v-else-if="type === 'star'" class="alert-icon alert-star" />
         <IconAlert v-else class="alert-icon" />
       </div>
       <div class="mr-2 alert-content text-sm leading-7">
@@ -33,6 +34,7 @@ export default {
   @apply leading-loose m-0 !important;
 }
 
+
 /* Warning Icon */
 .alert-warning {
   @apply bg-orange-100 border-orange-400;
@@ -51,16 +53,13 @@ export default {
 }
 
 .dark-mode .alert-warning {
-  @apply bg-yellow-900 border-yellow-700;
-}
-
-.dark-mode .alert-warning .alert-content {
-  @apply text-orange-300 bg-yellow-900 border-yellow-700;
+  @apply border-orange-500;
 }
 
 .dark-mode .alert-warning .alert-content code {
-  @apply bg-yellow-800 !important;
+  @apply text-orange-400;
 }
+
 
 /* Error Icon */
 .alert-error {
@@ -80,17 +79,43 @@ export default {
 }
 
 .dark-mode .alert-error {
-  @apply bg-yellow-900 border-yellow-700;
+  @apply border-red-600;
 }
-
-.dark-mode .alert-error .alert-content {
-  @apply text-red-300 bg-yellow-900 border-yellow-700;
+.dark-mode .alert-error .alert-icon{
+  @apply text-red-600;
 }
 
 .dark-mode .alert-error .alert-content code {
-  @apply bg-yellow-800 !important;
+  @apply text-red-400;
 }
 
+/* Tip & Success  */
+.alert-tip, .alert-success {
+  @apply bg-green-100 border-green-500;
+}
+
+.alert-tip code, .alert-success code {
+  @apply bg-green-100 shadow-none;
+}
+
+.alert-tip .alert-icon, .alert-success .alert-icon{
+  @apply text-green-600;
+}
+
+.alert-tip .alert-content, .alert-success .alert-content {
+  @apply text-green-700;
+}
+
+.dark-mode .alert-tip, .dark-mode .alert-success {
+  @apply border-green-500;
+}
+.dark-mode .alert-tip .alert-icon, .dark-mode .alert-success .alert-icon{
+  @apply text-green-400;
+}
+
+.dark-mode .alert-tip .alert-content code, .dark-mode .alert-success .alert-content code{
+  @apply text-green-400;
+}
 
 /* Info Icon */
 .alert-info {
@@ -110,15 +135,11 @@ export default {
 }
 
 .dark-mode .alert-info {
-  @apply bg-blue-900 border-blue-700;
-}
-
-.dark-mode .alert-info .alert-content {
-  @apply text-blue-300 bg-blue-900 border-blue-700;
+  @apply border-blue-600;
 }
 
 .dark-mode .alert-info .alert-content code {
-  @apply bg-blue-800 !important;
+  @apply text-blue-400;
 }
 
 /* Next Icon */
@@ -138,17 +159,11 @@ export default {
   @apply text-gray-700;
 }
 
+
 .dark-mode .alert-next {
-  @apply bg-gray-800 border-gray-700;
+  @apply border-dark-onSurfaceStrong;
 }
 
-.dark-mode .alert-next .alert-content {
-  @apply text-gray-300 bg-gray-800 border-gray-700;
-}
-
-.dark-mode .alert-next .alert-content code {
-  @apply bg-gray-800 !important;
-}
 
 /* Star Icon */
 .alert-star {
@@ -177,5 +192,21 @@ export default {
 
 .dark-mode .alert-star .alert-content code {
   @apply bg-purple-800 !important;
+}
+
+
+
+/* dark for all */
+
+.dark-mode .alert {
+  @apply bg-dark-surface;
+}
+
+.dark-mode .alert .alert-content {
+  @apply bg-transparent text-dark-onSurfacePrimary;
+}
+
+.dark-mode .alert .alert-content code {
+  @apply bg-dark-surface border border-dark-border;
 }
 </style>

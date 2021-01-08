@@ -4,17 +4,17 @@
 
       </div>
     <div
-      class="pb-8 lg:pb-0 lg:pt-8 bg-light-elevatedSurface border-t border-light-border dark:border-dark-border dark:bg-dark-elevatedSurface"
+      class="pb-8 lg:pb-0 lg:pt-4 bg-light-elevatedSurface border-t border-light-border dark:border-dark-border dark:bg-dark-elevatedSurface"
     >
       <div class="container mx-auto px-4 ">
         <div
           class="flex flex-col sm:flex-row text-center sm:text-right items-center content-center justify-between pt-10 sm:py-10"
         >
           <div class="flex-1 w-full sm:w-auto mb-8 sm:mb-0 sm:text-right" :class="{'hidden lg:block': $route.name !== 'index'}">
-            <h3 class="font-bold uppercase text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary text-lg pb-4 transition-colors duration-300 ease-linear" >
+            <h3 class="font-bold uppercase text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary text-lg pb-4" >
               {{ $t(`footer.links.community.title`) }}
             </h3>
-            <ul class="text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear">
+            <ul class="text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary">
               <li class="py-2">
                 <a
                   :href="$config.slackInvitationLink"
@@ -46,12 +46,12 @@
             }"
           >
             <h3
-              class="font-bold uppercase text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary text-lg pb-4 transition-colors duration-300 ease-linear"
+              class="font-bold uppercase text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary text-lg pb-4"
             >
               {{ $t(`footer.links.${title}.title`) }}
             </h3>
             <ul
-              class="text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear"
+              class="text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary"
             >
               <li v-for="(link, i) in l" :key="i" class="py-2">
                 <a
@@ -77,7 +77,7 @@
         </div>
       </div>
       <div
-        class="border-t border-light-border dark:border-dark-border transition-colors duration-300 ease-linear leading-relaxed"
+        class="border-t border-light-border dark:border-dark-border leading-relaxed transition-none"
       >
         <div class="container mx-auto px-4 text-center py-6" >
           {{$t('common.footer_copyrights')}}

@@ -1,6 +1,6 @@
 <template>
   <button
-    class="relative overflow-hidden px-3 flex items-center bg-gray-100 hover:bg-gray-200 focus:bg-gray-300 dark:bg-dark-surface rounded-full h-10 outline-none text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary ease-linear transform active:scale-95 transition-transform duration-100"
+    class="relative overflow-hidden px-3 lg:px-4 flex items-center bg-gray-100 hover:bg-gray-200 focus:bg-gray-300 dark:bg-dark-surface rounded-full h-10 outline-none text-light-onSurfacePrimary dark:text-dark-primaryText ease-linear transform active:scale-95 transition-transform duration-100"
     @click="setCurrentTheme"
   >
     <span
@@ -19,29 +19,31 @@
         :class="$colorMode.preference === 'light' ? 'show' : 'hide'"
       />
     </span>
-    <!-- <transition name="from-bottom-to-bottom" mode="out-in">
-      <span
-        v-if="$colorMode.preference === 'dark'"
-        key="dark"
-        class="inline-block font-medium ml-1 mr-2"
-      >
-        الليلي
-      </span>
-      <span
-        v-if="$colorMode.preference === 'system'"
-        key="system"
-        class="inline-block font-medium ml-1"
-      >
-        النظام
-      </span>
-      <span
-        v-else-if="$colorMode.preference === 'light'"
-        key="light"
-        class="inline-block font-medium ml-1"
-      >
-        العادي
-      </span>
-    </transition> -->
+    <div class="hidden lg:inline-block mr-2">
+      <transition name="from-bottom-to-bottom" mode="out-in">
+        <span
+          v-if="$colorMode.preference === 'dark'"
+          key="dark"
+          class="inline-block font-medium"
+        >
+          الليلي
+        </span>
+        <span
+          v-if="$colorMode.preference === 'system'"
+          key="system"
+          class="inline-block font-medium"
+        >
+          النظام
+        </span>
+        <span
+          v-else-if="$colorMode.preference === 'light'"
+          key="light"
+          class="inline-block font-medium"
+        >
+          العادي
+        </span>
+      </transition>
+    </div>
   </button>
 </template>
 
