@@ -162,7 +162,7 @@
   }
 
   & code {
-    @apply p-1 not-italic rounded text-sm;
+    @apply p-1 not-italic rounded text-sm leading-tight;
 
     direction: ltr!important;
     display: inline-block!important;
