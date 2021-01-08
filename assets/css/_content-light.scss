@@ -6,6 +6,12 @@
     height: 96px;
     visibility: hidden;
   }
+
+  h1, h2, h3, h4, h5, h6{
+    & code{
+      @apply bg-indigo-50 text-primary-dark;
+    }
+  }
   p {
     color: theme('colors.light.onSurfacePrimary');
   }
@@ -29,7 +35,7 @@
   & a {
     @apply text-dalil-lightindigo border-light-border transform;
     &:hover {
-      @apply bg-light-surface;
+      @apply bg-light-surface border-light-onSurfacePrimary;
     }
 
     & code {

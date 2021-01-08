@@ -49,6 +49,10 @@
       }
     }
 
+    & code{
+      @apply py-2 px-3;
+    }
+
     &:hover {
       & .icon-link {
         visibility: visible;
@@ -78,7 +82,7 @@
     } */
 
     & code {
-      @apply text-xl;
+      @apply text-2xl;
     }
 
     & a.icon-link {
@@ -114,7 +118,7 @@
     } */
 
     & code {
-      @apply text-lg;
+      @apply text-xl py-2 px-3;
     }
 
     & a.icon {
@@ -133,7 +137,7 @@
     @apply leading-9 pb-1 mb-2 transition-colors duration-300 ease-linear;
 
     a{
-      @apply border-b;
+      @apply border-b border-dashed;
       padding: 7px 0;
     }
   }
@@ -145,7 +149,7 @@
   & blockquote {
     @apply italic pr-5 border-r-4 text-sm border-gray-300 my-5;
     &, p{
-      @apply leading-loose;
+      @apply leading-8;
       color: theme('colors.gray.700')!important;
     }
   }
