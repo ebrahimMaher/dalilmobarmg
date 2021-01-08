@@ -6,7 +6,7 @@
       <!-- <LangFallback :doc-link="docLink" :lang-fallback="langFallback" /> -->
 
       <article>
-        <h1 class=" text-2xl lg:text-3xl text-light-onSurfacePrimary dark:text-dark-onSurfaceStrong transition-colors duration-300 ease-linear" >
+        <h1 class="leading-relaxed text-2xl text-light-onSurfacePrimary dark:text-dark-onSurfaceStrong transition-colors duration-300 ease-linear" >
           {{ page.title }}
         </h1>
         <nuxt-content :document="page" />
@@ -125,7 +125,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 article h1 {
-  @apply font-medium relative text-3xl table mb-8;
+  @apply font-medium relative table mb-8;
 
   /* &::after {
     content: ' ';

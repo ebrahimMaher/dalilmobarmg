@@ -1,6 +1,6 @@
 <template>
   <div>
-    <TheHeader />
+    <Navbar />
     <main
       class="lg:block relative bg-light-elevatedSurface dark:bg-dark-elevatedSurface"
     >

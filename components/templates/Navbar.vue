@@ -16,7 +16,7 @@
         />
       </NuxtLink>
       <!-- Center Navigation -->
-      <div class="flex items-center">
+      <div class="flex items-center mx-auto">
         <nav class="hidden lg:flex lg:pt-1 xl:pt-0">
           <ul class="flex text-center">
             <li
@@ -41,8 +41,15 @@
             </li>
           </ul>
         </nav>
-        <div class="buttons mr-2">
+      </div>
+
+
+      <div class="buttons flex lg:mr-auto">
+        <div>
           <DarkModeToggle />
+        </div>
+        <div class="lg:hidden mr-2">
+          <MobileNavigationDrawer />
         </div>
       </div>
     </div>
@@ -50,10 +57,10 @@
 </template>
 
 <script>
-
+import MobileNavigationDrawer from './MobileNavigationDrawer'
 export default {
   components: {
-
+    MobileNavigationDrawer
   },
   data() {
     return {

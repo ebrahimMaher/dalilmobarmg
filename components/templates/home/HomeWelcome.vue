@@ -29,7 +29,7 @@
 
 
           <div class="hidden sm:block text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary my-8">
-            <a href="#non-profit" class="py-2 px-3 bg-gray-100 hover:bg-indigo-50 rounded text-indigo-800 hover:text-light-onSurfacePrimary dark:hover:text-dark-onSurfacePrimary transition ease-out duration-200" >
+            <a href="#non-profit" class="py-2 px-3 bg-gray-100 hover:bg-indigo-50 dark:bg-dark-surface dark:hover:bg-dark-surface rounded text-indigo-800 dark:text-dark-onSurfaceStrong hover:text-light-onSurfacePrimary dark:hover:text-dark-primaryText dark:hover:text-dark-onSurfacePrimary" >
               {{ $t('homepage.welcome.non_profit') }}
             </a>
           </div>
@@ -64,8 +64,8 @@
 </template>
 
 <script>
-import TerminalIcon from '~/components/atoms/icons/IconTerminal.vue'
-import BlogIcon from '~/components/atoms/icons/IconBlog.vue'
+import TerminalIcon from '~/components/icons/IconTerminal.vue'
+import BlogIcon from '~/components/icons/IconBlog.vue'
 export default {
   components: {
     BlogIcon,

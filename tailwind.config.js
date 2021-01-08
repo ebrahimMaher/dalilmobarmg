@@ -65,7 +65,7 @@ module.exports = {
           onSurfacePrimary: '#a8a8b2',
           primaryText: '#a294ee',
           onSurfaceSecondary: '#B8C2CC',
-          elevatedSurface: '#0e0e10',
+          elevatedSurface: '#101014', // #
           elevatedSurface2: '#202042',
           border: '#22222a'
         }

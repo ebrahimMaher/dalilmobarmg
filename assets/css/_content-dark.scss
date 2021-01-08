@@ -66,6 +66,13 @@
   & h5,
   & h6 {
     color: theme('colors.dark.onSurfaceStrong');
+
+    & a,
+    .icon-link {
+      & .icon-link {
+        background-image: url('~assets/images/link-white.svg');
+      }
+    }
   }
 
   & .Alert {

@@ -6,7 +6,7 @@
       :class="{ 'header_mobile_aside--open shadow-2xl': show }"
     >
       <div
-        class="mx-auto h-full light:bg-light-elevatedSurface dark:bg-dark-surface transition-colors duration-300 ease-linear"
+        class="mx-auto h-full light:bg-light-elevatedSurface dark:bg-dark-surface transition-colors duration-300 ease-linear border-r light:border-light-border dark:border-dark-border"
       >
         <div class="content-wrapper h-full">
           <div class="overflow-y-auto h-full pt-4">
@@ -69,13 +69,13 @@
       </div>
     </div>
     <button
-      class="bookmark-button lg:hidden rounded-full flex items-center justify-center transform active:scale-95 active:text-white active:bg-dalil-indigo transition duration-100 ease-linear"
-      :class="{'text-white bg-dalil-indigo': show, 'text-dalil-indigo bg-light-elevatedSurface dark:bg-dark-elevatedSurface': !show}"
+      class="bookmark-button lg:hidden rounded-full flex items-center justify-center transform active:scale-95 active:text-white active:bg-dalil-indigo transition duration-100 ease-out"
+      :class="{'text-white bg-dalil-indigo': show, 'text-dalil-indigo dark:text-dark-primaryText bg-light-elevatedSurface dark:bg-dalil-indigo': !show}"
       @click.prevent.stop="toggle"
     >
-      <BookmarkIcon
+      <IconMenu
         v-if="!show"
-        class="block stroke-current transition-colors duration-300 ease-linear"
+        class="block stroke-current transition-colors duration-300 ease-linear w-6 h-6"
       />
       <TimesIcon
         v-else
@@ -88,14 +88,14 @@
 <script>
 import sortBy from 'lodash.sortby'
 
-import BookmarkIcon from '../atoms/icons/BookmarkIcon'
+import IconMenu from '../icons/IconMenu'
 import TimesIcon from '~/assets/icons/times.svg?inline'
 import ChevronDownIcon from '~/assets/icons/chevron-down.svg?inline'
 import ChevronRightIcon from '~/assets/icons/chevron-right.svg?inline'
 
 export default {
   components: {
-    BookmarkIcon,
+    IconMenu,
     TimesIcon,
     ChevronDownIcon,
     ChevronRightIcon
@@ -196,7 +196,7 @@ button {
   box-shadow: 0px 1px 7px 1px rgba(0, 0, 0, 0.101562);
   right: 1rem;
   bottom: 1rem;
-  z-index: 100;
+  z-index: 15;
 }
 
 .inner-button {

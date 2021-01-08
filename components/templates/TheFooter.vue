@@ -89,7 +89,7 @@
 
 <script>
 import GlobeIcon from '~/assets/icons/globe.svg?inline'
-import IconGroup from '~/components/atoms/icons/IconGroup'
+import IconGroup from '~/components/icons/IconGroup'
 import GithubIcon from '~/assets/icons/github-3.svg?inline'
 
 export default {

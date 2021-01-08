@@ -48,7 +48,7 @@
 <script>
 // import MentorIllustration from '~/assets/illustrations/mentorship.svg?inline'
 import DalilLogo from '~/components/global/DalilLogo'
-import IconGroup from '~/components/atoms/icons/IconGroup'
+import IconGroup from '~/components/icons/IconGroup'
 export default {
   components: {
     DalilLogo,

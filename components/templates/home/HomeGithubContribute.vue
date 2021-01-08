@@ -41,7 +41,7 @@
 </template>
 
 <script>
-import IconGroup from '~/components/atoms/icons/IconGroup'
+import IconGroup from '~/components/icons/IconGroup'
 export default {
   components: {
     IconGroup

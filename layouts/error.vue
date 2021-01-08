@@ -35,7 +35,7 @@
 
 <script>
 import LostImageIllustration from '~/assets/illustrations/404.svg?inline'
-import IllustrationMountainsGlobe from '~/components/molecules/illustrations/IllustrationMontainsGlobe'
+import IllustrationMountainsGlobe from '~/components/illustrations/IllustrationMontainsGlobe'
 export default {
   components: {
     IllustrationMountainsGlobe,

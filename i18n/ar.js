@@ -13,6 +13,7 @@ module.exports = {
   updated: 'مُعدل',
   copy: 'نسخ',
   copy_done: 'تم النسخ',
+  main_menu: 'القائمة الرئيسية',
 
   header: {
     links: [

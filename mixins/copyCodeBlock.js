@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import AppCopyButton from '~/components/molecules/AppCopyButton'
+import AppCopyButton from '~/components/components/AppCopyButton'
 
 export default {
   mounted() {
