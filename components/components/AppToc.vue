@@ -14,6 +14,8 @@
         always-track
         :modify-url="false"
       >
+        <!-- if you wanna hide h3 titles from Toc in phone.. ad this to :class object 'hidden md:block':
+              link.depth > 2 -->
         <li
           v-for="link of toc"
           :key="link.id"
@@ -21,8 +23,6 @@
           :class="{
             'border-t border-dashed dark:border-gray-800 first:border-t-0 font-semibold':
               link.depth === 2,
-            'hidden md:block':
-              link.depth > 2,
           }"
         >
           <a

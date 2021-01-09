@@ -60,12 +60,12 @@ module.exports = {
           border: defaultTheme.colors.gray['300']
         },
         dark: {
-          surface: '#0b0b0e',
+          surface: 'hsl(240, 12%, 6%)', /* #0b0b0e */
           onSurfaceStrong: '#f0f0f2',
           onSurfacePrimary: '#a8a8b2',
           primaryText: '#a294ee',
           onSurfaceSecondary: '#B8C2CC',
-          elevatedSurface: '#101014', // #
+          elevatedSurface: 'hsl(240, 12%, 8%)', // #101014
           elevatedSurface2: '#202042',
           border: '#22222a'
         }
