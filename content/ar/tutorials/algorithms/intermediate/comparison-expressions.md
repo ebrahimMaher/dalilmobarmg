@@ -1,12 +1,13 @@
 ---
-title: تعبيرات المقارنة (Comparison)
+title: تعبيرات المقارنة (متوسط)
 description: تعبيرات المقارنة (Comparison Expressions) هي نوع من التعبييرات مختص بالقيم المنطقية (true, false)
 position: 5
-category: fundamentals
+category: intermediate
 createdAt: 1610199050695
 updatedAt: 1610199050695
 new: false
 updated: false
+uncompleted: true
 contributors:
   - ebrahimmaher
 ---

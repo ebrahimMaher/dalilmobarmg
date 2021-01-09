@@ -4,7 +4,7 @@
       اضغط على الزر:
     </div>
     <div class="toggler flex">
-      <button class="text-white light:bg-primary-base dark:bg-dalil-lightindigo font-bold w-full px-4 lg:w-auto lg:px-12 relative overflow-hidden flex items-center justify-center rounded h-10 transform active:scale-95" @click="setMode" >
+      <button :class="{'text-orange-400': value, 'text-white': !value}" class="light:bg-primary-base dark:bg-dalil-lightindigo font-bold w-full px-4 lg:w-auto lg:px-12 relative overflow-hidden flex items-center justify-center rounded h-10 transform active:scale-95" @click="setMode" >
         <span class="relative overflow-hidden w-5 h-5 flex items-center justify-center ml-2" >
           <MoonIcon class="w-5 h-5 absolute" />
         </span>

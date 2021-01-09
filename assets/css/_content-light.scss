@@ -1,11 +1,4 @@
 .light-mode .nuxt-content {
-  h2:before, h3:before{
-    content: "";
-    display: block;
-    margin-top: -96px;
-    height: 96px;
-    visibility: hidden;
-  }
 
   h1, h2, h3, h4, h5, h6{
     & code{
@@ -14,7 +7,7 @@
   }
   p {
     color: theme('colors.light.onSurfacePrimary');
-  }
+   }
 
   blockquote {
     color: theme('colors.light.onSurfaceSecondary');
@@ -24,9 +17,6 @@
     & code {
       @apply border-0;
     }
-  }
-  .code-block.active .nuxt-content-highlight {
-    margin-top: 0;
   }
 
   & a {
@@ -54,7 +44,7 @@
   & pre {
     @apply static;
 
-    background-color: theme('colors.dark.elevatedSurface2');
+    @apply bg-dark-elevatedSurface2 border border-dark-elevatedSurface2;
 
     code {
       color: theme('colors.dark.onSurfacePrimary');

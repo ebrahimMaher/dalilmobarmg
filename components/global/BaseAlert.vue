@@ -67,7 +67,7 @@ export default {
 }
 
 .alert-error code {
-  @apply border border-red-200 shadow-none;
+  @apply bg-red-200 shadow-none;
 }
 
 .alert-error .alert-icon {

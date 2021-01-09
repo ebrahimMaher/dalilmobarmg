@@ -118,7 +118,9 @@ module.exports = {
     tutorials: {
       algorithms: {
         environment: 'إعداد بيئة العمل',
-        fundamentals: 'اﻷساسيات',
+        fundamentals: 'مستوى ابتدائي',
+        intermediate: 'مستوى متوسط',
+        advanced: 'مستوى متقدم',
       },
       computer: {
         essentials: 'اﻷساسيات',

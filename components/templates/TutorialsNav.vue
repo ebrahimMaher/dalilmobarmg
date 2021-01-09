@@ -49,7 +49,7 @@
                     <!-- {{ link.title }} -->
                   </div>
                   <div class="font-semibold mr-2 mt-1">
-                    <Badge v-if="link.uncompleted" color-class="bg-gray-500 hover:bg-gray-600" :value="$t('soon')" />
+                    <Badge v-if="link.uncompleted" color-class="bg-gray-500 dark:bg-gray-600 hover:dark:bg-gray-700 hover:bg-gray-600" :value="$t('soon')" />
                     <Badge v-else-if="link.new || dateIsNew(link.createdAt)" color-class="bg-indigo-600 hover:bg-indigo-500" :value="$t('new')" />
                     <Badge v-else-if="link.updated || dateIsNew(link.updatedAt)" color-class="bg-green-600 hover:bg-green-500" :value="$t('updated')" />
                   </div>
@@ -108,7 +108,7 @@ export default {
       return i;
     },
     isShort(){
-      return this.linksLength < 10;
+      return this.linksLength < 20;
     }
   },
   methods: {
