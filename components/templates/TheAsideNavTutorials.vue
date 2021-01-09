@@ -20,23 +20,24 @@
             class="flex select-none items-center cursor-pointer uppercase font-medium pb-2 transition-colors duration-100 ease-linear"
             :class="{
               'hover:text-dalil-lightindigo block':
-                $route.params.book !== group && visibleGroup !== group,
+                $route.params.book !== group && visibleGroup !== group && !isShort,
               'font-bold text-dalil-lightindigo dark:text-dark-onSurfaceStrong': $route.params.book === group,
               'text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary': $route.params.book !== group
             }"
             @click.prevent="visibleGroup === group ? visibleGroup = '' : visibleGroup = group"
           >
             <ChevronDownIcon
-              v-if="$route.params.book === group || visibleGroup === group"
+              v-if="$route.params.book === group || visibleGroup === group || isShort"
               class="w-4 h-4 ml-2"
             />
             <ChevronRightIcon v-else class="w-4 h-4 ml-2" />
+
             <span>{{ $t(`content.tutorials.${tutorial}.${group}`) }}</span>
           </component>
           <transition name="fade-down-transition">
-            <div v-if="$route.params.book === group || visibleGroup === group">
+            <div v-if="($route.params.book === group || visibleGroup === group) || isShort">
 
-              <ul class="pb-8 pl-2">
+              <ul class="pb-2 pl-2">
                 <li
                   v-for="(link, index) in sublinks"
                   :key="index"
@@ -101,6 +102,20 @@ export default {
         links[key] = this.links[key]
       })
       return links
+    },
+    linksLength(){
+      const sortedLinks = this.sortedLinks;
+
+      let i = 0;
+      for (let key in sortedLinks){
+        let subLinks = sortedLinks[key];
+        i += subLinks ? subLinks.length : 0;
+      }
+      return i;
+    },
+    isShort(){
+      console.log(this.linksLength);
+      return this.linksLength < 10;
     }
   },
   methods: {
@@ -138,7 +153,7 @@ export default {
 
 <style lang="scss" scoped>
   .aside-nav-item{
-    @apply transform;
+    @apply transform transition-transform duration-75 ease-linear;
     &:active{
       @apply scale-95 ;
     }

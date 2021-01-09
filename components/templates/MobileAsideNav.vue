@@ -189,8 +189,8 @@ button {
 }
 
 .bookmark-button {
-  width: 52px;
-  height: 52px;
+  width: 50px;
+  height: 50px;
   position: fixed;
   // border-radius: 0 9999px 9999px 0;
   box-shadow: 0px 1px 7px 1px rgba(0, 0, 0, 0.101562);

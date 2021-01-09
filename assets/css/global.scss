@@ -19,6 +19,7 @@ a, button, .btn{
     &:focus{
         outline: none!important;
     }
+    text-transform: unset!important;
     &.disabled, &[disabled]{
       @apply text-gray-500 cursor-default;
       &:hover{

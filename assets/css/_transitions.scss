@@ -34,3 +34,15 @@
   transform: none;
   opacity: 1!important;
 }
+
+.fade-up-transition-enter-active, .fade-up-transition-leave-active{
+  transition: opacity 0.1s ease, transform 0.2s ease!important;
+}
+.fade-up-transition-enter, .fade-up-transition-leave-to{
+  transform: translateY(25px);
+  opacity: 0!important;
+}
+.fade-up-transition-enter-to, .fade-up-transition-leave{
+  transform: none;
+  opacity: 1!important;
+}
