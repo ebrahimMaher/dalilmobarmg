@@ -5,7 +5,7 @@
       data-cy="prev"
       :to="
         localePath({
-          name: 'tutorials-algorithms-book-slug',
+          name: `tutorials-${tutorial}-book-slug`,
           params: { book: prevBook, slug: prev.slug }
         })
       "
@@ -28,7 +28,7 @@
       data-cy="next"
       :to="
         localePath({
-          name: 'tutorials-algorithms-book-slug',
+          name: `tutorials-${tutorial}-book-slug`,
           params: { book: nextBook, slug: next.slug }
         })
       "
@@ -65,7 +65,7 @@ export default {
       type: Object,
       default: () => null
     },
-    section: {
+    tutorial: {
       type: String,
       default: ''
     }

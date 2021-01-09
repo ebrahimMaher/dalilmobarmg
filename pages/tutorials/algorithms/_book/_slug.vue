@@ -14,7 +14,7 @@
         <LazyAppPrevNext
           :prev="prev"
           :next="next"
-          section="guides"
+          tutorial="algorithms"
           class="mt-4"
         />
 

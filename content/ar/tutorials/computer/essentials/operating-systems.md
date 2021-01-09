@@ -1,7 +1,7 @@
 ---
 title: أنظمة التشغيل
 description: معلومات مهمة عن أنظمة التشغيل وأهميتها وكيف تعمل وأنواعها المختلفة
-position: 3
+position: 4
 category: essentials
 createdAt: 1610211782735
 updatedAt: 1610211782735
