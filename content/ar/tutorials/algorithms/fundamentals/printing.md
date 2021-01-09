@@ -42,22 +42,23 @@ console.log("Hello World");
 ### تمرين طباعة إسمك
 ***قم بكتابة برنامج يطبع لك إسمك مرة بالعربية ومرة باﻹنجليزية بإستخدام دالة الطباعة `console.log()`***
 
-الحل:
-```js
-console.log('دليل مبرمج');
-console.log('Dalil Mobarmg');
-```
-
-
-
-<br>
-<br>
-
 <base-alert type="error">
 
 لا تنسى علامتيّ التنصيص ﻷن بدونها سيظهر لك خطأ ولن يعمل الكود!
 
 </base-alert>
+
+<expand full button-text="عرض الحل" hide-text="إخفاء الحل">
+
+```js
+console.log('دليل مبرمج');
+console.log('Dalil Mobarmg');
+```
+
+</expand>
+
+<br>
+<br>
 
 <base-alert type="next">
 
