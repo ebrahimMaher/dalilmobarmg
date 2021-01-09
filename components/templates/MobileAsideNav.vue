@@ -10,51 +10,7 @@
       >
         <div class="content-wrapper h-full">
           <div class="overflow-y-auto h-full pt-4">
-            <transition-group
-              v-for="(sublinks, group) in sortedLinks"
-              :key="group"
-              tag="div"
-              name="list"
-              class="header_mobile_aside_group"
-            >
-              <component
-                :is="$route.params.book === group ? `h3` : 'nuxt-link'"
-                :key="`title-${group}`"
-                :to="{
-                  name: `tutorials-${tutorial}-book-slug`,
-                  params: { book: group, slug: sublinks[0].slug }
-                }"
-                class="flex items-center uppercase text-gray-600 pb-2"
-                :class="{
-                  'hover:text-dalil-lightindigo mb-4 block':
-                    $route.params.book !== group,
-                  'font-bold': $route.params.book === group
-                }"
-              >
-                <ChevronDownIcon
-                  v-if="$route.params.book === group"
-                  class="w-4 h-4 ml-2"
-                />
-                <ChevronRightIcon v-else class="w-4 h-4 ml-2" />
-                <span>{{ $t(`content.tutorials.${tutorial}.${group}`) }}</span>
-              </component>
-              <ul
-                v-if="$route.params.book === group"
-                :key="`list-${group}`"
-                class="pb-6"
-              >
-                <li v-for="(link, index) in sublinks" :key="index" class="py-2">
-                  <NuxtLink
-                    class="block dark:text-dark-onSurfacePrimary hover:text-dalil-lightindigo transition-colors duration-300 ease-linear"
-                    exact-active-class="text-dalil-lightindigo"
-                    :to="toLink(group, link)"
-                    @click.native="show = false"
-                  >
-                    {{ link.title }}
-                  </NuxtLink>
-                </li>
-              </ul>
-            </transition-group>
+            <TutorialsNav :links="links" :tutorial="tutorial" />
           </div>
           <!-- <button
             class="inner-button sm:hidden absolute h-10 w-10 flex items-center justify-center text-dalil-gray bg-gray-200 dark:bg-dark-elevatedSurface dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear"
@@ -127,7 +83,6 @@ export default {
   },
   methods: {
     toggle(){
-      console.log('test');
       this.show = !this.show;
     },
     clickOutsideHandler() {
@@ -135,12 +90,6 @@ export default {
         this.show = false
       }
     },
-    toLink(group, link) {
-      return this.localePath({
-        name: `tutorials-${this.tutorial}-book-slug`,
-        params: { book: group, slug: link.slug }
-      })
-    }
   }
 }
 </script>
@@ -173,7 +122,7 @@ export default {
 
 .content-wrapper {
   margin-right: auto;
-  padding-right: 2rem;
+  padding: 0 1rem;
 
   @screen sm {
     max-width: calc(theme('screens.sm') / 2);

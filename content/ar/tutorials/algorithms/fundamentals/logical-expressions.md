@@ -1,12 +1,13 @@
 ---
 title: التعبيرات المنطقية (Logical)
 description: التعبيرات المنطقية (Logical Expressions) هي نوع من التعبييرات مختص بالقيم المنطقية (true, false)
-position: 5
+position: 6
 category: fundamentals
 createdAt: 1610127607339
 updatedAt: 1610127607339
 new: false
 updated: false
+uncompleted: true
 contributors:
   - ebrahimmaher
 ---

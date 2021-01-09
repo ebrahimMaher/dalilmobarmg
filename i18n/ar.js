@@ -9,6 +9,7 @@ module.exports = {
   },
   iso: 'ar',
   name: 'دليل مبرمج',
+  soon: 'قريباً',
   new: 'جديد',
   updated: 'مُعدل',
   copy: 'نسخ',

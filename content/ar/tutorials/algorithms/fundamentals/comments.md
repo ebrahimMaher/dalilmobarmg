@@ -37,14 +37,14 @@ contributors:
 مثال:
 ```js{1,2}
 // Let's Print test to console!
-console.log('test');
+console.log("test");
 ```
 جرب تشغيل الكود ولن يظهر خطأ! ﻷن المفسر سيتجاهل السطر اﻷول ﻷنه تعليق.
 ولو جربت جعل السطر الثاني الخاص بالطباعة تعليق أيضاً فعند تشغيل الكود لن يتم الطباعة! لن يعمل السطر...
 
 ```js{1,2}
 // Let's Print test to console!
-// console.log('test');
+// console.log("test");
 ```
 اﻵن المفسر سيعتبر السطر الثاني "سطر الطباعة" تعليق، بالتالي سيتجاهله ولن يشغله.
 
@@ -61,21 +61,21 @@ console.log('test');
 > ستلاحظ أن التعليق دائما يأخذ لون خافت، رمادي خافت مثلاً..
 
 ```js
-/* console.log('test');
-console.log('test');
-console.log('test');
-console.log('test');*/
+/* console.log("test");
+console.log("test");
+console.log("test");
+console.log("test");*/
 ```
 اﻵن المفسر سيتجاهل كل ما بين العلامتين !
 
 مثال أخر:
 
 ```js
-/* console.log('test');
-console.log('test');
-console.log('test');
-console.log('test');*/
-console.log('here');
+/* console.log("test");
+console.log("test");
+console.log("test");
+console.log("test");*/
+console.log("here");
 ```
 عند تشغيل الكود، ستجد المشغل لم يفسر إلّا السطر اﻵخير ﻷنه خارج التعليق، بالتالي سيطبع فقط ***hello***
 
@@ -92,10 +92,6 @@ console.log('here');
   ﻷن هذه اﻷسطر لن يمر عليها مفسّر اللغة وسيتجاهلها
 */
 ```
-
-| test | test | test | test |
-|------|------|------|------|
-| test | test | tset | test |
 
 <base-alert type="tip">
 

@@ -3,9 +3,9 @@
     <div class="flex items-start">
       <div class="flex-shrink-0 self-start pt-1">
         <IconInfo v-if="type === 'info' || type === 'success'" class="alert-icon" />
-        <IconNext v-else-if="type === 'next'" class="alert-icon alert-next" />
+        <IconNext v-else-if="type === 'next'" class="alert-icon" />
         <IconTip v-else-if="type === 'tip'" class="alert-icon" />
-        <IconStar v-else-if="type === 'star'" class="alert-icon alert-star" />
+        <IconStar v-else-if="type === 'star'" class="alert-icon" />
         <IconAlert v-else class="alert-icon" />
       </div>
       <div class="mr-2 alert-content text-sm leading-7">
@@ -158,7 +158,6 @@ export default {
 .alert-next .alert-content {
   @apply text-gray-700;
 }
-
 
 .dark-mode .alert-next {
   @apply border-dark-onSurfaceStrong;

@@ -85,7 +85,8 @@
     } */
 
     & code {
-      @apply text-2xl;
+      @apply text-2xl pb-1;
+      line-height: 0.9!important;
     }
 
     & a.icon-link {
