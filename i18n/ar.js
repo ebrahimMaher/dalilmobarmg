@@ -124,6 +124,8 @@ module.exports = {
       },
       computer: {
         essentials: 'اﻷساسيات',
+        cli: 'سطر اﻷوامر',
+        editor: 'محرر النصوص',
       }
     }
   },

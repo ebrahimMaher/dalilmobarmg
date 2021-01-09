@@ -57,7 +57,6 @@ export default {
   },
   buildModules: [
     '@nuxtjs/color-mode',
-    // https://github.com/nuxt-community/netlify-files-module
     '@nuxtjs/style-resources',
     // https://github.com/nuxt-community/svg-module
     '@nuxtjs/svg',
