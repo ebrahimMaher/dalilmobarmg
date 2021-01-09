@@ -31,8 +31,8 @@ module.exports = {
       {
         name: 'مبادئ البرمجة والخوارزميات',
         slug: 'tutorials-algorithms-book-slug',
-        param_book: 'environment',
-        param_slug: 'intro'
+        param_book: 'fundamentals',
+        param_slug: 'print'
       },
       {
         name: 'اﻹختبارات',

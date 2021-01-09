@@ -8,7 +8,7 @@
               <img src="~/assets/illustrations/operating-system.svg" class="max-h-full" />
             </template>
           </TutorialCard>
-          <TutorialCard :to="{name: 'tutorials-algorithms-book-slug', params: {book: 'environment', slug: 'intro'}}" :title="$t('homepage.tutorials.algorithms.title')" :description="$t('homepage.tutorials.algorithms.description')" color="primary">
+          <TutorialCard :to="{name: 'tutorials-algorithms-book-slug', params: {book: 'fundamentals', slug: 'print'}}" :title="$t('homepage.tutorials.algorithms.title')" :description="$t('homepage.tutorials.algorithms.description')" color="primary">
             <template v-slot:icon>
               <img src="~/assets/illustrations/algorithms.svg" class="max-h-full" />
             </template>

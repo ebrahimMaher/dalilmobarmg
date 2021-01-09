@@ -11,7 +11,7 @@
           :to="
             localePath({
               name: link.slug,
-              params: { book: 'environment', slug: 'intro' }
+              params: { book: 'fundamentals', slug: 'print' }
             })
           "
         >
