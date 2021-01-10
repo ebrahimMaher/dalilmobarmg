@@ -97,3 +97,17 @@ html.dark-mode{
       background: rgba(255, 255, 255, 0.3);
   }
 }
+
+.ltr-dir{
+  text-align: left;
+  &, div{
+    direction: ltr;
+  }
+}
+
+.rtl-dir{
+  text-align: right;
+  &, div{
+    direction: rtl;
+  }
+}
