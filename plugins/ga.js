@@ -30,7 +30,7 @@ export default ({ app }, inject) => {
   /*
    ** Set the current page
    */
-  ga('create', 'UA-88662854-1', 'auto')
+  ga('create', 'G-S43187LK9D', 'auto')
   inject('ga', ga)
   /*
    ** Every time the route changes (fired on initialization too)
