@@ -257,11 +257,20 @@
 
   table {
     @apply text-sm my-6;
-    border-collapse: collapse;
-    width: 100%;
-    overflow-x: scroll;
-    max-width: 100%;
 
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    // border-collapse: collapse;
+    &, thead, tbody, tr, td, th{
+      width: 100%;
+    }
+    overflow-x: auto!important;
+
+    thead, tbody{
+      width: 100%;
+    }
 
     td, th {
       @apply p-4 border;
