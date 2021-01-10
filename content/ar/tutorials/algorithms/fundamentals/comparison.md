@@ -61,8 +61,8 @@ contributors:
 
 مثال:
 ```js
-console.log(5 != 4);
-console.log(5 != 5);
+console.log(5 == 4);
+console.log(5 == 5);
 ```
 <code-result>
 true
@@ -91,8 +91,8 @@ false
 
 مثال:
 ```js
-console.log(5 == 4);
-console.log(5 == 5);
+console.log(5 != 4);
+console.log(5 != 5);
 ```
 <code-result>
 false
