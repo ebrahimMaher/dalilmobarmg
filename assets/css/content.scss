@@ -252,6 +252,27 @@
       }
     }
   }
+
+  // tables
+
+  table {
+    @apply text-sm my-6;
+    border-collapse: collapse;
+    width: 100%;
+    overflow-x: scroll;
+    max-width: 100%;
+
+
+    td, th {
+      @apply p-4 border;
+      white-space: nowrap;
+    }
+
+    th {
+      @apply py-3;
+    }
+  }
+
 }
 // lists
 .nuxt-content {
@@ -347,4 +368,5 @@ article{
     }
   }
 }
+
 

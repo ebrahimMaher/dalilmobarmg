@@ -60,6 +60,27 @@
       color: theme('colors.dark.onSurfacePrimary');
     }
   }
+
+  table {
+    td, th {
+      @apply border-dark-border;
+    }
+
+    tr:nth-child(even){
+      @apply bg-dark-surface;
+    }
+
+    tr{
+      &:hover{
+        // @apply bg-gray-200;
+      }
+    }
+
+    th {
+      @apply bg-dark-surface text-dark-onSurfaceStrong;
+    }
+  }
+
   & h2,
   & h3,
   & h4,

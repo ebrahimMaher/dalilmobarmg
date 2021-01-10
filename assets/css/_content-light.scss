@@ -59,6 +59,26 @@
     }
   }
 
+  table {
+    td, th {
+      @apply border-light-border;
+    }
+
+    tr:nth-child(even){
+      @apply bg-light-surface;
+    }
+
+    tr{
+      &:hover{
+        // @apply bg-gray-200;
+      }
+    }
+
+    th {
+      @apply bg-primary-base text-white;
+    }
+  }
+
   & .Alert {
     @apply bg-blue-100 text-light-onSurfacePrimary;
 
