@@ -68,7 +68,7 @@
   }
 
   h2{
-    @apply border-b pb-2 border-light-border; // dark:border-dark-border
+    @apply border-b font-bold pb-2 border-light-border; // dark:border-dark-border
     width: 100%;
   }
   & h2 {
@@ -360,7 +360,7 @@ article{
   }
 
   .nuxt-content-highlight{
-    @apply my-6;
+    @apply mt-6 mb-3;
 
     pre{
       @apply my-2;
