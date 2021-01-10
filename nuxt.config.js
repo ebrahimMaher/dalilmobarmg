@@ -106,7 +106,6 @@ export default {
     '~/plugins/directives',
     '~/plugins/intersection-observer.client.js',
     '~/plugins/vue-observe-visibility.client.js',
-    '~/plugins/ga.js',
     '~/plugins/vue-scrollactive',
   ],
   env: {
