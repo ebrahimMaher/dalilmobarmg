@@ -19,7 +19,7 @@ export default {
   async asyncData({ $content, app, params, redirect }) {
     let pages = []
     if (!params.book) {
-      return redirect('/tutorials/algorithms/fundamentals/print')
+      return redirect('/tutorials/algorithms/comparison')
     }
     try {
       const locale = app.i18n.defaultLocale;

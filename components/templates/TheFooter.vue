@@ -123,7 +123,7 @@ export default {
           },
           {
             key: this.$t('footer.links.tutorials.algorithms'),
-            to: this.localePath('/tutorials/algorithms/fundamentals/print')
+            to: this.localePath('/tutorials/algorithms/comparison')
           },
           {
             key: this.$t('footer.links.tutorials.javascript'),
