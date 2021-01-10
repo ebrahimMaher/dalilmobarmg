@@ -65,9 +65,9 @@ console.log(5 == 4);
 console.log(5 == 5);
 ```
 <code-result>
-true
-<br>
 false
+<br>
+true
 </code-result>
 
 
@@ -95,9 +95,9 @@ console.log(5 != 4);
 console.log(5 != 5);
 ```
 <code-result>
-false
-<br>
 true
+<br>
+false
 </code-result>
 
 
