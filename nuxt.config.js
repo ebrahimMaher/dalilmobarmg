@@ -58,12 +58,10 @@ export default {
   buildModules: [
     '@nuxtjs/color-mode',
     '@nuxtjs/style-resources',
-    // https://github.com/nuxt-community/svg-module
     '@nuxtjs/svg',
-    // https://github.com/Atinux/nuxt-tailwindcss/
     '@nuxtjs/tailwindcss',
-    // https://pwa.dalilmobarmg.com
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/google-analytics',
   ],
   modules: [
     '@nuxt/http',
@@ -71,7 +69,9 @@ export default {
     'nuxt-i18n',
     'vue-scrollto/nuxt'
   ],
-
+  googleAnalytics: {
+    id: process.env.GOOGLE_ANALYTICS_ID || 'G-S43187LK9D',
+  },
   pwa: {
     manifest: {
       name: 'دليل مبرمج'
