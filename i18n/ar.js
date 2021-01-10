@@ -118,6 +118,7 @@ module.exports = {
   content: {
     tutorials: {
       algorithms: {
+        'before-start': 'قبل البدء في البرمجة',
         environment: 'إعداد بيئة العمل',
         fundamentals: 'مستوى ابتدائي',
         intermediate: 'مستوى متوسط',
