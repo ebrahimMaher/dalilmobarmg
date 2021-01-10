@@ -26,6 +26,11 @@
                 <br />
               </template>
             </i18n>
+
+            <div class="only-men text-sm mt-3 p-3 bg-yellow-100 rounded">
+              {{$t('homepage.slack.only_men')}}
+            </div>
+
             <div class="text-center lg:text-right mt-8">
               <AppButton :variant="null" :href="$config.slackInvitationLink" class="bg-yellow-500 hover:bg-yellow-400 py-3 px-6 text-base text-light-onSurfaceStrong" data-cy="slack" >
                 <div class="flex">
