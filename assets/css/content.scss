@@ -321,6 +321,10 @@
 
     z-index: 4;
 
+    @media (min-width: 1024px){
+      @apply flex; // not hidden in lg screens
+    }
+
     &:focus {
       @apply outline-none;
     }
