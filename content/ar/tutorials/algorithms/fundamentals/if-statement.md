@@ -174,7 +174,7 @@ if (dark == false){
 ### مثال أكبر من 10
 في هذا المثال سنقوم بإنشاء متغير ونضع بداخله رقم، ونكتب كود يطبع "العدد أكبر من 10" إذا كان العدد فعلاً أكبر من "10"
 
-> يستخدم المثال [تعبيرات المقارنة](/tutorials/algorithms/fundamentals/datatype) ، وتعتمد الشروط عليها بشكل كبير لذلك يُفضل مراجعة [درس تعبيرات المقارنة](/tutorials/algorithms/fundamentals/comparison) سريعاً
+> يستخدم المثال [تعبيرات المقارنة](/tutorials/algorithms/fundamentals/comparison) ، وتعتمد الشروط عليها بشكل كبير لذلك يُفضل مراجعة [درس تعبيرات المقارنة](/tutorials/algorithms/fundamentals/comparison) سريعاً
 
 ```js
 var num = 15;
