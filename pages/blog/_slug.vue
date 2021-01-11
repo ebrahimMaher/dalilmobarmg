@@ -90,12 +90,8 @@ export default {
       envProd: state => state.envProd
     }),
     socialImage() {
-      const image = this.post.imgUrl ? this.post.imgUrl : 'nuxt-card.png'
-      if (this.envTest || this.isDev) {
-        return `${this.host}/${image}`
-      } else {
-        return `https://res.cloudinary.com/nuxt/image/upload/w_1200,h_628,c_fill,f_auto/remote/nuxt-org/${this.post.imgUrl}`
-      }
+      const image = this.post.imgUrl ? this.post.imgUrl : 'dalilmobarmg-card.png'
+      return `${this.host}/${image}`
     }
   },
   head() {
