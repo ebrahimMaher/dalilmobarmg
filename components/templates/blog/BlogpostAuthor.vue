@@ -4,7 +4,7 @@
     :href="author.link"
     target="_blank"
     rel="noopener"
-    class="inline-flex items-center hover:text-dalil-lightindigo transition ease-linear duration-150"
+    class="inline-flex items-center light:bg-light-surface dark:bg-dark-surface"
   >
     <img
       class="inline-block h-6 w-6 rounded-full"
@@ -15,7 +15,7 @@
   </a>
   <span
     v-else
-    class="inline-flex items-center hover:text-dalil-lightindigo transition ease-linear duration-150"
+    class="inline-flex items-center"
   >
     <img
       class="inline-block h-6 w-6 rounded-full"

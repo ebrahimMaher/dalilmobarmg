@@ -1,3 +1,4 @@
+
 <template>
   <div class="shadow-dalilmobarmg">
     <div class="container mx-auto px-4 lg:px-12 xl:px-20 pt-16 pb-8">
@@ -20,30 +21,14 @@
             tag="h3"
             class="xl:text-lg light:text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6"
           >
-            <template v-slot:nuxtTeam>
-              <NuxtLink
-                class="text-dalil-indigo underline"
-                to="/team#nuxtCompany"
-              >
-                {{ $t('blog.dalil_team') }}
-              </NuxtLink>
-            </template>
-            <template v-slot:nuxtCommunity>
-              <NuxtLink
-                class="text-dalil-indigo underline"
-                to="/team#nuxtCommunity"
-              >
-                {{ $t('blog.dalil_community') }}
-              </NuxtLink>
-            </template>
           </i18n>
         </div>
         <img src="~/assets/illustrations/blog.svg"
           class="w-2/3 mx-auto lg:mx-0 lg:w-3/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"
         />
       </div>
-      <hr class="hidden lg:block my-8" />
-      <section>
+      <hr class="light:border-light-border dark:border-dark-border hidden lg:block my-8" />
+      <section class="grid grid-cols-1 lg:grid-cols-3 gap-4">
         <BlogpostPreviewItem
           v-for="(post, index) in posts"
           :key="index"

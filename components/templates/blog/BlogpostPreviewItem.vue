@@ -1,81 +1,67 @@
 <template>
   <NuxtLink
     :to="localePath({ name: 'blog-slug', params: { slug: post.slug } })"
-    class="light:bg-light-surface dark:bg-dark-surface flex flex-col-reverse lg:flex-row mb-8 rounded p-4 sm:p-8 lg:p-4 light:hover:bg-gray-200 dark:hover:bg-gray-800 cursor-pointer transition-colors duration-300 ease-linear"
+    class="border light:border-light-border dark:border-dark-border flex flex-col mb-8 rounded-lg overflow-hidden hover:shadow-dalilmobarmg dark:hover:bg-dark-surface cursor-pointer transition duration-300 ease-linear"
   >
-    <div class="w-full lg:w-2/3 flex flex-col justify-between pr-4">
+    <div class="w-full overflow-hidden h-15 light:bg-light-surface dark:bg-dark-surface">
+      <img :src="post.imgUrl" :alt="post.title" class="w-100 " />
+    </div>
+    <div class="px-4 lg:px-5 pt-3 pb-5 w-full flex flex-col justify-between">
       <div class="mb-2">
-        <h2
-          class="mb-4 inline-block leading-tight light:hover:text-dalil-lightindigo dark:hover:text-dalil-lightindigo light:text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-semibold text-2xl md:text-3xl transition-colors duration-300 ease-linear"
-        >
+
+        <div class="flex justify-between items-center mb-3">
+          <div class="light:text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary text-sm" >
+            {{ formatDateByLocale(post.date) }}
+          </div>
+          <div class="flex text-xs items-center light:bg-light-surface dark:bg-dark-surface rounded-full pl-2" >
+            <img class="inline-block h-6 w-6 rounded-full border light:border-light-border dark:border-dark-border" :src="post.authors[0].avatarUrl" alt />
+            <span class="leading-none last:ml-0 px-1 light:text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary hover:text-dalil-lightindigo" >
+              {{ post.authors[0].name }}
+            </span>
+          </div>
+        </div>
+
+        <h2 class="my-1 inline-block leading-tight light:hover:text-dalil-lightindigo dark:hover:text-dark-primaryText light:text-light-onSurfaceStrong dark:text-dark-onSurfaceStrong text-lg md:text-xl font-semibold" >
           {{ post.title }}
         </h2>
-        <div class="mb-4">
+        <div class="py-3">
           <p
-            class="truncate-multiline-3 light:text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear"
+            class="truncate-multiline-3 leading-relaxed light:text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
           >
             {{ post.description }}
           </p>
         </div>
+
+        <hr class="light:border-light-border dark:border-dark-border hidden lg:block my-5" />
+
         <div
-          class="flex flex-row flex-wrap justify-start mb-2 light:text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary"
+          class="flex flex-row flex-no-wrap justify-start light:text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
         >
-          <span
-            v-for="(tag, id) in post.tags"
-            :key="id"
-            class="truncate uppercase tracking-wider font-medium text-ss px-2 py-1 rounded-full ml-2 mb-2 border border-light-border dark:border-dark-border transition-colors duration-300 ease-linear"
-          >
+          <span v-for="(tag, id) in post.tags" :key="id" class="truncate uppercase tracking-wider font-medium text-ss px-2 py-1 rounded-full ml-2 border border-light-border dark:border-dark-border" >
             {{ tag }}
           </span>
         </div>
       </div>
-      <div class="flex flex-col lg:flex-row text-sm">
+      <!-- <div class="flex flex-col lg:flex-row text-sm">
         <div class="mb-4 lg:mb-0 flex items-center">
           <span
             v-for="(author, index) in post.authors"
             :key="index"
-            class="flex items-center ml-4"
+            class="flex items-center ml-3 light:bg-light-surface dark:bg-dark-surface rounded-full px-2 py-1"
           >
             <img
-              class="inline-block h-6 w-6 rounded-full ml-2"
+              class="inline-block h-6 w-6 rounded-full"
               :src="author.avatarUrl"
               alt
             />
             <span
-              class="leading-none last:ml-0 light:text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary hover:text-dalil-lightindigo transition-colors duration-300 ease-linear"
+              class="leading-none last:ml-0 px-1 light:text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary hover:text-dalil-lightindigo"
             >
               {{ author.name }}
             </span>
           </span>
         </div>
-        <div
-          class="flex w-full lg:w-auto items-center justify-between leading-none"
-        >
-          <span
-            class="hidden lg:inline-block text-xs mx-2 light:text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear"
-          >
-            &bullet;
-          </span>
-          <span
-            class="light:text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear"
-          >
-            {{ formatDateByLocale(post.date) }}
-          </span>
-          <span
-            class="hidden lg:inline-block text-xs mx-2 light:text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear"
-          >
-            &bullet;
-          </span>
-          <span
-            class="light:text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear"
-          >
-            {{ post.readingTime.text }}
-          </span>
-        </div>
-      </div>
-    </div>
-    <div class="w-full lg:w-1/3 mb-6 lg:mb-0 rounded overflow-hidden">
-      <AppImage :src="post.imgUrl" ratio="16:9" />
+      </div> -->
     </div>
   </NuxtLink>
 </template>

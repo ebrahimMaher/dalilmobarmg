@@ -13,13 +13,6 @@
               :author="author"
             />
           </div>
-          <div
-            class="mt-1 dark:text-dark-onSurfaceSecondary light:text-light-onSurfaceSecondary"
-          >
-            {{ formatDateByLocale(post.date) }}
-            <span class="text-xs mx-1">&bullet;</span>
-            {{ post.readingTime.text }}
-          </div>
         </div>
       </div>
       <AppImage :src="post.imgUrl" ratio="16:9" sizes="80vh" class="rounded" />
