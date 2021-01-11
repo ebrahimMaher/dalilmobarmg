@@ -36,7 +36,7 @@
 
           <div class="flex flex-col sm:block pt-4">
             <AppButton
-              to="/tutorials/algorithms/comparison"
+              to="/tutorials/algorithms/before-start/intro"
               variant="primary"
               data-cy="fundamentals"
               class="sm:ml-4 py-3 px-6 text-base mb-4"
