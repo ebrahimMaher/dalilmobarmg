@@ -31,6 +31,9 @@ contributors:
 ```js
 console.log("Hello World");
 ```
+
+> اﻵن قم بنسخ الكود ولا داعي لفهم ما فيه ﻷنك ستفهم في الدرسين القادمين كيفية كتابته، لكن اﻷهم اﻵن معرفة معنى الطباعة وأهميتها.
+
 بعد تشغيل الكود كما تعلمنا سابقاً في درس إعداد بيئة التعلم ستجد ان الناتج هو نفس الجملة التي كتبتها `Hello World`، ويمكنك كتابة أي شيء بأي لغة !
 
 <base-alert type="tip">
@@ -51,8 +54,8 @@ console.log("Hello World");
 <expand full button-text="عرض الحل" hide-text="إخفاء الحل" no-padding>
 
 ```js
-console.log('دليل مبرمج');
-console.log('Dalil Mobarmg');
+console.log("دليل مبرمج");
+console.log("Dalil Mobarmg");
 ```
 
 </expand>
