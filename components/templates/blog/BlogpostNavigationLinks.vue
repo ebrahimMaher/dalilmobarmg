@@ -3,18 +3,19 @@
     <NuxtLink
       v-if="prev"
       :to="toLink(prev.slug)"
-      class="inline-flex items-center dark:hover:text-dalil-lightindigo light:hover:text-dalil-lightindigo dark:text-dark-onSurfaceSecondary light:text-light-onSurfaceSecondary transition-colors duration-300 ease-linear"
+      class="btn blog-button border light:border-light-border dark:border-dark-border transition duration-200 ease no-underline text-xs lg:text-sm px-2 lg:px-4 py-2 uppercase rounded transform hover:shadow-lg hover:bg-primary-base active:translate-y-0 active:shadow-md active:scale-95 dark:text-dark-primaryText text-primary-base dark:hover:text-white hover:text-white font-semibold inline-flex items-center"
     >
-      <ArrowLeftIcon class="h-5 ml-2" />
+      <!-- <ArrowLeftIcon class="h-5 ml-2" /> -->
+      <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path></svg>
       {{ prev.title || 'عودة إلى المقالات' }}
     </NuxtLink>
     <NuxtLink
       v-if="next"
       :to="toLink(next.slug)"
-      class="inline-flex items-center text-left dark:hover:text-dalil-lightindigo light:hover:text-dalil-lightindigo dark:text-dark-onSurfaceSecondary light:text-light-onSurfaceSecondary transition-colors duration-300 ease-linear"
+      class="btn blog-button border light:border-light-border dark:border-dark-border transition duration-200 ease no-underline text-xs lg:text-sm px-2 lg:px-4 py-2 uppercase rounded transform hover:shadow-lg hover:bg-primary-base active:translate-y-0 active:shadow-md active:scale-95 dark:text-dark-primaryText text-primary-base dark:hover:text-white hover:text-white font-semibold inline-flex items-center"
     >
       {{ next.title }}
-      <ArrowRightIcon class="h-5 mr-2" />
+      <svg class="mr-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7"></path></svg>
     </NuxtLink>
   </div>
 </template>

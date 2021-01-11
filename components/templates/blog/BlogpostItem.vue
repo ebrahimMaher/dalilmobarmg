@@ -1,11 +1,17 @@
 <template>
   <article>
-    <header class="flex items-center justify-between flex-col mt-12">
+    <header class="flex items-center justify-between flex-col mt-4 lg:mt-8">
       <div class="flex flex-1 flex-col mb-8">
-        <h1 class="text-4xl font-semibold mb-4 leading-tight">
+        <h1 class="text-2xl lg:text-3xl light:text-light-onSurfaceStrong dark:text-dark-onSurfaceStrong font-semibold mb-4 leading-normal">
           {{ post.title }}
         </h1>
-        <div class="text-sm flex justify-between flex-col sm:flex-row">
+        <div class="text-sm flex justify-between flex-row">
+          <div>
+            <div class="flex light:text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary text-sm" >
+              <svg class="ml-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+              {{ formatDateByLocale(post.date) }}
+            </div>
+          </div>
           <div>
             <BlogpostAuthor
               v-for="(author, index) in post.authors"
@@ -16,8 +22,12 @@
         </div>
       </div>
       <AppImage :src="post.imgUrl" ratio="16:9" sizes="80vh" class="rounded" />
+
+      <div class="w-full overflow-hidden h-15 rounded-md light:bg-light-surface dark:bg-dark-surface">
+        <img :src="post.imgUrl" :alt="post.title" class="w-100 " />
+      </div>
     </header>
-    <div class="mt-12">
+    <div class="mt-8 lg:mt-12">
       <NuxtContent :document="post" />
     </div>
     <div

@@ -38,12 +38,12 @@ body {
   min-width: 320px;
 }
 
-a.nuxt-link-exact-active:not(.tutorial-button),
-a.nuxt-link-active:not(.tutorial-button) {
+a.nuxt-link-exact-active:not(.tutorial-button):not(.blog-button),
+a.nuxt-link-active:not(.tutorial-button):not(.blog-button) {
   @apply text-dalil-lightindigo;
 }
-.dark-mode a.nuxt-link-exact-active:not(.tutorial-button),
-.dark-mode a.nuxt-link-active:not(.tutorial-button){
+.dark-mode a.nuxt-link-exact-active:not(.tutorial-button):not(.blog-button),
+.dark-mode a.nuxt-link-active:not(.tutorial-button):not(.blog-button){
   @apply text-dark-onSurfaceStrong;
 }
 

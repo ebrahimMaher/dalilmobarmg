@@ -1,11 +1,12 @@
 <template>
   <div class>
-    <div class="container lg:max-w-4xl mx-auto p-4 pb-8">
+    <div class="container blog-container overflow-hidden mx-auto p-4 pb-8">
       <NuxtLink
         :to="localePath({ name: 'blog' })"
-        class="inline-flex items-center dark:hover:text-dalil-lightindigo light:hover:text-dalil-lightindigo dark:text-dark-onSurfaceSecondary light:text-light-onSurfaceSecondary"
+        class="btn blog-button border-primary-base dark:border-dark-border transition duration-200 ease no-underline text-xs lg:text-sm px-2 lg:px-4 py-2 uppercase rounded transform hover:shadow-lg hover:bg-primary-base active:translate-y-0 active:shadow-md active:scale-95 dark:text-dark-primaryText text-light-onSurfacePrimary dark:hover:text-white hover:text-white font-semibold inline-flex items-center"
       >
-        <ArrowRightIcon class="h-5 ml-2" /> عودة إلى صفحة المدونة
+        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path></svg>
+        عودة إلى صفحة المدونة
       </NuxtLink>
 
       <BlogpostItem :post="post" />
@@ -148,3 +149,16 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+@media(min-width: 1024px){
+  .container.blog-container{
+    max-width: 54rem;
+  }
+}
+@media (min-width: 1280px){
+  .container.blog-container{
+    max-width: 58rem;
+  }
+}
+</style>

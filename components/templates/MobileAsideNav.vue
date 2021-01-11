@@ -26,7 +26,7 @@
     </div>
     <button
       class="bookmark-button lg:hidden rounded-full flex items-center justify-center transform active:scale-95 active:text-white active:bg-dalil-indigo transition duration-100 ease-out"
-      :class="{'text-white bg-dalil-indigo': show, 'text-dalil-indigo dark:text-dark-primaryText bg-light-elevatedSurface dark:bg-dalil-indigo': !show}"
+      :class="{'text-white bg-dalil-indigo': show, 'bg-primary-base text-white hover:bg-primary-dark': !show}"
       @click.prevent.stop="toggle"
     >
       <IconMenu

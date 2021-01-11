@@ -37,7 +37,7 @@
         <div
           class="flex flex-row flex-no-wrap justify-start light:text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
         >
-          <span v-for="(tag, id) in post.tags" :key="id" class="truncate uppercase tracking-wider font-medium text-ss px-2 py-1 rounded-full ml-2 border border-light-border dark:border-dark-border" >
+          <span v-for="(tag, id) in post.tags.slice(0,4)" :key="id" class="truncate uppercase font-medium text-ss px-2 py-1 rounded-full ml-2 border border-light-border dark:border-dark-border" >
             {{ tag }}
           </span>
         </div>

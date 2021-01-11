@@ -4,10 +4,10 @@
     :href="author.link"
     target="_blank"
     rel="noopener"
-    class="inline-flex items-center light:bg-light-surface dark:bg-dark-surface"
+    class="inline-flex items-center light:bg-light-surface rounded-full dark:bg-dark-surface pl-1"
   >
     <img
-      class="inline-block h-6 w-6 rounded-full"
+      class="inline-block h-6 w-6 rounded-full border light:border-light-border dark:border-dark-border"
       :src="author.avatarUrl"
       :alt="author.name"
     />
