@@ -126,7 +126,7 @@
     } */
 
     & code {
-      @apply text-xl py-2 px-3;
+      @apply text-xl py-2 px-2;
     }
 
     & a.icon {
@@ -290,7 +290,7 @@
     @apply list-inside py-1 pl-1;
 
     & li {
-      @apply leading-normal pt-0 pb-2;
+      @apply leading-relaxed pt-0 pb-3;
     }
 
     & ul,

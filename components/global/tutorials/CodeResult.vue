@@ -1,5 +1,5 @@
 <template>
-    <div class="code-result leading-relaxed overflow-hidden rounded-md py-2 px-4 text-left ltr-dir white font-bold light:text-light-onSurfaceStrong dark:text-dark-onSurfaceStrong mb-4 light:bg-light-surface dark:bg-dark-surface border light:border-light-border dark:border-dark-border">
+    <div :class="{'ltr-dir': !rtl}" class="code-result leading-relaxed overflow-hidden rounded-md py-2 px-4 text-left white font-bold light:text-light-onSurfaceStrong dark:text-dark-onSurfaceStrong mb-4 light:bg-light-surface dark:bg-dark-surface border light:border-light-border dark:border-dark-border">
         <span class="label px-2 py-1 text-xs text-gray-600 border light:border-light-border dark:border-dark-border">{{label}}</span>
         <span v-if="result">{{result}}</span>
         <slot v-else />
@@ -17,6 +17,10 @@ export default {
         label: {
             type: String,
             default: 'ناتج التشغيل'
+        },
+        rtl: {
+            type: Boolean,
+            default: false
         },
         result: {
             type: String,

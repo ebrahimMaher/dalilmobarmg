@@ -48,7 +48,7 @@ console.log("Hello World");
 
 </base-alert>
 
-<expand full button-text="عرض الحل" hide-text="إخفاء الحل">
+<expand full button-text="عرض الحل" hide-text="إخفاء الحل" no-padding>
 
 ```js
 console.log('دليل مبرمج');

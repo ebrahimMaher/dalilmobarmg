@@ -1,11 +1,11 @@
 <template>
   <div class="expand-wrapper my-2">
-    <button @click="show = !show" :class="{'w-full': full}" class="btn cursor-pointer px-4 py-2 font-bold text-sm shadow bg-light-elevatedSurface light:text-light-onSurfacePrimary dark:text-dark-onSurfaceStrong dark:bg-dark-surface hover:bg-light-surface dark:hover:bg-dark-surface hover:text-primary-base transform active:scale-95 transition duration-150 rounded">
+    <button @click="show = !show" :class="{'w-full': full}" class="btn cursor-pointer px-4 py-2 font-bold text-sm shadow-md bg-light-elevatedSurface light:text-light-onSurfacePrimary dark:text-dark-onSurfaceStrong dark:bg-dark-surface hover:bg-light-surface dark:hover:bg-dark-surface hover:text-primary-base transform active:scale-95 transition duration-150 rounded">
       {{show ? hideText : buttonText}}
     </button>
 
     <transition name="fade-down-transition">
-      <div v-if="show" class="expand-content">
+      <div v-if="show" class="expand-content" :class="{'my-5': !noPadding, 'py-3 px-5 shadow-md light:border-light-border dark:border-dark-border': card}">
         <slot />
       </div>
     </transition>
@@ -25,6 +25,14 @@ export default {
       default: 'عرض المزيد'
     },
     full: {
+      type: Boolean,
+      default: false,
+    },
+    card: {
+      type: Boolean,
+      default: false,
+    },
+    noPadding: {
       type: Boolean,
       default: false,
     },
