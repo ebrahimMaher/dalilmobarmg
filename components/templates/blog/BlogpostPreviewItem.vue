@@ -21,7 +21,7 @@
           </div>
         </div>
 
-        <h2 class="my-1 inline-block leading-tight light:hover:text-dalil-lightindigo dark:hover:text-dark-primaryText light:text-light-onSurfaceStrong dark:text-dark-onSurfaceStrong text-lg md:text-xl font-semibold" >
+        <h2 class="my-1 inline-block truncate overflow-hidden max-w-full leading-normal light:hover:text-dalil-lightindigo dark:hover:text-dark-primaryText light:text-light-onSurfaceStrong dark:text-dark-onSurfaceStrong text-lg md:text-xl font-semibold" >
           {{ post.title }}
         </h2>
         <div class="py-3">
