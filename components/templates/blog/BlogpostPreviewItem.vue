@@ -24,9 +24,9 @@
         <h2 class="my-1 inline-block truncate overflow-hidden max-w-full leading-normal light:hover:text-dalil-lightindigo dark:hover:text-dark-primaryText light:text-light-onSurfaceStrong dark:text-dark-onSurfaceStrong text-lg md:text-xl font-semibold" >
           {{ post.title }}
         </h2>
-        <div class="py-3">
+        <div class="py-2">
           <p
-            class="truncate-multiline-3 leading-relaxed light:text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
+            class="text-family truncate-multiline-3 leading-relaxed light:text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
           >
             {{ post.description }}
           </p>

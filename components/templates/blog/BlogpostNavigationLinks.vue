@@ -9,6 +9,7 @@
       <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path></svg>
       {{ prev.title || 'عودة إلى المقالات' }}
     </NuxtLink>
+    <div v-else></div>
     <NuxtLink
       v-if="next"
       :to="toLink(next.slug)"
@@ -17,6 +18,7 @@
       {{ next.title }}
       <svg class="mr-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7"></path></svg>
     </NuxtLink>
+    <div v-else></div>
   </div>
 </template>
 

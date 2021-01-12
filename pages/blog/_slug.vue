@@ -1,6 +1,6 @@
 <template>
   <div class>
-    <div class="container blog-container overflow-hidden mx-auto p-4 pb-8">
+    <div class="container blog-container overflow-hidden mx-auto pt-4 px-8 pb-8">
       <NuxtLink
         :to="localePath({ name: 'blog' })"
         class="btn blog-button border-primary-base dark:border-dark-border transition duration-200 ease no-underline text-xs lg:text-sm px-2 lg:px-4 py-2 uppercase rounded transform hover:shadow-lg hover:bg-primary-base active:translate-y-0 active:shadow-md active:scale-95 dark:text-dark-primaryText text-light-onSurfacePrimary dark:hover:text-white hover:text-white font-semibold inline-flex items-center"
