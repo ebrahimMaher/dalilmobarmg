@@ -291,7 +291,7 @@
     @apply list-inside py-1 pl-1;
 
     & li {
-      @apply leading-relaxed pt-0 pb-3;
+      @apply leading-loose pt-0 pb-3;
     }
 
     & ul,

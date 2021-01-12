@@ -1,11 +1,9 @@
 const envProd = process.env.CONTEXT === 'production'
-const envTest = Boolean(process.env.DEPLOY_PRIME_URL && !envProd)
 
 export const state = () => ({
   host: envProd ? (process.env.URL || 'https://www.dalilmobarmg.com') :  'http://localhost:3000',
   envProd,
-  envTest,
-  isDev: !envProd && !envTest,
+  isDev: !envProd,
   visibleAffix: false,
 
   contributors: [

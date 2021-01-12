@@ -86,7 +86,6 @@ export default {
     ...mapState({
       host: state => state.host,
       isDev: state => state.isDev,
-      envTest: state => state.envTest,
       envProd: state => state.envProd
     }),
     socialImage() {
