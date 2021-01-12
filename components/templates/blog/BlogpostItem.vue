@@ -21,7 +21,6 @@
           </div>
         </div>
       </div>
-      <AppImage :src="post.imgUrl" ratio="16:9" sizes="80vh" class="rounded" />
 
       <div class="w-full overflow-hidden h-15 rounded-md light:bg-light-surface dark:bg-dark-surface">
         <img :src="post.imgUrl" :alt="post.title" class="w-100 " />
