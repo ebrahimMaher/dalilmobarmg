@@ -30,7 +30,7 @@
   }
 
 
-  & a {
+  & a:not(.btn) {
     @apply text-dark-onSurfaceStrong border-dark-border;
 
     &:hover {

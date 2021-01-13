@@ -19,7 +19,7 @@
     }
   }
 
-  & a {
+  & a:not(.btn) {
     @apply text-dalil-lightindigo border-light-border transform;
     &:hover {
       @apply bg-light-surface border-light-onSurfacePrimary;
