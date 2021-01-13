@@ -5,6 +5,11 @@ module.exports = {
     sourceType: 'module',
     ecmaVersion: 2020
   },
+  env: {
+    "browser": true,
+    "node": true,
+    "jasmine": true
+  },
   extends: ['@nuxtjs', 'eslint-config-prettier'],
   rules: {
     // Only allow console log and debugger in development

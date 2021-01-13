@@ -100,13 +100,18 @@ export default {
       }
     }
   },
-  css: ['~/assets/css/main.scss'],
+  css: [
+    '~/assets/css/main.scss',
+    'codemirror/lib/codemirror.css',
+    'codemirror/theme/material-palenight.css',
+  ],
   plugins: [
     '~/plugins/i18n',
     '~/plugins/directives',
     '~/plugins/intersection-observer.client.js',
     '~/plugins/vue-observe-visibility.client.js',
     '~/plugins/vue-scrollactive',
+    {src: '~plugins/vue-codemirror', ssr: false },
   ],
   env: {
     URL: process.env.URL || false,
@@ -143,6 +148,12 @@ export default {
     langDir: 'i18n/'
   },
   build: {
+    html: {
+      minify: {
+        minifyCSS: false,
+        minifyJS: false,
+      }
+    },
     plugins: [
       new webpack.IgnorePlugin({
         resourceRegExp: /^\.\/locale$/,
@@ -155,11 +166,4 @@ export default {
       }
     }
   },
-  hooks: {
-    'content:file:beforeInsert': item => {
-      const stats = require('reading-time')(item.text)
-
-      item.readingTime = stats
-    }
-  }
 }

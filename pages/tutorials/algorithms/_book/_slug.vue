@@ -32,6 +32,8 @@
       />
 
     </AffixBlock>
+
+    <floating-code-editor />
   </div>
 </template>
 

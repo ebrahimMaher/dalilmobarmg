@@ -19,6 +19,7 @@
     "prism-themes": "^1.5.0",
     "reading-time": "^1.2.1",
     "vue-chartjs": "^3.5.1",
+    "vue-codemirror": "^4.0.6",
     "vue-if-bot": "^1.2.0",
     "vue-observe-visibility": "^1.0.0",
     "vue-scrollactive": "^0.9.3",
