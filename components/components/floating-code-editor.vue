@@ -4,8 +4,8 @@
       <code-editor v-model="show" />
     </client-only>
     <div class="floating-code-editor">
-      <button class="btn bg-primary-base text-white hover:bg-primary-dark rounded-full flex items-center justify-center transform active:scale-95 transition duration-100 ease-linear" @click="show = !show">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+      <button class="btn bg-gray-900 text-purple-400 hover:bg-primary-dark rounded-full inline-flex items-center justify-center transform active:scale-95 transition duration-100 ease-linear" @click="show = !show">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
       </button>
     </div>
 </div>

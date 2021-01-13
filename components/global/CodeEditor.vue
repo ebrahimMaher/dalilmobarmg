@@ -1,12 +1,15 @@
 <template>
   <!-- Nuxt.js -->
-  <client-only>
-    <div ref="editorWrapper" v-if="show" class="code-editor-wrapper dark-mode relative shad">
+  <transition name="fade-up-transition">
+    <div ref="editorWrapper" v-show="show" class="code-editor-wrapper dark-mode relative">
       <div class="flex absolute" style="top: 13px; right: 13px; z-index: 5;">
       </div>
 
 
-      <div ref="editorHeader" @mousedown="handleMouseDown" @touchstart="handleMouseDown" class="editor-header cursor-move flex items-center justify-between w-full text-sm text-gray-500">
+      <div ref="editorHeader" @mousedown="handleMouseDown" class="editor-header cursor-move flex items-center justify-between w-full text-sm text-gray-500">
+        <div class="px-4 flex items-center" @mousedown.stop>
+          <span class="text-sm text-gray-600">محرر دليل مبرمج</span>
+        </div>
         <div class="cursor-pointer flex" @mousedown.stop>
           <div class="close-btn btn h-10 flex items-center justify-center px-4 hover:bg-red-600 active:bg-red-700 hover:text-white" @click.stop.prevent="show =false">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
@@ -14,9 +17,6 @@
           <!-- <div class="resize-btn mr-2 btn h-10 flex items-center justify-center px-4 hover:bg-green-600 active:bg-green-700 hover:text-white" @click="show =false">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path></svg>
           </div> -->
-        </div>
-        <div @mousedown.stop>
-
         </div>
       </div>
       <div>
@@ -31,7 +31,7 @@
         <div>
 
           <button @click="runCode" class="btn px-3 rounded-md py-1 text-sm bg-blue-500 text-white hover:bg-blue-600 active:bg-blue-700 hover:shadow-lg transform transition-transform active:scale-95">
-            تشغيل الكود
+            تشغيل الكود (F5)
           </button>
         </div>
         <!-- <div class="text-xs text-right text-gray-500">ناتج التشغيل</div> -->
@@ -40,7 +40,7 @@
         </div>
       </div>
     </div>
-  </client-only>
+  </transition>
 </template>
 
 <script>
@@ -131,10 +131,24 @@ export default {
     reset(){
       this.result = '';
       this.error = false;
-    }
+    },
+    setKeyboardListener(){
+      window.addEventListener('keydown', e=>{
+        if (this.show){
+          if (e.key === 'F5' || e.code == 116 || e.which == 116){
+            e.preventDefault();
+            window.console.log('here');
+            this.runCode();
+          }else if (e.key === 'Escape' || e.code == 27 || e.which == 27){
+            e.preventDefault();
+            this.show = false;
+          }
+        }
+      })
+    },
   },
   mounted(){
-
+    this.setKeyboardListener();
   }
 }
 </script>
@@ -148,10 +162,21 @@ export default {
     width: 500px;
     min-height: 400px;
     box-shadow: 0px 5px 16px 1px rgba(0, 0, 0, 0.25), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+    @media(max-width: 768px){
+      max-width: 100%;
+      width: 100%;
+      top: unset!important;
+      left: 0!important;
+      bottom: 0!important;
+    }
 
     .code-editor{
       .CodeMirror{
         font-size: 16px;
+        line-height: 1.75;
+        @media(max-width: 768px){
+          font-size: 15px;
+        }
         *{
           text-align: left;
         }
@@ -170,7 +195,7 @@ export default {
       max-height: 100px;
     }
     .code-result, .editor-header{
-      background: hsl(231, 22%, 19%);
+      background: hsl(231, 22%, 17%);
     }
     .editor-header{
       border-bottom: 1px solid rgb(#000, 0.25);
