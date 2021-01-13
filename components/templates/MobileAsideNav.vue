@@ -138,14 +138,22 @@ button {
 }
 
 .bookmark-button {
-  width: 50px;
+  /* width: 50px;
   height: 50px;
-  position: fixed;
-  // border-radius: 0 9999px 9999px 0;
-  box-shadow: 0px 1px 7px 1px rgba(0, 0, 0, 0.101562);
   right: 1rem;
-  bottom: 1rem;
+  bottom: 1rem; */
+
+  position: fixed;
+  box-shadow: 0px 1px 7px 1px rgba(0, 0, 0, 0.101562);
   z-index: 15;
+
+  width: 60px;
+  height: 40px;
+  position: fixed;
+  left: -1rem;
+  top: 20%;
+  border-radius: 6px!important;
+  padding-left: 1rem;
 }
 
 .inner-button {

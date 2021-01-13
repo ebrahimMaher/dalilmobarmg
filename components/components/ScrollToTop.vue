@@ -50,7 +50,7 @@ export default {
 .scroll-to-top{
     position: fixed;
     bottom: 1rem;
-    left: 1rem;
+    right: 1rem;
     z-index: 15;
 
     .btn{
