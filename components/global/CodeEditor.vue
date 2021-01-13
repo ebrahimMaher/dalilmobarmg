@@ -96,7 +96,6 @@ export default {
       };
 
       // call a function whenever the cursor moves:
-      window.console.log(e);
       const elmnt = this.$refs.editorWrapper;
       window.document.onmousemove = (e)=>{
         e = e || window.event;
@@ -115,13 +114,15 @@ export default {
       const self = this;
       this.reset();
       try{
-      var console = {
-        log(val){
-          let result = self.result === '' ? val : `\n${val}`;
-          self.result += result;
-        }
-      };
-        eval(this.code);
+        var console = {
+          log(val){
+            let result = self.result === '' ? val : `\n${val}`;
+            self.result += result;
+          }
+        };
+        let code = this.code;
+        code = code.replace('window', 'notallowed');
+        eval(code);
       }
       catch(e){
         this.error = true;
