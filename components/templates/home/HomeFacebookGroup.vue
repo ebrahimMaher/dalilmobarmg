@@ -14,8 +14,8 @@
             </div>
             <hr class="lg:w-5/6 my-6 dark:border-dark-border"> -->
 
-            <div class="flex justify-center items-center mb-6">
-              <img src="~/assets/images/facebook.svg" style="height: 40px" />
+            <div class="flex flex-col lg:flex-row justify-center items-center mb-6">
+              <img class="mb-4 lg:mb-0" src="~/assets/images/facebook.svg" style="height: 40px" />
               <i18n path="homepage.facebook.title" tag="h2" class="font-semibold mr-3 lg:font-medium text-center md:text-right text-2xl md:text-3xl lg:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary tracking-normal leading-tight" > </i18n>
             </div>
             <i18n

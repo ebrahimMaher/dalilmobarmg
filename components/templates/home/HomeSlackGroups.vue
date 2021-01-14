@@ -27,7 +27,7 @@
               </template>
             </i18n>
 
-            <div class="only-men text-sm mt-3 p-3 bg-yellow-100 rounded">
+            <div class="only-men leading-relaxed text-sm mt-3 p-3 bg-red-100 text-red-900 dark:bg-dark-surface dark:text-red-500 rounded">
               {{$t('homepage.slack.only_men')}}
             </div>
 
