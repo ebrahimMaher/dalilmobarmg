@@ -1,7 +1,7 @@
 ---
 title: الدوال (Functions)
 description: درس يوضح مفهوم الشروط وif الشرطية
-position: 7
+position: 8
 category: fundamentals
 createdAt: 1610199050695
 updatedAt: 1610199050695
