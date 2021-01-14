@@ -3,6 +3,7 @@
     <HomeWelcome />
     <HomeTutorials />
     <HomeSlackGroups />
+    <HomeFacebookGroup />
     <HomeGithubContribute />
   </div>
 </template>
