@@ -3,7 +3,8 @@
     <div class="container mx-auto px-4">
       <div class="flex flex-col lg:flex-row justify-between py-4 sm:py-24">
         <figure class="w-5/6 lg:w-full md:max-w-3/4 mx-auto lg:hidden">
-            <img src="~/assets/images/home-vector.svg" />
+            <img v-if="$colorMode.preference === 'dark'" src="~/assets/images/home-vector-transparent.svg" />
+            <img v-else src="~/assets/images/home-vector.svg" />
         </figure>
         <div class="w-full lg:w-6/12 xl:w-8/12 text-center lg:text-right py-4 sm:p-0 lg:ml-12">
           <!--welcome title i18n -->
