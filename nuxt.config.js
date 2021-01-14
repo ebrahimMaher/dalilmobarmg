@@ -120,7 +120,7 @@ export default {
     dalilLocale: process.env.NUXT_LOCALE || 'ar',
     slackInvitationLink: process.env.SLACK_INVITATION_LINK || '#',
     GithubLink: process.env.GITHUB_LINK || 'https://github.com/ebrahimMaher/dalilmobarmg',
-    facebookGroupLink: proccess.env.FACEBOOK_GROUP || 'https://www.facebook.com/groups/3585515441546997',
+    facebookGroupLink: process.env.FACEBOOK_GROUP || 'https://www.facebook.com/groups/3585515441546997',
   },
   loading: { color: '#4927d0' },
   generate: {
