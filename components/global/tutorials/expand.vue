@@ -5,7 +5,7 @@
     </button>
 
     <transition name="fade-down-transition">
-      <div v-if="show" class="expand-content" :class="{'my-5': !noPadding, 'py-3 px-5 shadow-md light:border-light-border dark:border-dark-border': card}">
+      <div v-show="show" class="expand-content" :class="{'my-5': !noPadding, 'py-3 px-5 shadow-md light:border-light-border dark:border-dark-border': card}">
         <slot />
       </div>
     </transition>
