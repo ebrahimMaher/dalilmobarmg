@@ -367,7 +367,7 @@ while (i >= 1){
 
 </expand>
 
-<expand full button-text="عرض الحل" hide-text="إخفاء الحل">
+<!-- <expand full button-text="عرض الحل" hide-text="إخفاء الحل">
 
 ```js
 var rows = 4, // enter rows count here
@@ -387,4 +387,4 @@ while (r <= rows){
 > جرب تغيير قيمة `rows` إلى `8` ليرسم مثلث كبير بقاعدة 8 نجوم
 
 > استخدمنا دمج النصوص (concatenation) يمكنك مراجعته في [درس التعبيرات](/tutorials/algorithms/fundamentals/expressions#دمج-النصوص-concatenation)
-</expand>
+</expand> -->
