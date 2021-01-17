@@ -2,7 +2,7 @@
   <div>
     <div
       v-click-outside="clickOutsideHandler"
-      class="header_mobile_aside h-full block lg:hidden fixed left-0 z-20 w-3/4 sm:w-1/2"
+      class="header_mobile_aside h-full block lg:hidden fixed right-0 z-20 w-3/4 sm:w-1/2"
       :class="{ 'header_mobile_aside--open shadow-2xl': show }"
     >
       <div
@@ -10,7 +10,7 @@
       >
         <div class="content-wrapper h-full">
           <div class="overflow-y-auto h-full pt-4">
-            <TutorialsNav :links="links" :tutorial="tutorial" />
+            <TutorialsNav :links="links" :tutorial="tutorial" @navigated="show = false" />
           </div>
           <!-- <button
             class="inner-button sm:hidden absolute h-10 w-10 flex items-center justify-center text-dalil-gray bg-gray-200 dark:bg-dark-elevatedSurface dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear"
@@ -98,7 +98,7 @@ export default {
 .header_mobile_aside {
   bottom: theme('spacing.16');
   top: theme('spacing.16');
-  transform: translateX(calc(-100% - 1px));
+  transform: translateX(calc(100% + 1px));
   transition-duration: 0.2s;
   transition-property: transform;
   // transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
@@ -150,10 +150,10 @@ button {
   width: 60px;
   height: 40px;
   position: fixed;
-  left: -1rem;
+  right: -1rem;
   top: 20%;
   border-radius: 6px!important;
-  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .inner-button {

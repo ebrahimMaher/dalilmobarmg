@@ -2,7 +2,7 @@
   <div>
     <div
       v-click-outside="clickOutsideHandler"
-      class="navigation-drawer h-full block lg:hidden fixed right-0 z-20 w-5/6 sm:w-3/4 shadow-2xl"
+      class="navigation-drawer h-full block lg:hidden fixed left-0 z-20 w-5/6 sm:w-3/4 shadow-2xl"
       :class="{ 'navigation-drawer--open': show }"
     >
       <div
@@ -109,7 +109,7 @@ export default {
 
 <style lang="scss" scoped>
 .navigation-drawer {
-  transform: translateX(calc(100% + 30px));
+  transform: translateX(calc(-100% - 30px));
   transition-duration: 0.2s;
   transition-property: transform;
   // transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);

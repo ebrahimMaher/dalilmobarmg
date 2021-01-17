@@ -15,7 +15,7 @@
           'font-bold text-dalil-lightindigo dark:text-dark-onSurfaceStrong': $route.params.book === group,
           'text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary': $route.params.book !== group
         }"
-        @click.prevent="visibleGroup === group ? visibleGroup = '' : visibleGroup = group"
+        @click.prevent="clicked"
       >
         <ChevronDownIcon
           v-if="$route.params.book === group || visibleGroup === group || isShort"
@@ -33,6 +33,7 @@
               v-for="(link, index) in sublinks"
               :key="index"
               class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
+              @click="$emit('navigated')"
             >
               <component
                 :is="!link.uncompleted ? 'nuxt-link' : 'a'"
@@ -112,6 +113,10 @@ export default {
     }
   },
   methods: {
+    clicked(){
+      this.$emit('navigated');
+      this.visibleGroup === this.group ? this.visibleGroup = '' : this.visibleGroup = this.group;
+    },
     parseBraces(text){
       let regex = /\((.*?)\)/g,
         braces = text.match(regex);

@@ -347,7 +347,7 @@ while (i >= 1){
 
 <quiz label="تمرين متقدم">
 
-قم بكتابة برنامج يأخذ عدد كقيمة لمتغير اسمه `rows` ويطبع شكل مثلث قائم من `*` عدد صفوفه `rows`.
+قم بكتابة برنامج يأخذ عدد كقيمة لمتغير اسمه `rows` ويطبع شكل مثلث قائم من النجوم `*` عدد صفوفه `rows`.
 
 > عندما قيمة `rows` تساوي `4` يجب أن يكون الناتج:
 <code-result>
@@ -367,7 +367,7 @@ while (i >= 1){
 
 </expand>
 
-<!-- <expand full button-text="عرض الحل" hide-text="إخفاء الحل">
+<expand full button-text="عرض الحل" hide-text="إخفاء الحل">
 
 ```js
 var rows = 4, // enter rows count here
@@ -387,4 +387,4 @@ while (r <= rows){
 > جرب تغيير قيمة `rows` إلى `8` ليرسم مثلث كبير بقاعدة 8 نجوم
 
 > استخدمنا دمج النصوص (concatenation) يمكنك مراجعته في [درس التعبيرات](/tutorials/algorithms/fundamentals/expressions#دمج-النصوص-concatenation)
-</expand> -->
+</expand>
