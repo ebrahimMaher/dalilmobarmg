@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-between items-center mt-4 lg:mt-12">
+  <div class="flex justify-between items-center mt-8 lg:mt-12">
     <NuxtLink
       v-if="prev"
       data-cy="prev"
@@ -18,7 +18,8 @@
           {{ prev.menu }}
         </template>
         <template v-else>
-          {{ prev.title }}
+          <span class="hidden lg:inline-block">{{ prev.title }}</span>
+          <span class="lg:hidden">السابق</span>
         </template>
       </div>
     </NuxtLink>
@@ -40,7 +41,8 @@
           {{ next.menu }}
         </template>
         <template v-else>
-          {{ next.title }}
+          <span class="hidden lg:inline-block">{{ next.title }}</span>
+          <span class="lg:hidden">التالي</span>
         </template>
       </div>
       <IconArrowLeft class="w-4 h-4 mr-1" />
@@ -53,7 +55,7 @@
 export default {
   data(){
     return {
-      classes: "btn border light:border-light-border dark:border-dark-border transition duration-200 ease no-underline text-xs lg:text-sm px-2 lg:px-4 py-2 uppercase rounded transform hover:shadow-lg hover:bg-primary-base dark:hover:text-white hover:text-white active:translate-y-0 active:shadow-md active:scale-95 dark:text-dark-primaryText text-primary-base font-semibold flex items-center"
+      classes: "btn border light:border-light-border dark:border-dark-border transition-transform lg:transition-all duration-200 ease no-underline text-sm lg:text-sm px-5 lg:px-4 py-2 uppercase rounded transform lg:hover:shadow-lg bg-light-surface dark:bg-dark-surface lg:bg-transparent lg:hover:bg-primary-base lg:dark:hover:text-white lg:hover:text-white active:translate-y-0 lg:active:shadow-md active:scale-95 light:text-primary-base dark:text-dark-primaryText lg:dark:text-dark-primaryText lg:text-primary-base font-semibold flex items-center"
     }
   },
   props: {

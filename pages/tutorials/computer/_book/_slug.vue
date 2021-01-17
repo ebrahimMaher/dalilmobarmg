@@ -9,13 +9,21 @@
         <h1 class="leading-relaxed text-2xl text-light-onSurfacePrimary dark:text-dark-onSurfaceStrong transition-colors duration-300 ease-linear" >
           {{ page.title }}
         </h1>
+
+        <div class="lg:hidden">
+          <LazyAppPrevNext
+          :prev="prev"
+          :next="next"
+          tutorial="algorithms"
+        />
+        </div>
+
         <nuxt-content :document="page" />
 
         <LazyAppPrevNext
           :prev="prev"
           :next="next"
           tutorial="computer"
-          class="mt-4"
         />
 
         <div v-if="page" class="contributors-wrapper">
