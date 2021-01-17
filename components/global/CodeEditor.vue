@@ -30,6 +30,11 @@
           :options="options"
         />
       </div>
+      <div class="shortcuts grid grid-cols-11 ltr-dir">
+        <div class="shortcut cursor-pointer select-none text-white flex justify-center items-center py-2 w-full" v-for="(shortcut, i) in shortcuts" :key="i" @click="shortcutClick(shortcut)">
+          {{shortcut}}
+        </div>
+      </div>
       <div class="code-result overflow-y-auto flex items-stretch w-full py-3 px-5 text-sm" :class="{'text-gray-100': !error, 'text-red-500': error}">
         <div>
 
@@ -62,6 +67,8 @@ export default {
       error: false,
       result: '',
 
+      shortcuts: ['(', ')', '{', '}', '"', ';', '=', '+', '-', '*', '/'],
+
       options: {
         theme: 'material-palenight',
         tabSize: 2,
@@ -88,6 +95,9 @@ export default {
     }
   },
   methods: {
+    shortcutClick(shortcut){
+      this.code = this.code + shortcut;
+    },
     handleMouseDown(e){
       let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
 
@@ -206,7 +216,7 @@ export default {
       height: 100px;
       max-height: 100px;
     }
-    .code-result, .editor-header{
+    .code-result, .editor-header, .shortcuts{
       background: hsl(231, 22%, 17%);
     }
     .editor-header{
@@ -214,6 +224,17 @@ export default {
 
       &:active{
         background: hsl(231, 22%, 16%);
+      }
+    }
+    .shortcuts{
+      border-top: 1px solid rgb(#000, 0.25);
+    }
+    .shortcut{
+      &:hover{
+        background: rgba(#000, 0.2);
+      }
+      &:active{
+        background: rgba(#000, 0.4);
       }
     }
   }
