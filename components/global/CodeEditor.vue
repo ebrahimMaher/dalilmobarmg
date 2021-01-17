@@ -159,7 +159,6 @@ export default {
         if (this.show){
           if (e.key === 'F5' || e.code == 116 || e.which == 116){
             e.preventDefault();
-            window.console.log('here');
             this.runCode();
           }else if (e.key === 'Escape' || e.code == 27 || e.which == 27){
             e.preventDefault();
