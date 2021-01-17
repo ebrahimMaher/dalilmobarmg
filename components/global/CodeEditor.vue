@@ -69,7 +69,11 @@ export default {
         styleActiveLine: true,
         lineNumbers: true,
         line: true,
-        mode: 'text/javascript'
+        mode: 'text/javascript',
+
+        matchBrackets: true,
+        autoCloseBrackets: true,
+        showHint: true,
       }
     }
   },
