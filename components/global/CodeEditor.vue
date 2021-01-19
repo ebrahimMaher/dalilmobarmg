@@ -35,7 +35,7 @@
           {{shortcut}}
         </div>
       </div>
-      <div class="code-result overflow-y-auto flex items-stretch w-full py-3 px-5 text-sm" :class="{'text-gray-100': !error, 'text-red-500': error}">
+      <div class="code-result overflow-y-auto flex flex-wrap items-stretch w-full py-3 px-5 text-sm" :class="{'text-gray-100': !error, 'text-red-500': error}">
         <div>
 
           <button @click="runCode" class="btn px-3 rounded-md py-1 text-sm bg-blue-500 text-white hover:bg-blue-600 active:bg-blue-700 hover:shadow-lg transform transition-transform active:scale-95">

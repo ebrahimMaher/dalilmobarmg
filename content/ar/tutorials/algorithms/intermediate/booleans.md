@@ -1,7 +1,7 @@
 ---
 title: القيم المنطقية (متوسط)
 description: شرح مفصل عن القيم المنطقية (Booleans) كنوع من أهم أنواع البيانات.
-position: 4
+position: 1
 category: intermediate
 createdAt: 1610168252061
 updatedAt: 1610168252061

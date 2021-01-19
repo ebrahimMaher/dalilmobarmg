@@ -69,7 +69,7 @@ var num = 10;
 ```js
 console.log(num + 5);
 ```
-<code-reslt>
+<code-result>
 15
 </code-result>
 

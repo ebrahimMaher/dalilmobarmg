@@ -15,7 +15,7 @@
           'font-bold text-dalil-lightindigo dark:text-dark-onSurfaceStrong': $route.params.book === group,
           'text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary': $route.params.book !== group
         }"
-        @click.prevent="clicked"
+        @click.prevent="clicked(group)"
       >
         <ChevronDownIcon
           v-if="$route.params.book === group || visibleGroup === group || isShort"
@@ -26,7 +26,7 @@
         <span>{{ $t(`content.tutorials.${tutorial}.${group}`) }}</span>
       </component>
       <transition name="fade-down-transition">
-        <div v-if="($route.params.book === group || visibleGroup === group) || isShort">
+        <div v-if="($route.params.book === group || visibleGroup === group) || (isShort)">
 
           <ul class="pb-2 pl-2">
             <li
@@ -109,13 +109,13 @@ export default {
       return i;
     },
     isShort(){
-      return this.linksLength < 20;
+      return this.linksLength < 25;
     }
   },
   methods: {
-    clicked(){
+    clicked(group){
       this.$emit('navigated');
-      this.visibleGroup === this.group ? this.visibleGroup = '' : this.visibleGroup = this.group;
+      this.visibleGroup === group ? this.visibleGroup = '' : this.visibleGroup = group;
     },
     parseBraces(text){
       let regex = /\((.*?)\)/g,
