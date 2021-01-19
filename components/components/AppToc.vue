@@ -63,7 +63,7 @@ li {
   list-style: none;
 }
 .toc-active-item{
-  @apply text-dalil-lightindigo font-bold;
+  @apply text-dalil-lightindigo font-semibold;
 }
 .dark-mode{
   .toc-active-item{

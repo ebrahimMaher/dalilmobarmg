@@ -19,7 +19,7 @@ export default {
   async asyncData({ $content, app, params, redirect }) {
     let pages = []
     if (!params.book) {
-      return redirect('/tutorials/computer/essentials/intro') // TODO: update it to default lesson of computer tutorial
+      return redirect('/tutorials/computer/essentials/intro')
     }
     try {
       const locale = app.i18n.defaultLocale;

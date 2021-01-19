@@ -288,7 +288,8 @@
 .nuxt-content {
   & ul,
   & ol {
-    @apply list-inside py-1 pl-1;
+    @apply py-1 pl-1; // list-inside
+    margin-right: 1.1rem;
 
     & li {
       @apply leading-loose pt-0 pb-3;
