@@ -1,6 +1,6 @@
 ---
 title: الدوال (Functions)
-description: شرح مفصل للدوال وأهميتها واستخداماتها باﻷمثلة والتمارين
+description: تعلم الدوال وأهميتها واستخداماتها باﻷمثلة والتمارين
 position: 8
 category: fundamentals
 createdAt: 1611032237218

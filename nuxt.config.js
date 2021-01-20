@@ -70,7 +70,7 @@ export default {
     'vue-scrollto/nuxt'
   ],
   googleAnalytics: {
-    id: process.env.GOOGLE_ANALYTICS_ID || 'G-S43187LK9D',
+    id: process.env.GOOGLE_ANALYTICS_ID || 'UA-186983539-1',
   },
   pwa: {
     manifest: {
