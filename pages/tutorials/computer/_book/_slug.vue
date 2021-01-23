@@ -14,7 +14,7 @@
           <LazyAppPrevNext
           :prev="prev"
           :next="next"
-          tutorial="algorithms"
+          tutorial="computer"
         />
         </div>
 

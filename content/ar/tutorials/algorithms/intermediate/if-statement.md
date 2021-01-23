@@ -1,7 +1,7 @@
 ---
 title: If الشرطية (متوسط)
 description: المستوى المتوسط من شرح if الشرطية
-position: 6
+position: 5
 category: intermediate
 createdAt: 1610199050695
 updatedAt: 1610199050695

@@ -1,7 +1,7 @@
 ---
 title: النصوص (متوسط)
 description: شرح مفصل ومتقدم عن النصوص (String) والعمليات عليها.
-position: 9
+position: 8
 category: intermediate
 createdAt: 1610168252061
 updatedAt: 1610168252061
