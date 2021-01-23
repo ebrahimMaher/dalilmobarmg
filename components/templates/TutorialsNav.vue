@@ -109,7 +109,7 @@ export default {
       return i;
     },
     isShort(){
-      return this.linksLength < 25;
+      return this.linksLength < 30;
     }
   },
   methods: {
