@@ -13,3 +13,7 @@ contributors:
 ---
 
 ## حذف عنصر من المصفوفة
+
+## array slice
+
+## split, join
