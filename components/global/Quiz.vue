@@ -32,6 +32,10 @@ export default {
       top: 0.5rem;
       right: -1.5rem;
     }
+    a:not(.btn){
+        @apply border-white;
+        color: white!important;
+    }
     .quiz-content{
       p{
         color: white!important;

@@ -17,3 +17,7 @@ contributors:
 ## array slice
 
 ## split, join
+
+## for loop into array
+
+## forEach loop intro array
