@@ -528,3 +528,49 @@ countryIsAllowed("Syria");
 - خارج الحلقة التكرارية وبعد إنتهاءها، قم بطباعة المتغير `result`
 - قم بإستدعاء الدالة أكثر من مرة لتجربتها على مصفوفات مختلفة
 </expand>
+
+
+
+<quiz label="تمرين متقدم">
+
+قم بكتابة دالة `largest(numbers)` تأخذ مصفوفة من اﻷعداد كمُدخل وتقوم بطباعة **العدد اﻷكبر**
+مثلاً: `largest([5, 10, 17, 5])` تقوم بطباعة `17`
+
+</quiz>
+
+<expand full button-text="كود الحل" hide-text="إخفاء الكود">
+
+```js
+function largest(numbers){
+  var largestNum = numbers[0];
+  var i = 0;
+  while (i < numbers.length){
+    if (numbers[i] > largestNum){
+      largestNum = numbers[i];
+    }
+    i = i + 1;
+  }
+  console.log(largestNum);
+}
+
+largest([5, 10, 17, 5]);
+largest([5, 30, 45, 15]);
+```
+<code-result>
+17
+<br>
+45
+</code-result>
+
+
+<expand full button-text="شرح الكود" hide-text="إخفاء الشرح">
+
+- قمنا بإنشاء متغير `largestNum` سيحتوي على قيمة العدد اﻷكبر، قيمته تساوي العنصر اﻷول من المصفوفة، بحيث نبدأ به.
+- قمنا بإنشاء حلقة تكرارية للوصول لكل عناصر المصفوفة، ومع كل عدد نقوم بالتالي:
+  - استخدمنا `if` الشرطية في التحقق من إن كان العدد أكبر من قيمة المتغير `largestNum` إذن نقوم بتغيير قيمة `largestNum` لتصبح هي العدد الحالي، ﻷنه حتى اﻵن هو اﻷكبر
+- وستتكرر العملية السابقة مع كل اﻷعداد، فإن كان العدد أكبر من `largestNum` يصبح هو `largestNum` وهكذا... 
+- بعد إنتهاء الحلقة التكرارية نقوم بطباعة `largestNum`
+ 
+</expand>
+
+</expand>
