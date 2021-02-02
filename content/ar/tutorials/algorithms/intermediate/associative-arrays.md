@@ -1,12 +1,13 @@
 ---
-title: المصفوفات (Arrays)
-description: تعلم المصفوفات البرمجية وأهميتها واستخداماتها
-position: 2
+title: المصفوفات اﻹرتباطية
+description: تعلم المصفوفات اﻹرتباطية أو القواميس في البرمجة وأهميتها واستخداماتها
+position: 3
 category: intermediate
 createdAt: 1611421561524
-updatedAt: 1612284278598
+updatedAt: 1611586243937
 new: false
 updated: false
+uncompleted: true
 contributors:
   - ebrahimmaher
 ---
