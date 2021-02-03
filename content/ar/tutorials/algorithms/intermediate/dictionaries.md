@@ -87,6 +87,59 @@ Dalil Mobarmg
 Dictionaries
 </code-result>
 
+### إضافة عنصر إلى القاموس
+يمكن إضافة عنصر للقاموس كما نفعل مع المصفوفات بكل بساطة:
+
+```js
+var test = {};
+test["name"] = "Mohamed";
+console.log(test["name"]);
+```
+<code-result>
+Mohamed
+</code-result>
+
+### تعديل عنصر في القاموس
+
+```js
+var test = {name: "Mohamed"};
+console.log(test["name"]);
+
+test["name"] = "Ebrahim";
+console.log(test["name"]);
+```
+<code-result>
+Mohamed
+<br>
+Ebrahim
+</code-result>
+
+### حذف عنصر من القاموس
+<base-alert type="info">
+
+تختلف هذه الطريقة من لغة لأخرى، وسنذكر مثال بلغة جافاسكريبت
+
+</base-alert>
+
+```js
+var test = {name: "Mohamed"};
+console.log(test["name"]);
+
+delete test["name"];
+console.log(test["name"]);
+```
+<code-result>
+Mohamed
+<br>
+undefined
+</code-result>
+
+<base-alert type="tip">
+
+`undefined` في جافاسكريبت هي أحد أنواع البيانات، وتعني "غير معرف"، فمثلاً إن قمت بطباعة قيمة متغير غير موجود سيتم طباعة `undefined` لكن هذا النوع من البيانات غير موجود في أي لغة أخرى تقريباً، في معظم اللغات إن قمت بطباعة متغير غير موجود أو مثلاً عنصر غير موجود في القاموس كما فعلنا سيُعطي المفسر خطأ
+
+</base-alert>
+
 #### حل مشكلة تخزين بيانات المنشور
 اﻵن يمكننا حل مشكلة تخزين بيانات المنشور المذكورة في بداية الدرس:
 
@@ -166,6 +219,7 @@ post 3
 <br>
 post 4
 </code-result>
+
 
 <base-alert type="star">
 
