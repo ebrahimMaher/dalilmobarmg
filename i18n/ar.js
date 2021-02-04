@@ -10,6 +10,7 @@ module.exports = {
   iso: 'ar',
   name: 'دليل مبرمج',
   soon: 'قريباً',
+  practical: 'عملي',
   new: 'جديد',
   updated: 'مُعدل',
   copy: 'نسخ',

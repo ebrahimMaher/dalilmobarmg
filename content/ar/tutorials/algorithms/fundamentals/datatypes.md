@@ -1,6 +1,6 @@
 ---
 title: أنواع البيانات (Datatypes)
-description: تعلم مفهوم من أهم مفاهيم البرمجة وهو أنواع البيانات، يذكر الدرس أنواع البيانات اﻷساسية
+description: تعلم مفهوم من أهم مفاهيم البرمجة "أنواع البيانات"
 position: 3
 category: fundamentals
 createdAt: 1609951404433
