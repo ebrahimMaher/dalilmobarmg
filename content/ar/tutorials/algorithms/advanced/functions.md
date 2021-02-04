@@ -24,3 +24,10 @@ contributors:
 
 ## Scopes
 
+
+
+<base-alert type="tip">
+
+**الفرق بين parameters و arguments**
+
+</base-alert>
