@@ -113,7 +113,10 @@ export default {
       return i;
     },
     isShort(){
-      return this.linksLength < 30;
+      return this.linksLength < 25 || this.introIsActive;
+    },
+    introIsActive(){
+      return this.$route.params.book === Object.keys(this.sortedLinks)[0];
     }
   },
   methods: {

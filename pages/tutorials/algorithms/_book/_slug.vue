@@ -57,13 +57,6 @@ export default {
 
     try {
       page = await $content(path, params.slug).fetch();
-
-      if (page.uncompleted){
-        return error({
-          statusCode: 404,
-          message: app.i18n.t('common.lesson_not_completed')
-        })
-      }
     } catch (err) {
       if (!err.response || err.response.status !== 404) {
         return error({
@@ -77,6 +70,13 @@ export default {
           message: app.i18n.t('common.page_not_found')
         })
       }
+    }
+
+    if (page.uncompleted){
+      return error({
+        statusCode: 404,
+        message: app.i18n.t('common.lesson_not_completed')
+      })
     }
 
     try {
