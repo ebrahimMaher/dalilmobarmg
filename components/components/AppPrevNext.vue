@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-between items-center mt-8 lg:mt-12">
     <NuxtLink
-      v-if="prev"
+      v-if="prev && !prev.uncompleted"
       data-cy="prev"
       :to="
         localePath({
@@ -25,7 +25,7 @@
     </NuxtLink>
     <span v-else>&nbsp;</span>
     <NuxtLink
-      v-if="next"
+      v-if="next && !next.uncompleted"
       data-cy="next"
       :to="
         localePath({

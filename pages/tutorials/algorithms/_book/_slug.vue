@@ -56,7 +56,14 @@ export default {
     let page, prev, next, langFallback
 
     try {
-      page = await $content(path, params.slug).fetch()
+      page = await $content(path, params.slug).fetch();
+
+      if (page.uncompleted){
+        return error({
+          statusCode: 404,
+          message: app.i18n.t('common.lesson_not_completed')
+        })
+      }
     } catch (err) {
       if (!err.response || err.response.status !== 404) {
         return error({
@@ -74,7 +81,7 @@ export default {
 
     try {
       ;[prev, next] = await $content(path)
-        .only(['title', 'slug', 'dir', 'menu'])
+        .only(['title', 'slug', 'dir', 'menu', 'uncompleted'])
         .sortBy('position')
         .sortBy('title')
         .sortBy('menu')
