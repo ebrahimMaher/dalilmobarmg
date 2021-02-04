@@ -26,7 +26,7 @@
         <span>{{ $t(`content.tutorials.${tutorial}.${group}`) }}</span>
       </component>
       <transition name="fade-down-transition">
-        <div v-if="($route.params.book === group || visibleGroup === group) || (isShort)">
+        <div v-show="($route.params.book === group || visibleGroup === group) || (isShort)">
 
           <ul class="pb-2 pl-2">
             <li
