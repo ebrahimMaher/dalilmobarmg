@@ -121,7 +121,7 @@ export default {
   },
   methods: {
     clicked(group){
-      this.$emit('navigated');
+      // this.$emit('navigated');
       this.visibleGroup === group ? this.visibleGroup = '' : this.visibleGroup = group;
     },
     parseBraces(text){

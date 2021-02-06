@@ -1,7 +1,7 @@
 ---
 title: أنواع البيانات (متوسط)
 description: شرح متقدم لتفاصيل كل نوع من أنواع البيانات بشكل متعمق
-position: 5
+position: 6
 category: intermediate
 createdAt: 1610168252061
 updatedAt: 1610168252061

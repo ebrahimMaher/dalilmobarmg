@@ -24,14 +24,14 @@ module.exports = {
         name: 'الرئيسية',
         slug: 'home'
       },
-      {
+      /* {
         name: 'أساسيات الحاسوب',
         slug: 'tutorials-computer-book-slug',
         param_book: 'essentials',
         param_slug: 'intro'
-      },
+      }, */
       {
-        name: 'مبادئ البرمجة والخوارزميات',
+        name: 'تعلم مبادئ البرمجة',
         slug: 'tutorials-algorithms-book-slug',
         param_book: 'before-start',
         param_slug: 'intro'
