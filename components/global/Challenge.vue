@@ -17,7 +17,7 @@
       </button>
     </div>
 
-    <ChallengeEditor v-model="showEditor" :function-name="functionName" />
+    <ChallengeEditor v-model="showEditor" :label="label" :function-name="functionName" :parameters="parameters" />
   </div>
 </template>
 
@@ -33,6 +33,9 @@ export default {
     functionName: {
       type: String,
       default: 'test'
+    },
+    parameters: {
+      type: Array,
     }
   },
   data(){

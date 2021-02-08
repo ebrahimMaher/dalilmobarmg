@@ -46,3 +46,15 @@
   transform: none;
   opacity: 1!important;
 }
+
+.scale-fade-transition-enter-active, .scale-fade-transition-leave-active{
+  transition: opacity 0.15s ease-in, transform 0.2s ease!important;
+}
+.scale-fade-transition-enter, .scale-fade-transition-leave-to{
+  transform: scale(0.75);
+  opacity: 0!important;
+}
+.scale-fade-transition-enter-to, .scale-fade-transition-leave{
+  transform: none;
+  opacity: 1!important;
+}

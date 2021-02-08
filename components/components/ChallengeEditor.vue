@@ -1,14 +1,10 @@
 <template>
   <!-- Nuxt.js -->
-  <transition name="fade-up-transition">
+  <transition name="scale-fade-transition">
     <div ref="editorWrapper" v-show="show" class="challenge-editor-wrapper dark-mode relative">
-      <div class="flex absolute" style="top: 13px; right: 13px; z-index: 5;">
-      </div>
-
-
       <div ref="editorHeader" @mousedown="handleMouseDown" class="editor-header cursor-move flex items-center justify-between w-full text-sm text-gray-500">
         <div class="px-4 flex items-center" @mousedown.stop>
-          <span class="text-sm text-gray-600">محرر دليل مبرمج</span>
+          <span class="text-sm text-gray-600">محرر تحديات دليل مبرمج</span>
         </div>
         <div class="cursor-pointer flex" @mousedown.stop>
           <div class="reset-btn btn h-10 flex items-center justify-center px-4 hover:bg-green-600 active:bg-green-700 hover:text-white" @click.stop.prevent="resetAll">
@@ -22,32 +18,67 @@
           </div> -->
         </div>
       </div>
-      <div>
-        <codemirror
-          class="challenge-editor"
-          ref="cmEditor"
-          v-model="code"
-          :options="options"
-        />
-      </div>
-      <div class="shortcuts grid grid-cols-11 ltr-dir">
-        <div class="shortcut cursor-pointer select-none text-white flex justify-center items-center py-2 w-full" v-for="(shortcut, i) in shortcuts" :key="i" @click="shortcutClick(shortcut)">
-          {{shortcut}}
-        </div>
-      </div>
-      <div class="code-result overflow-y-auto flex flex-wrap items-stretch w-full py-3 px-5 text-sm" :class="{'text-gray-100': !error, 'text-red-500': error}">
-        <div>
+      <div class="flex items-stretch">
 
-          <button @click="runCode" class="btn px-3 rounded-md py-1 text-sm bg-blue-500 text-white hover:bg-blue-600 active:bg-blue-700 hover:shadow-lg transform transition-transform active:scale-95">
-            تشغيل الكود (F5)
-          </button>
+        <div class="challenge-info-wrapper flex flex-col text-gray-500">
+          <div class="info-header flex py-3 px-5">
+            <div class="icon ml-2 py-1">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"></path></svg>
+            </div>
+            <div class="label text-md font-semibold">{{label}}</div>
+          </div>
+          <div class="sample-tests flex-grow p-3">
+            <div class="text-sm">اختبارات الحل</div>
+
+            <div class="font-semibold mt-2 test-md">
+              <span class="text-green-500" v-if="challengeResult === 'success'">لقد نجحت في التحدي!</span>
+              <span class="text-red-500" v-else-if="challengeResult === 'error'">الحل غير صحيح</span>
+            </div>
+          </div>
+          <div class="p-4">
+            <button @click="runCode()" class="w-full mb-2 btn px-3 rounded-md py-1 text-sm border border-gray-700 text-gray-500 hover:text-gray-300 hover:shadow-lg transform transition-transform active:scale-95">
+              تشغيل الكود (F5)
+            </button>
+
+            <button @click="testCases" class="w-full btn px-3 rounded-md py-2 bg-primary-base text-orange-300 hover:bg-primary-light active:bg-primary-dark hover:shadow-lg transform transition-transform active:scale-95">
+              اختبار الحل
+            </button>
+          </div>
         </div>
-        <!-- <div class="text-xs text-right text-gray-500">ناتج التشغيل</div> -->
-        <div class="text-left ltr-dir flex-grow">
-          <pre v-text="result"></pre>
+        <div class="editor-wrapper flex-grow">
+          <div class="flex absolute" style="top: 13px; right: 13px; z-index: 5;">
+          </div>
+
+          <div>
+            <codemirror
+              class="challenge-editor"
+              ref="cmEditor"
+              v-model="code"
+              :options="options"
+            />
+          </div>
+          <!-- <div class="shortcuts grid grid-cols-11 ltr-dir">
+            <div class="shortcut cursor-pointer select-none text-white flex justify-center items-center py-2 w-full" v-for="(shortcut, i) in shortcuts" :key="i" @click="shortcutClick(shortcut)">
+              {{shortcut}}
+            </div>
+          </div> -->
+          <div class="code-result overflow-y-auto flex flex-wrap items-stretch w-full py-3 px-5 text-sm" :class="{'text-gray-100': !error, 'text-red-500': error}">
+            <div>
+
+              <!-- <button @click="runCode()" class="btn px-3 rounded-md py-1 text-sm bg-blue-500 text-white hover:bg-blue-600 active:bg-blue-700 hover:shadow-lg transform transition-transform active:scale-95">
+                تشغيل الكود (F5)
+              </button> -->
+
+            </div>
+            <!-- <div class="text-xs text-right text-gray-500">ناتج التشغيل</div> -->
+            <div class="text-left ltr-dir flex-grow">
+              <pre v-text="result"></pre>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+
+      </div>
   </transition>
 </template>
 
@@ -57,7 +88,11 @@
 
 export default {
   props: {
-    value: {type: Boolean}
+    value: {type: Boolean},
+    cases: {type: Array},
+    label: {type: String, default: null},
+    parameters: {type: Array},
+    functionName: {type: String, default: 'dalilTest'},
   },
   components: {},
   data(){
@@ -66,6 +101,7 @@ export default {
       code: '',
       error: false,
       result: '',
+      challengeResult: '',
 
       shortcuts: ['(', ')', '{', '}', '"', ';', '=', '+', '-', '*', '/'],
 
@@ -82,6 +118,19 @@ export default {
         autoCloseBrackets: true,
         showHint: true,
       }
+    }
+  },
+  computed: {
+    initialCode(){
+      const functionName = this.functionName,
+        parameters = this.parameters && this.parameters.length ? this.parameters.join(', ') : '';
+        console.log(parameters);
+      return `function ${functionName}(${parameters}){
+  // dalilmobarmg.com challenge
+  // Start Here
+
+
+}`;
     }
   },
   watch: {
@@ -127,31 +176,60 @@ export default {
         elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
       };
     },
-    runCode(){
+    runCode(inputCode=null, log=true){
       const self = this;
       this.reset();
+
       try{
+
         var console = {
+          returned: undefined,
           log(val){
-            let result = self.result === '' ? val : `\n${val}`;
-            self.result += result;
+            if (log){
+              let result = self.result === '' ? val : `\n${val}`;
+              self.result += result;
+            }
+          },
+          testSolution(val){
+            this.returned = val;
+            return val;
           }
         };
-        let code = this.code;
+
+        let code = inputCode ? inputCode : this.code;
+        window.console.log(code);
         code = code.replace('window', 'notallowed');
         eval(code);
+        return console.returned;
       }
       catch(e){
         this.error = true;
         this.result = e.message;
+        return false;
       }
+    },
+    testCases(){
+      const cases = [
+        [[ '[2,2,3]' ], 17]
+      ];
+      cases.forEach(testCase=>{
+        let parameters = testCase[0].join(', ');
+        let code = this.code + `\nconsole.testSolution(${this.functionName}(${parameters}))`;
+        let result = this.runCode(code, false);
+        if (result === testCase[1]){
+          this.challengeResult = 'success';
+        }else{
+          this.challengeResult = 'error';
+          console.log('FAILED');
+        }
+      });
     },
     reset(){
       this.result = '';
       this.error = false;
     },
     resetAll(){
-      this.code = '';
+      this.code = this.initialCode;
       this.reset();
     },
     setKeyboardListener(){
@@ -167,9 +245,16 @@ export default {
         }
       })
     },
+    setInitialCode(){
+      window.setTimeout(()=>{
+        this.code = this.initialCode;
+      }, 1000)
+    }
   },
   mounted(){
     this.setKeyboardListener();
+
+    this.setInitialCode();
   }
 }
 </script>
@@ -179,8 +264,8 @@ export default {
     position: fixed;
     z-index: 35;
     top: 30%;
-    left: 1rem;
-    width: 500px;
+    left: 25%;
+    width: 800px;
     min-height: 400px;
     box-shadow: 0px 5px 16px 1px rgba(0, 0, 0, 0.25), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
     @media(max-width: 768px){
@@ -189,6 +274,14 @@ export default {
       top: unset!important;
       left: 0!important;
       bottom: 0!important;
+    }
+    .challenge-info-wrapper{
+      width: 35%;
+      background: hsl(231, 22%, 16%);
+      border-left: 1px solid rgb(#000, 0.25);
+      .info-header{
+        border-bottom: 1px solid rgb(#000, 0.25);
+      }
     }
 
     .challenge-editor{
@@ -213,9 +306,12 @@ export default {
     .code-result{
       border-top: 1px solid rgb(#000, 0.25);
       height: 100px;
-      max-height: 100px;
+      max-height: 75px;
     }
-    .code-result, .editor-header, .shortcuts{
+    .code-result{
+      background: #292D3E;
+    }
+    .editor-header, .shortcuts{
       background: hsl(231, 22%, 17%);
     }
     .editor-header{
@@ -227,6 +323,10 @@ export default {
     }
     .shortcuts{
       border-top: 1px solid rgb(#000, 0.25);
+    }
+    pre{
+      background: transparent!important;
+      border: 0!important;
     }
     .shortcut{
       &:hover{
