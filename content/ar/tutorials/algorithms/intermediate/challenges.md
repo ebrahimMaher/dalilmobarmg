@@ -20,6 +20,7 @@ contributors:
 
 </challenge>
 
+<br>
 
 <base-alert type="tip">
 

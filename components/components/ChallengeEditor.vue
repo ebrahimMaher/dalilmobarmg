@@ -1,7 +1,7 @@
 <template>
   <!-- Nuxt.js -->
   <transition name="scale-fade-transition">
-    <div ref="editorWrapper" v-show="show" class="challenge-editor-wrapper dark-mode relative">
+    <div ref="editorWrapper" v-if="show" class="challenge-editor-wrapper dark-mode relative">
       <div ref="editorHeader" @mousedown="handleMouseDown" class="editor-header cursor-move flex items-center justify-between w-full text-sm text-gray-500">
         <div class="px-4 flex items-center" @mousedown.stop>
           <span class="text-sm text-gray-600">محرر تحديات دليل مبرمج</span>
@@ -18,7 +18,7 @@
           </div> -->
         </div>
       </div>
-      <div class="flex items-stretch">
+      <div class="flex flex-col lg:flex-row items-stretch">
 
         <div class="challenge-info-wrapper flex flex-col text-gray-500">
           <div class="info-header flex py-3 px-5">
@@ -28,19 +28,35 @@
             <div class="label text-md font-semibold">{{label}}</div>
           </div>
           <div class="sample-tests flex-grow p-3">
-            <div class="text-sm">اختبارات الحل</div>
+            <div class="text-sm">نتيجة اﻹختبار</div>
 
-            <div class="font-semibold mt-2 test-md">
-              <span class="text-green-500" v-if="challengeResult === 'success'">لقد نجحت في التحدي!</span>
-              <span class="text-red-500" v-else-if="challengeResult === 'error'">الحل غير صحيح</span>
-            </div>
+            <template v-if="challengeResult">
+
+              <div class="font-semibold mt-2 mb-4 text-base w-full rounded-md p-2 text-center border" :class="{'border-green-600': challengeResult === 'success', 'border-red-500': challengeResult === 'error'}">
+                <span class="text-green-500" v-if="challengeResult === 'success'">تم الحل بنجاح!</span>
+                <span class="text-red-500" v-else-if="challengeResult === 'error'">الحل غير صحيح</span>
+              </div>
+
+              <div class="text-sm leading-loose text-gray-600">
+                تم إختبار الدالة <span class="font-bold text-gray-500">{{cases ? cases.length : 0}} تجارب</span> على حالات مختلفة؛
+                <span v-if="challengeResult === 'success'" class="text-green-500">وكان الناتج صحيحاً في كل التجارب</span>
+                <span v-else-if="challengeResult === 'error'">
+                  <span v-if="successCases">
+                    وعملت الدالة بنجاح في
+                    <span class="font-bold text-gray-500">{{pluralize(successCases, 'تجربة', 'تجربتين', 'تجارب')}}</span>،
+                  </span>
+                  <span class="text-red-500">ولم تعمل الدالة بالشكل المطلوب في <span class="font-bold">{{pluralize(errorCases, 'تجربة', 'تجربتين', 'تجارب')}}</span>.</span>
+                </span>
+              </div>
+
+            </template>
           </div>
           <div class="p-4">
             <button @click="runCode()" class="w-full mb-2 btn px-3 rounded-md py-1 text-sm border border-gray-700 text-gray-500 hover:text-gray-300 hover:shadow-lg transform transition-transform active:scale-95">
               تشغيل الكود (F5)
             </button>
 
-            <button @click="testCases" class="w-full btn px-3 rounded-md py-2 bg-primary-base text-orange-300 hover:bg-primary-light active:bg-primary-dark hover:shadow-lg transform transition-transform active:scale-95">
+            <button @click="testCases" class="w-full btn px-3 text-sm lg:text-base rounded-md py-1 lg:py-2 bg-primary-base text-orange-300 hover:bg-primary-light active:bg-primary-dark hover:shadow-lg transform transition-transform active:scale-95">
               اختبار الحل
             </button>
           </div>
@@ -101,7 +117,10 @@ export default {
       code: '',
       error: false,
       result: '',
+
       challengeResult: '',
+      successCases: 0,
+      errorCases: 0,
 
       shortcuts: ['(', ')', '{', '}', '"', ';', '=', '+', '-', '*', '/'],
 
@@ -146,6 +165,17 @@ export default {
   methods: {
     shortcutClick(shortcut){
       this.code = this.code + shortcut;
+    },
+    pluralize(num, single, dual, plural){
+      if (num === 1){
+        return single;
+      }else if (num === 2){
+        return dual;
+      }else if (num <= 10){
+        return `${num} ${plural}`;
+      }else{
+        return `${num} ${single}`;
+      }
     },
     handleMouseDown(e){
       let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
@@ -210,23 +240,36 @@ export default {
     },
     testCases(){
       const cases = [
-        [[ '[2,2,3]' ], 17]
+        [[ '[2,2,3]' ], 17],
+        [[ '[1,1,2]' ], 6],
+        [[ '[1,2,2]' ], 9]
       ];
+      let success = 0,
+        error = 0;
       cases.forEach(testCase=>{
         let parameters = testCase[0].join(', ');
         let code = this.code + `\nconsole.testSolution(${this.functionName}(${parameters}))`;
         let result = this.runCode(code, false);
         if (result === testCase[1]){
-          this.challengeResult = 'success';
+          success += 1;
         }else{
-          this.challengeResult = 'error';
-          console.log('FAILED');
+          error += 1;
         }
       });
+      if (error > 0){
+        this.challengeResult = 'error';
+      }else{
+        this.challengeResult = 'success';
+      }
+      this.successCases = success;
+      this.errorCases = error;
     },
     reset(){
       this.result = '';
       this.error = false;
+      this.challengeResult = '';
+      this.successCases = 0;
+      this.errorCases = 0;
     },
     resetAll(){
       this.code = this.initialCode;
@@ -248,7 +291,7 @@ export default {
     setInitialCode(){
       window.setTimeout(()=>{
         this.code = this.initialCode;
-      }, 1000)
+      }, 1000);
     }
   },
   mounted(){
@@ -261,8 +304,11 @@ export default {
 
 <style lang="scss">
   .challenge-editor-wrapper{
+    background: #292D3E;
+    overflow-y: auto;
     position: fixed;
     z-index: 35;
+    max-height: 100%;
     top: 30%;
     left: 25%;
     width: 800px;
@@ -274,9 +320,20 @@ export default {
       top: unset!important;
       left: 0!important;
       bottom: 0!important;
+
+      height: 100%;
     }
     .challenge-info-wrapper{
       width: 35%;
+      @media(max-width: 768px){
+        max-width: 100%;
+        width: 100%;
+        height: 38vh;
+        overflow: hidden;
+        .sample-tests{
+          overflow-y: auto;
+        }
+      }
       background: hsl(231, 22%, 16%);
       border-left: 1px solid rgb(#000, 0.25);
       .info-header{
@@ -285,6 +342,7 @@ export default {
     }
 
     .challenge-editor{
+        height: 350px;
       .CodeMirror{
         font-size: 16px;
         line-height: 1.75;
@@ -295,6 +353,7 @@ export default {
           text-align: left;
         }
         padding: 1rem 0.5rem;
+        height: 350px;
         .CodeMirror-lines{
           padding: 4px;
         }
@@ -305,10 +364,11 @@ export default {
     }
     .code-result{
       border-top: 1px solid rgb(#000, 0.25);
-      height: 100px;
+      height: 75px;
       max-height: 75px;
+      overflow: hidden;
     }
-    .code-result{
+    .code-result, .challenge-editor{
       background: #292D3E;
     }
     .editor-header, .shortcuts{
