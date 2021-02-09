@@ -17,7 +17,7 @@
       </button>
     </div>
 
-    <ChallengeEditor v-model="showEditor" :label="label" :function-name="functionName" :parameters="parameters" />
+    <ChallengeEditor v-model="showEditor" :cases="cases" :label="label" :function-name="functionName" :parameters="parameters" />
   </div>
 </template>
 
@@ -29,6 +29,9 @@ export default {
     label: {
       type: String,
       default: 'تحدي'
+    },
+    cases: {
+      type: Array,
     },
     functionName: {
       type: String,
@@ -42,6 +45,9 @@ export default {
     return {
       showEditor: false,
     }
+  },
+  mounted(){
+    console.log(this.cases);
   }
 }
 </script>

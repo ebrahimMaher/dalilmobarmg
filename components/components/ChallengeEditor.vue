@@ -32,20 +32,24 @@
 
             <template v-if="challengeResult">
 
-              <div class="font-semibold mt-2 mb-4 text-base w-full rounded-md p-2 text-center border" :class="{'border-green-600': challengeResult === 'success', 'border-red-500': challengeResult === 'error'}">
+              <div class="font-semibold mt-3 mb-4 text-base w-full rounded-md p-2 text-center border-2" :class="{'border-green-600': challengeResult === 'success', 'border-red-500': challengeResult === 'error'}">
                 <span class="text-green-500" v-if="challengeResult === 'success'">تم الحل بنجاح!</span>
                 <span class="text-red-500" v-else-if="challengeResult === 'error'">الحل غير صحيح</span>
               </div>
 
               <div class="text-sm leading-loose text-gray-600">
-                تم إختبار الدالة <span class="font-bold text-gray-500">{{cases ? cases.length : 0}} تجارب</span> على حالات مختلفة؛
-                <span v-if="challengeResult === 'success'" class="text-green-500">وكان الناتج صحيحاً في كل التجارب</span>
+                تم إجراء <span class="font-bold text-gray-500">{{cases ? cases.length : 0}} تجارب</span> على الدالة بحالات مختلفة؛
+                <span v-if="challengeResult === 'success'" class="text-green-500">
+                  وتخطت الدالة
+                  <span class="font-bold">{{pluralize(successCases, 'تجربة', 'تجربتين', 'تجارب')}}</span>
+                  بنجاح
+                </span>
                 <span v-else-if="challengeResult === 'error'">
                   <span v-if="successCases">
-                    وعملت الدالة بنجاح في
+                    وتخطت الدالة
                     <span class="font-bold text-gray-500">{{pluralize(successCases, 'تجربة', 'تجربتين', 'تجارب')}}</span>،
                   </span>
-                  <span class="text-red-500">ولم تعمل الدالة بالشكل المطلوب في <span class="font-bold">{{pluralize(errorCases, 'تجربة', 'تجربتين', 'تجارب')}}</span>.</span>
+                  <span class="text-red-500">ولكن لم تعمل الدالة بالشكل المطلوب في <span class="font-bold">{{pluralize(errorCases, 'تجربة', 'تجربتين', 'تجارب')}}</span>.</span>
                 </span>
               </div>
 
@@ -143,7 +147,6 @@ export default {
     initialCode(){
       const functionName = this.functionName,
         parameters = this.parameters && this.parameters.length ? this.parameters.join(', ') : '';
-        console.log(parameters);
       return `function ${functionName}(${parameters}){
   // dalilmobarmg.com challenge
   // Start Here
@@ -166,9 +169,9 @@ export default {
     shortcutClick(shortcut){
       this.code = this.code + shortcut;
     },
-    pluralize(num, single, dual, plural){
+    pluralize(num, single, dual, plural, singleWord="واحدة"){
       if (num === 1){
-        return single;
+        return single + ' ' + singleWord;
       }else if (num === 2){
         return dual;
       }else if (num <= 10){
@@ -227,7 +230,6 @@ export default {
         };
 
         let code = inputCode ? inputCode : this.code;
-        window.console.log(code);
         code = code.replace('window', 'notallowed');
         eval(code);
         return console.returned;
@@ -239,11 +241,7 @@ export default {
       }
     },
     testCases(){
-      const cases = [
-        [[ '[2,2,3]' ], 17],
-        [[ '[1,1,2]' ], 6],
-        [[ '[1,2,2]' ], 9]
-      ];
+      const cases = this.cases;
       let success = 0,
         error = 0;
       cases.forEach(testCase=>{
@@ -258,8 +256,10 @@ export default {
       });
       if (error > 0){
         this.challengeResult = 'error';
+        this.playSound('error');
       }else{
         this.challengeResult = 'success';
+        this.playSound('success');
       }
       this.successCases = success;
       this.errorCases = error;
@@ -292,6 +292,13 @@ export default {
       window.setTimeout(()=>{
         this.code = this.initialCode;
       }, 1000);
+    },
+
+    playSound(filename, ext = 'ogg', volume = .75) {
+      var path = '/sounds/' + filename + '.' + ext,
+          soundFile = new window.Audio(path);
+      soundFile.volume = volume;
+      soundFile.play();
     }
   },
   mounted(){

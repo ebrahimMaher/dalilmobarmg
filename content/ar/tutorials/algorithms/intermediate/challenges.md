@@ -10,11 +10,18 @@ updated: false
 practical: true
 contributors:
   - ebrahimmaher
+challenge1cases: [
+  [[ '[2,2,3]' ], 17],
+  [[ '[1,1,2]' ], 6],
+  [[ '[1,2,2]' ], 9],
+  [[ '[1,2]' ], 5],
+  [[ '[0, 3, 4, 5]' ], 50],
+]
 ---
 
 التحديات تثبت ما تعلمت وتمني مهاراتك البرمجية وقدراتك على حل المشكلات، وهي من أهم أساليب التعلم
 
-<challenge label="تحدي مجموع مربع اﻷعداد" function-name="sumSquare" :parameters="['numbers']">
+<challenge :cases="challenge1cases" label="تحدي مجموع مربع اﻷعداد" function-name="sumSquare" :parameters="['numbers']">
 
 قم بكتابة دالة اسمها `sumSquare` تأخذ مصفوفة من اﻷعداد كمُدخل، وتقوم بإرجاع ناتج **مجموع مربع كل اﻷعداد**، أي تقوم بضرب كل عدد في نفسه ثم تقوم بجمع كل النواتج، مثلاً: `sumSquare([2, 2, 3])` تقوم بإرجاع `17` ﻷن `2*2 + 2*2 + 3*3 = 17`
 
