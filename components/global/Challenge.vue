@@ -1,5 +1,5 @@
 <template>
-  <div class="challenge bg-light-surface dark:bg-dark-surface card rounded border-r-4 border-primary-light dark:border-orange-400 p-3 lg:p-5 pr-5 lg:pr-8">
+  <div class="challenge my-6 bg-light-surface dark:bg-dark-surface card rounded border-r-4 border-primary-light dark:border-orange-400 p-3 lg:p-5 pr-5 lg:pr-8">
     <div class="flag-icon bg-primary-base text-orange-400 shadow-md hover:shadow-lg">
       <svg class="w-100 h-100" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"></path></svg>
     </div>
