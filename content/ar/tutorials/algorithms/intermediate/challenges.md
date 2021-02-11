@@ -58,7 +58,40 @@ makePositiveCases: [
   [[ '-14' ], 14],
 ]
 
+searchInArrayCases: [
+  [[ '2, [2,5,3]' ], 0],
+  [[ '3, [6,5,3]' ], 2],
+  [[ '4, [-5,0,-1]' ], -1],
+  [[ '-1, [7,-1,3]' ], 1],
+  [[ '1, [20, 4, 2, -14, 1, -13]' ], 4],
+  [[ '5, [-6, 13, 8]' ], -1],
+  [[ '16, [8, 16, 4, 2, 9]' ], 1],
+  [[ '2, [8, 16, 4, 2, 9]' ], 3],
+  [[ '0, [5, -13]' ], -1],
+  [[ '13, []' ], -1],
+]
+
+isStockAvailableCases: [
+  [[ '2, {name: "product 1", stock: 4}' ], true],
+  [[ '5, {name: "product 2", stock: 4}' ], false],
+  [[ '4, {name: "product 3", stock: 4}' ], true],
+  [[ '2, {name: "product 4", stock: 0}' ], false],
+  [[ '8, {name: "product 5", stock: 7}' ], false],
+  [[ '10, {name: "product 6", stock: 30}' ], true],
+  [[ '2, {name: "product 7", stock: 2}' ], true],
+  [[ '2, {name: "product 8", stock: 1}' ], false],
+]
+
+canViewPostCases: [
+  [[ '{content: "post 1", public: true, isFriend: true}' ], true],
+  [[ '{content: "post 2", public: false, isFriend: true}' ], true],
+  [[ '{content: "post 3", public: true, isFriend: false}' ], true],
+  [[ '{content: "post 4", public: false, isFriend: false}' ], false],
+]
+
 ---
+
+## مقدمة
 
 التمارين والتحديات البرمجية تثبت ما تعلمت وتمني مهاراتك البرمجية وقدراتك على حل المشكلات ﻷنها تمنحك الفرصة للتطبيق على ما تعلّمت واستخدامه بشكل واقعي في أمثلة حقيقية؛ لذلك هي من أهم أساليب التعلم... في هذا الدرس ستجد تمارين متعددة على كل ما تعلّمت فإحرص بشدّة على حلّها بأفضل طريقة
 
@@ -71,8 +104,11 @@ makePositiveCases: [
 <base-alert type="tip">
 
 إذا واجهتك مشكلة يمكنك الرجوع لنا في مجموعات التعلم على slack أو مجموعة فيسبوك وسنحرص على مساعدتك وإرشادك.
+
 </base-alert>
 
+
+## تحدي مجموع مربع اﻷعداد
 
 <challenge :cases="sumSquareCases" label="تحدي مجموع مربع اﻷعداد" function-name="sumSquare" :parameters="['numbers']">
 
@@ -80,11 +116,15 @@ makePositiveCases: [
 
 </challenge>
 
+## تحدي العدد اﻷصغر
+
 <challenge :cases="lowestCases" label="تحدي العدد اﻷصغر" function-name="lowestNum" :parameters="['numbers']">
 
 قم بكتابة دالة اسمها `lowestNum` تأخذ مصفوفة من اﻷعداد كمُدخل، وتقوم بإرجاع العدد اﻷصغر، مثلاً: `lowestNum([5, 2, 3])` تقوم بإرجاع `2`.
 
 </challenge>
+
+## تحدي تحويل السالب إلى موجب
 
 <challenge :cases="makePositiveCases" label="تحدي تحويل السالب إلى موجب" function-name="makePositive" :parameters="['num']">
 
@@ -92,9 +132,59 @@ makePositiveCases: [
 
 </challenge>
 
+## تحدي حساب المدى
+
 <challenge :cases="rangeCases" label="تحدي حساب المدى" function-name="range" :parameters="['numbers']">
 
 قم بكتابة دالة `range` تأخذ مصفوفة من اﻷعداد كمُدخل، وتقوم بإرجاع **المدى** لهذه اﻷعداد، والمدى هو **أكبر قيمة - أصغر قيمة**، مثلاً: `rangeCases([5, 2, 3, 1])` تقوم بإرجاع `4` ﻷن أكبر قيمة `5` وأصغر قيمة `1` فيكون المدى يساوي **5-1 = 4**
+
+</challenge>
+
+## تحدي البحث في مصفوفة
+<base-alert type="info">
+
+معلومة: في معظم لغات البرمجة ستجد دالة جاهزة يمكن استخدامها للبحث عن عنصر في المصفوفة، سنتعلمها في درس المصفوفات المتقدم، ويختلف فقط اسم الدالة من لغة للغة، لكننا اﻵن نريد أن نكتب دالة بنفسنا تقوم بهذا الغرض بدون اﻹستعانة بدالة جاهزة؛ مما سيمنحك فهم أكبر لمبادئ البرمجة ويطور من مهارات التفكير البرمجي لديك.
+
+</base-alert>
+
+
+<challenge :cases="searchInArrayCases" label="تحدي البحث في مصفوفة" function-name="searchInArray" :parameters="['element', 'dataArray']">
+
+قم بكتابة دالة `searchInArray` مهمتها البحث عن عنصر في المصفوفة، تأخذ مُدخلين، اﻷول ما سنبحث عنه `element`، والثاني مصفوفة `dataArray` نبحث فيها عن العنصر.. وتقوم بإرجاع **مفتاح العنصر (ترتيبه index)** إن كان العنصر موجود في المصفوفة، غير ذلك تقوم بإرجاع **-1**
+
+> في البرمجة؛ القيمة **-1** في البحث نعتبر أنها تعني **"غير موجود"**
+
+</challenge>
+
+## تحدي مخزون المنتج
+
+<base-alert type="next">
+
+قم بمراجعة [درس القواميس](/tutorials/algorithms/intermediate/dictionaries) قبل حل التمرين حتى تتمكن من الحل.
+
+</base-alert>
+
+<challenge :cases="isStockAvailableCases" label="تحدي مخزون المنتج" function-name="isStockAvailable" :parameters="['quantity', 'product']">
+
+قم بكتابة دالة `isStockAvailable` تقوم بالتحقق هل يوجد مخزون كافي من المُنتج لإتمام عملية الشراء أم المخزون لا يكفي، تأخذ مُدخلين اﻷول هو **الكمّية** المطلوب شراءها، والثاني **قاموس** يحتوي على بيانات المنتج ومن هذه البيانات هناك عنصر مفتاحه `stock` فيه عدد المخزون المتوفر من المنتج، وتقوم الدالة بالتحقق هل الكمية المطلوب شراءها أكبر من مخزون المنتج؟ فتقوم بإرجاع `false` غير ذلك تقوم بإرجاع `true` أي أن العملية ممكنة.
+
+أمثلة:
+
+> `isStockAvailable(5, {name: "كتاب برمجة", stock: 4})` تقوم بإرجاع `false` ﻷن مخزون المنتج **4** والكمية المطلوب شراءها **5**
+
+> `isStockAvailable(2, {name: "كتاب برمجة", stock: 10})` تقوم بإرجاع `true` ﻷن المخزون المتوفر من المنتج **10** والمطلوب شراؤه **2**
+
+</challenge>
+
+## تحدي السماح بعرض المنشور
+
+<challenge :cases="canViewPostCases" label="تحدي السماح بعرض المنشور" function-name="canViewPost" :parameters="['post']">
+
+قم بكتابة دالة `canViewPost` مهمتها تحديد هل مسموح للمستخدم رؤية المنشور أم ﻻ، ويمكنه رؤيته إذا كان من أصدقاء ناشر المنشور أو إذا كان المنشور عام.
+
+تأخذ مُدخل واحد عبارة عن **قاموس** يحتوي على بيانات المنشور، ومن هذه البيانات عنصر مفتاحه `public` قيمته منطقية تكون `true` لو كان المنشور **عام** غير ذلك تكون قيمتها `false` أي أن **المنشور خاص ومتاح فقط للأصدقاء**، ويحتوي القاموس على عنصر آخر مفتاحه `isFriend` قيمته منطقية تكون `true` إذا كان المستخدم من **أصدقاء ناشر المنشور**، وتكون `false` إذا لم يكن من أصدقاءه.
+
+**وتقوم الدالة بإرجاع `true` فقط إن كان المنشور عام أو المنشور خاص والمستخدم من أصدقاء الناشر، غير ذلك تقوم بإرجاع `false`**
 
 </challenge>
 
@@ -102,13 +192,21 @@ makePositiveCases: [
 
 <!-- unitFormat(num, plural, single) - 5 قطع، 15 قطعة .. الخ -->
 
+## منصات للتحديات البرمجية
 
-<base-alert type="tip">
+<base-alert type="star">
 
-يمكنك حل المزيد من التحديات والتمارين بمستويات مختلفة على منصات عالمية مشهورة، ومن هذه المنصات:
+**يمكنك حل المزيد من التحديات والتمارين بمستويات مختلفة على منصات عالمية مشهورة:**
 
-- [Codewars](https://www.codewars.com)
-- [HackerRank](https://www.hackerrank.com/)
-- [LeetCode](https://leetcode.com/problemset/all/)
+<md-button :class="'my-2'" :full="false" href="https://www.codewars.com">
+Codewars
+</md-button>
+<md-button :class="'mb-2'" href="https://www.hackerrank.com">
+HackerRank
+</md-button>
+
+<md-button href="https://leetcode.com/problemset/all/">
+LeetCode
+</md-button>
 
 </base-alert>

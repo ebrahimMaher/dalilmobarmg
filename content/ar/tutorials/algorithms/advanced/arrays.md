@@ -21,3 +21,11 @@ contributors:
 ## for loop into array
 
 ## forEach loop intro array
+
+## search in array
+
+<base-alert type="next">
+
+قبل أن تستكمل قراءة قم بحل تحدي "البحث في مصفوفة" في درس [تحديات المستوى المتوسط](/tutorials/algorithms/intermediate/challenges) أولاً ثم استكمل القراءة هنا.
+
+</base-alert>

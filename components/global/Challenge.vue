@@ -11,9 +11,9 @@
       <slot />
     </div>
     <div class="challenge-actions mt-4">
-      <button @click="showEditor = true" class="w-full bg-primary-base hover:bg-primary-dark text-orange-300 transform active:scale-95 transition duration-200 ease-in-out no-underline flex items-center justify-center font-medium text-md px-4 py-2 shadow uppercase rounded">
+      <button @click="showEditor = true" class="w-full bg-primary-base hover:bg-primary-dark text-orange-300 transform active:scale-95 transition duration-200 ease-in-out no-underline flex items-center justify-center text-md px-4 py-2 text-sm font-semibold shadow uppercase rounded">
         <svg class="w-6 h-6 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
-        ابدأ التحدي
+        ابدأ التحدي اﻵن
       </button>
     </div>
 
