@@ -17,7 +17,7 @@ contributors:
 
 <base-alert type="next">
 
-إذا كنت لم تقرأ درس الدوال في المستوى المبتدئ، يجب عليك قراءته [من هنا](/tutorials/algorithms/fundamentals/functions) وفهمه جيداً قبل استكمال الدرس
+إذا كنت لم تقرأ درس الدوال في المستوى الإبتدائي، يجب عليك قراءته [من هنا](/tutorials/algorithms/fundamentals/functions) وفهمه جيداً قبل استكمال الدرس
 
 </base-alert>
 

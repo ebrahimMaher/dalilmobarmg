@@ -1,7 +1,7 @@
 ---
 title: تعبيرات المقارنة (متوسط)
 description: تعبيرات المقارنة (Comparison Expressions) هي نوع من التعبييرات مختص بالقيم المنطقية (true, false)
-position: 8
+position: 9
 category: intermediate
 createdAt: 1610199050695
 updatedAt: 1610199050695

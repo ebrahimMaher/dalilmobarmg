@@ -1,7 +1,7 @@
 ---
 title: المتغيرات (variables)
-description: شرح المتغيرات البرمجية وتفاصيلها المتقدمة
-position: 8
+description: استكمال شرح المتغيرات البرمجية وتفاصيلها المتقدمة
+position: 7
 category: intermediate
 createdAt: 1609951404433
 updatedAt: 1610344301929
