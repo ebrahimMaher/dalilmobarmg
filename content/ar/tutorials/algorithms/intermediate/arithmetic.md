@@ -1,10 +1,10 @@
 ---
-title: العلامات الحسابية (Arithmetic)
-description: شرح العلامات والتعبيرات الحسابية (Arithmetic) في البرمجة بشكل مفصّل 
+title: العمليات الحسابية (Arithmetic)
+description: شرح العوامل والتعبيرات الحسابية (Arithmetic) في البرمجة بشكل مفصّل 
 position: 6
 category: intermediate
 createdAt: 1613408444828
-updatedAt: 1613408444828
+updatedAt: 1613494938442
 new: false
 updated: false
 contributors:
