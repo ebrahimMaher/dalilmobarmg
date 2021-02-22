@@ -330,8 +330,12 @@ export default {
 
       height: 100%;
     }
+    .editor-wrapper{
+      overflow-x: auto;
+    }
     .challenge-info-wrapper{
       width: 35%;
+      min-width: 35%;
       @media(max-width: 768px){
         max-width: 100%;
         width: 100%;
