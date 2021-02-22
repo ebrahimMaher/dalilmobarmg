@@ -1,7 +1,7 @@
 ---
 title: المتغيرات (variables)
 description: استكمال شرح المتغيرات البرمجية وتفاصيلها المتقدمة
-position: 8
+position: 9
 category: intermediate
 createdAt: 1609951404433
 updatedAt: 1610344301929
@@ -12,7 +12,6 @@ contributors:
   - ebrahimmaher
 ---
 
-### ما هو المتغير؟
 
 
 ### Scope

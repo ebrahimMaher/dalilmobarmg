@@ -1,7 +1,7 @@
 ---
 title: تحدي السنة الكبيسة
 description: تحدي كتابة دالة تحسب عدد اﻷيام في السنة بناءا على هل السنة عادية أم كبيسة
-position: 7
+position: 8
 category: intermediate
 createdAt: 1614020066413
 updatedAt: 1614020066413
