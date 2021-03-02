@@ -133,7 +133,7 @@ export default {
       }
       return text;
     },
-    dateIsNew(timestamp, days=2){
+    dateIsNew(timestamp, days=3){
       // ** createdAt must be in UTC **
       if (!timestamp){
         return false;
@@ -176,7 +176,7 @@ export default {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-line-clamp: 1; /* number of lines to show */
     -webkit-box-orient: vertical;
   }
 </style>

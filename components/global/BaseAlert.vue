@@ -8,7 +8,7 @@
         <IconStar v-else-if="type === 'star'" class="alert-icon" />
         <IconAlert v-else class="alert-icon" />
       </div>
-      <div class="mr-2 overflow-hidden alert-content text-sm leading-7">
+      <div class="mr-2 overflow-hidden alert-content text-sm leading-7 w-full">
         <slot />
       </div>
     </div>
