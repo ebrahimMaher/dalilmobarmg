@@ -19,5 +19,5 @@ contributors:
 - usage with nested expressions
 - usage with boolean casting (0, 1, []) .. etc
 - advanced examples
-
+- !!variable expression (boolean casting)
 -->
