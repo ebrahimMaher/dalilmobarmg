@@ -67,7 +67,6 @@ console.log(4%2);
 console.log(11%3);
 console.log(15%3);
 console.log(15%4);
-var n = 5;
 console.log(5%4);
 ```
 <code-result>
