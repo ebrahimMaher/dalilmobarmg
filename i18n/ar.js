@@ -36,11 +36,11 @@ module.exports = {
         param_book: 'before-start',
         param_slug: 'intro'
       },
-      {
+      /* {
         name: 'اﻹختبارات',
         slug: 'tests',
         disabled: true
-      },
+      }, */
       {
         name: 'المدونة',
         slug: 'blog'
@@ -150,7 +150,7 @@ module.exports = {
         title: 'الروابط',
         home: 'الرئيسية',
         blog: 'المدونة',
-        tests: 'اﻹختبارات'
+        // tests: 'اﻹختبارات'
       },
       community: {
         title: 'مجتمع دليل مبرمج',

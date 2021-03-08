@@ -1,7 +1,7 @@
 ---
 title: الحلقات التكرارية (متوسط)
 description: استكمال شرح الحلقات التكرارية (مستوى متوسط)
-position: 12
+position: 16
 category: intermediate
 createdAt: 1610199050695
 updatedAt: 1610199050695
