@@ -1,6 +1,6 @@
 ---
 title: If الشرطية (متوسط)
-description: المستوى المتوسط من شرح if الشرطية
+description: يتناول معلومات متقدمة عن الشروط، وربطها بما تعلمنا سابقاً عن الشروط والتعبيرات المنطقية والتحويل المنطقي ويعرض مشكلات ستواجهك أثناء التعامل مع الشروط وحلولها، كما أنه يتناول nested if و else if.
 position: 11
 category: intermediate
 createdAt: 1615223406540
@@ -268,14 +268,6 @@ rating(95);
 </code-result>
 
 
-<!-- 
-- nested if
-- else if
-- usage with logical expressions
-- usage with boolean casting (0, 1, []) .. etc
-- advanced examples
-- !!variable expression (boolean casting)
- -->
 
 
 ## الشروط والقيمة الفارغة
@@ -382,7 +374,7 @@ if (even.length){
 </base-alert>
 
 
-#### ماذا لو لم أعرف هل الدالة تقوم بإرجاع مصفوفة أم `null` ?
+#### ماذا لو لم أعرف هل الدالة تقوم بإرجاع مصفوفة أم `null` ؟
 <base-alert type="error">
 
 لنتخيل أن الدالة تقوم بإرجاع `null` إذا لم تجد أعداد زوجية، واستخدمنا طريقة طول المصفوفة `even.length` بسبب أننا كنا نتخيل أنها ستقوم بإرجاع مصفوفة فارغة! في هذه الحالة سيكون الشرط `even.length` يساوي `null.length` وبالتالي سيقوم المفسر بإعطاء النتيجة **خطأ** ﻷن `.length` تستخدم مع المصفوفات وليس مع `null`!
@@ -417,3 +409,9 @@ if (even && even.length){
 تهانينا... أنت اﻵن درست كل ما ستحتاج تقريباً في الشروط، وعرفت كل المشاكل التي ستواجهك أثناء استخدام الشروط والتعبيرات المنطقية... ولذلك أنت اﻵن تستطيع التفكير كمبرمج! **التفكير المنطقي**.
 
 </base-alert>
+
+
+<!-- 
+- advanced examples
+- !!variable expression (boolean casting)
+ -->

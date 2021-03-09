@@ -59,3 +59,7 @@ contributors:
 </expand>
 
 <br>
+
+<!-- تحدث عن closures ﻷننا سنستخدمها لاحقاً مع المكتبات وكذلك مع الحلقات التكرارية forEach -->
+<!-- recursive functions -->
+<!-- default values of parameters -->
