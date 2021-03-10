@@ -1,7 +1,7 @@
 ---
 title: القواميس (Dictionaries)
 description: تعلم القواميس أو القواميس في البرمجة وأهميتها واستخداماتها
-position: 3
+position: 2.2
 category: intermediate
 createdAt: 1612331013059
 updatedAt: 1612331013059
