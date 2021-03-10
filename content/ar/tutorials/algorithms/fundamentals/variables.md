@@ -1,5 +1,5 @@
 ---
-title: المتغيرات (متوسط)
+title: المتغيرات (Variables)
 description: إعداد بيئة العمل تمهيداً لكتابة أول كود برمجي
 position: 5
 category: fundamentals

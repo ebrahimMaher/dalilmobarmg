@@ -1,5 +1,5 @@
 ---
-title: المتغيرات (Variables)
+title: المتغيرات (متوسط)
 description: استكمال شرح المتغيرات البرمجية وتفاصيلها المتقدمة
 position: 1
 category: intermediate
