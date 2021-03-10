@@ -1,5 +1,5 @@
 ---
-title: هياكل البيانات (data structures)
+title: هياكل البيانات (Data Structures)
 description: شرح لمفهوم هياكل البيانات (Data Structures) وأهميتها في البرمجة
 position: 2
 category: intermediate

@@ -1,5 +1,5 @@
 ---
-title: الثوابت (constants)
+title: الثوابت (Constants)
 description: شرح الثوابت البرمجية واستخداماتها وأهميتها
 position: 1.1
 category: intermediate
