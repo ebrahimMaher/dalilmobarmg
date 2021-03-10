@@ -1,8 +1,8 @@
 ---
 title: برنامج أسماء الملفات
 description: 
-position: 16
-category: intermediate
+position: 3
+category: advanced
 createdAt: 1612462477328
 updatedAt: 1612462477328
 new: false
