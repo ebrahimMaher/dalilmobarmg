@@ -1,5 +1,5 @@
 <template>
-  <nav class="pt-6 lg:overflow-y-auto lg:block lg:pr-0 lg:pl-2 sticky?lg:max-h-(screen-24)">
+  <nav class="py-6 lg:overflow-y-auto lg:block lg:pr-0 lg:pl-2 sticky?lg:max-h-(screen-24)">
     <div v-for="(sublinks, group) in sortedLinks" :key="`links-${group}`" class="mb-4">
       <component
         :is="$route.params.book === group ? `h3` : 'a'"
