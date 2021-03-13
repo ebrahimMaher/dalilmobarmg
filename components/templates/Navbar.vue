@@ -16,7 +16,7 @@
         />
       </NuxtLink>
       <!-- Center Navigation -->
-      <div class="flex items-center mx-auto">
+      <div class="flex items-center lg:mr-auto">
         <nav class="hidden lg:flex lg:pt-1 xl:pt-0">
           <ul class="flex text-center">
             <li
@@ -44,7 +44,7 @@
       </div>
 
 
-      <div class="buttons flex lg:mr-auto">
+      <div class="buttons flex lg:mr-8">
         <div>
           <DarkModeToggle />
         </div>

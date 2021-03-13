@@ -1,7 +1,7 @@
 ---
 title: المصفوفات (متقدم)
 description: تعلم المصفوفات بشكل مبسط وأهميتها واستخداماتها
-position: 1
+position: 4
 category: advanced
 createdAt: 1611421561524
 updatedAt: 1611421561524

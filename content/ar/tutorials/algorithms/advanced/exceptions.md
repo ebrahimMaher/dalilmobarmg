@@ -11,5 +11,9 @@ uncompleted: true
 contributors:
   - ebrahimmaher
 ---
+<!-- ## أنواع الأخطاء (Error types) -->
+<!-- ## try ... catch -->
 
-## try ... catch
+<!-- https://www.guru99.com/java-exception-handling.html -->
+<!-- http://www.upv.es/~jgonsol/tutorial/java/exceptions/definition.html -->
+<!-- https://en.wikipedia.org/wiki/Exception_handling -->

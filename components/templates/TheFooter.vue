@@ -110,11 +110,6 @@ export default {
             key: this.$t('footer.links.links.blog'),
             to: this.localePath({name: 'blog'})
           },
-          {
-            key: this.$t('footer.links.links.tests'),
-            to: this.localePath('/tests'),
-            disabled: true,
-          }
         ],
         tutorials: [
           {

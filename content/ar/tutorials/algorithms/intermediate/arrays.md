@@ -1,7 +1,7 @@
 ---
 title: المصفوفات (Arrays)
 description: تعلم المصفوفات البرمجية وأهميتها واستخداماتها
-position: 2
+position: 2.1
 category: intermediate
 createdAt: 1611421561524
 updatedAt: 1612284278598
