@@ -179,7 +179,7 @@ test();
 
 console.log(num);
 ```
-<code-result error>
+<code-result>
 10
 <br>
 6
