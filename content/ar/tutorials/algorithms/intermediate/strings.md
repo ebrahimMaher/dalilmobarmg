@@ -1,5 +1,5 @@
 ---
-title: النصوص (متوسط)
+title: النصوص (Strings)
 description: شرح متقدم للنصوص (strings) والعمليات عليها والدوال المرتبطة بها
 position: 17.1
 category: intermediate
