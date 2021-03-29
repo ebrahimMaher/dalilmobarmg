@@ -1,6 +1,6 @@
 ---
 title: اﻹستثنائات (Exceptions)
-description: 
+description: شرح الاستثناءات البرمجية وأهميتها واستخداماتها والتحكم في اﻷخطاء (try.. catch)
 position: 2
 category: advanced
 createdAt: 1617037285803
