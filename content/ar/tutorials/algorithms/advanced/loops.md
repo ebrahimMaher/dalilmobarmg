@@ -1,7 +1,7 @@
 ---
 title: الحلقات التكرارية (متقدم)
 description: شرح التفاصيل المتقدمة عن الحلقات التكرارية
-position: 4
+position: 3
 category: advanced
 createdAt: 1610199050695
 updatedAt: 1610199050695

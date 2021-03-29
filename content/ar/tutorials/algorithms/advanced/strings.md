@@ -1,7 +1,7 @@
 ---
 title: النصوص (متقدم)
 description: شرح متقدم للنصوص (strings) والعمليات عليها والدوال المرتبطة بها
-position: 3
+position: 4
 category: advanced
 createdAt: 1616058624657
 updatedAt: 1616058624657
