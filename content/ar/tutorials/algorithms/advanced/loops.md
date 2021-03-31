@@ -1,6 +1,6 @@
 ---
 title: الحلقات التكرارية (متقدم)
-description: شرح التفاصيل المتقدمة عن الحلقات التكرارية
+description: شرح تفاصيل متقدمة عن الحلقات التكرارية وبعض اﻷنواع الجديدة منها (do.. while, forEach)
 position: 3
 category: advanced
 createdAt: 1617216774949
