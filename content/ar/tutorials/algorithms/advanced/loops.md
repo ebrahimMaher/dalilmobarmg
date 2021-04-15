@@ -72,7 +72,7 @@ test
 
 <base-alert type="tip">
 
-`do.. while` قليلة الإستخدام ولكننا نستخدمها إذا أردنا أن تتنفذ الحلقة التكرارية على اﻷقل مرة واحدة
+`do.. while` قليلة الاستخدام ولكننا نستخدمها إذا أردنا أن تتنفذ الحلقة التكرارية على اﻷقل مرة واحدة
 
 </base-alert>
 
@@ -105,7 +105,7 @@ do {
 var numbers = [1, 2, 3, 4];
 numbers.forEach(function (num){
   console.log(num);
-})
+});
 ```
 <code-result>
 1
@@ -130,7 +130,7 @@ numbers.forEach(function (num){
 var countries = ["Palestine", "Syria", "Egypt"];
 countries.forEach(function (country, index){
   console.log(index + ': ' + country);
-})
+});
 ```
 <code-result>
 0: Palestine

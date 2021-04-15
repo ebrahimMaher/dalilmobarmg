@@ -1,7 +1,7 @@
 ---
 title: الكود النظيف (Clean Code)
 description: 
-position: 4
+position: 7
 category: advanced
 createdAt: 1610168252061
 updatedAt: 1610168252061
