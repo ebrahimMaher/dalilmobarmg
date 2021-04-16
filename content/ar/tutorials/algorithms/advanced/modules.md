@@ -1,6 +1,6 @@
 ---
 title: الوحدات والحزم (Modules)
-description: شرح ما هي الوحدات (modules) ؟ وما هي الحزم (packages) ؟ وأهميتهما واستخداماتهما والحزم المدمجة باللغات ومدير الحزم (package manager)
+description: شرح ما هي الوحدات (modules) ؟ وما هي الحزم (packages) ؟ وأهميتهما ومدير الحزم (package manager)
 position: 6
 category: advanced
 createdAt: 1618529152622
