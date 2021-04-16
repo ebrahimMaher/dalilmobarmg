@@ -1,6 +1,6 @@
 ---
 title: الكود النظيف (Clean Code)
-description: 
+description: تعلم القواعد اﻷساسية لكتابة كود نظيف قابل للقراءة والتطوير والصيانة وأقل عُرضة للأخطاء البرمجية
 position: 7
 category: advanced
 createdAt: 1618562815059

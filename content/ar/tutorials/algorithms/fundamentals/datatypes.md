@@ -140,7 +140,7 @@ console.log(false)
   <boolean-dark-mode-try />
 </try-wrapper>
 
-> ستتعلم أكثر عن هذا النوع من البيانات في المستوى المتوسط في درس[**أنواع البيانات**](/tutorials/algorithms/intermediate/datatypes)
+> ستتعلم أكثر عن هذا النوع من البيانات في المستوى المتوسط
 
 > ستفهم استخدام القيم المنطقية وأهميتها في درس [**if الشرطية**](/tutorials/algorithms/fundamentals/if-statement)
 
