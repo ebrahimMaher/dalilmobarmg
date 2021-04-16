@@ -53,6 +53,7 @@ export default {
   scrollToTop: true,
   async asyncData({ $content, params, store, error, app }) {
     let path = `/${app.i18n.defaultLocale}/tutorials/algorithms/${params.book}`
+    let books = ['before-start', 'fundamentals', 'intermediate', 'advanced'];
     let page, prev, next, langFallback
 
     try {
@@ -87,6 +88,24 @@ export default {
         .sortBy('menu')
         .surround(params.slug, { before: 1, after: 1 })
         .fetch()
+
+
+      if (!next){
+        // if last lesson of this book (category).. so no "next", fetch first of next book
+        const nextBook = books[ books.indexOf(params.book)+1 ];
+        if (nextBook){
+          let nextFetch = await $content(`/${app.i18n.defaultLocale}/tutorials/algorithms/${nextBook}`)
+          .only(['title', 'slug', 'dir', 'menu', 'uncompleted'])
+          .sortBy('position')
+          .sortBy('title')
+          .sortBy('menu')
+          .limit(1)
+          .fetch();
+
+          next = nextFetch[0]
+        }
+      }
+
     } catch (e) {}
 
     return {

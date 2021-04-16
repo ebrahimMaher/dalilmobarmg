@@ -9,7 +9,7 @@
         class="mx-auto h-full light:bg-light-elevatedSurface dark:bg-dark-surface transition-colors duration-300 ease-linear border-r light:border-light-border dark:border-dark-border"
       >
         <div class="content-wrapper h-full">
-          <div class="overflow-y-auto h-full pt-4">
+          <div class="overflow-y-auto h-full pt-4 pb-10">
             <TutorialsNav :links="links" :tutorial="tutorial" @navigated="show = false" />
           </div>
           <!-- <button
