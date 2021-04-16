@@ -14,7 +14,7 @@ contributors:
 ## مقدمة
 تحدثنا عن أساسيات الحلقات التكرارية في [درس الحلقات التكرارية](/tutorials/algorithms/fundamentals/loops) في المستوى اﻹبتدائي، وتعمقنا في الحلقات التكرارية وتفاصيلها المتقدمة في درس [الحلقات التكرارية (متوسط)](/tutorials/algorithms/intermediate/loops) واﻵن سنتعلم بعض اﻷمور  واﻷنواع الجديدة من الحلقات التكرارية التي لم نذكرها في المستويات السابقة.
 
-## قطع الحلفة التكرارية `break`
+## قطع الحلقة التكرارية `break`
 في بعض اﻷحيان نحتاج لإيقاف الحلقة التكرارية إذا حدث شيئاً معين، يمكننا استخدام اﻷمر `break` لإعطاء المفسر أمر بالتوقف عن التكرار وقطع الحلقة التكرارية... 
 
 <base-alert type="tip">
@@ -139,6 +139,13 @@ countries.forEach(function (country, index){
 <br>
 2: Egypt
 </code-result>
+
+<base-alert type="error">
+
+لا يُمكن استخدام اﻷمر `break` لقطع الحلقة التكرارية `forEach`.. سيظهر لك الخطأ التالي
+`Uncaught SyntaxError: Illegal break statement`
+
+</base-alert>
 
 <!-- 
 <quiz>

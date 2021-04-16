@@ -1,5 +1,5 @@
 ---
-title: اﻷيام بين تاريخين
+title: عدد اﻷيام بين تاريخين
 description: 
 position: 8
 category: advanced
@@ -11,3 +11,5 @@ practical: true
 contributors:
   - ebrahimmaher
 ---
+
+...
