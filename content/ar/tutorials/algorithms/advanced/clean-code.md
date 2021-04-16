@@ -143,6 +143,13 @@ function check(num){
 
 </base-alert>
 
+<br>
+
+<base-alert type="next">
+
+يمكنك زيادة معرفتك عن موضوع الكود النظيف بالبحث على جوجل عن ***"الكود النظيف"*** أو ***"Clean Code"*** وإن كانت انجليزيتك قوية ابدأ اﻵن بقراءة كتاب ***"Clean Code - by Robert C. Martin"*** لتتعمق أكثر وأكثر في فن كتابة الكود النظيف.
+
+</base-alert>
 
 
 <!-- ## Best Practices
