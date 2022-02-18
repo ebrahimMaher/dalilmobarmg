@@ -196,3 +196,8 @@ contributors:
   - ebrahimmaher2
 ---
 ```
+
+# Build
+```
+npm run generate
+```
