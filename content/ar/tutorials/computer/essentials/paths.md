@@ -1,7 +1,7 @@
 ---
-title: المسارات
+title: المسارات (paths)
 description: شرح مفصل للمسارات واستخداماتها وأهميتها في عالم الحاسوب
-position: 5
+position: 5.1
 category: essentials
 createdAt: 1610211782735
 updatedAt: 1610211782735

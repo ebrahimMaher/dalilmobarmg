@@ -2,8 +2,8 @@
   <div>
     <HomeWelcome />
     <HomeTutorials />
-    <HomeSlackGroups />
-    <HomeFacebookGroup />
+    <!-- <HomeSlackGroups /> -->
+    <!-- <HomeFacebookGroup /> -->
     <HomeGithubContribute />
   </div>
 </template>
