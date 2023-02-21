@@ -2,7 +2,7 @@
 title: اللغة العربية فخر وهوية.. ظاهرة ذوبان اللغة
 description: ظاهرة ذوبان اللغة في المجتمع التقني والهندسي؛ ظاهرة طاغية في وقتنا الحالي وملحوظة بشدة في المجتمعات الهندسية والتقنية العربية، ولا يكاد يسلم منها حتى “المثقفون” والمؤثرون والمعلمون بل تكثر فيهم أكثر من غيرهم وتنتقل منهم للآلاف غيرهم كالعدوى.
 date: 2021-01-12
-imgUrl: '/blog/andalus-arabic.png'
+imgUrl: '/blog/andalus-arabic.jpg'
 authors:
   - name: Ebrahim Maher
     avatarUrl: https://avatars2.githubusercontent.com/u/44779868?s=460&u=8c86377de086dde8ca546f6c674b4df0cad97e4c&v=4
